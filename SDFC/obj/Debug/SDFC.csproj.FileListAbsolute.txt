@@ -1,0 +1,10 @@
+C:\Users\cgpuglie\Documents\Visual Studio 2012\Projects\SDFC\SDFC\SDFC\bin\SDFC.dll
+C:\Users\cgpuglie\Documents\Visual Studio 2012\Projects\SDFC\SDFC\SDFC\bin\SDFC.pdb
+C:\Users\cgpuglie\Documents\Visual Studio 2012\Projects\SDFC\SDFC\SDFC\obj\Debug\SDFC.csprojResolveAssemblyReference.cache
+C:\Users\cgpuglie\Documents\Visual Studio 2012\Projects\SDFC\SDFC\SDFC\obj\Debug\SDFC.dll
+C:\Users\cgpuglie\Documents\Visual Studio 2012\Projects\SDFC\SDFC\SDFC\obj\Debug\SDFC.pdb
+C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\bin\SDFC.dll
+C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\bin\SDFC.pdb
+C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\obj\Debug\SDFC.csprojResolveAssemblyReference.cache
+C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\obj\Debug\SDFC.dll
+C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\obj\Debug\SDFC.pdb
