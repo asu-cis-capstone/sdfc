@@ -19,10 +19,16 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <h1>Hello world, from the master page!</h1> <!--Test Master Page-->
-        <asp:ContentPlaceHolder id="MobileContentPlaceholder" runat="server">
+        <div id="header" class="panel horizontalCenter">
+            <div class="verticalCenter horizontalCenter">
+                <h1><asp:Literal ID="PageTitleDisplay" runat="server"></asp:Literal></h1> <!--Test Master Page-->
+            </div>
+        </div>     
+        <div id="main" class="horizontalCenter">
+            <asp:ContentPlaceHolder id="MobileContent" runat="server">
         
-        </asp:ContentPlaceHolder>
+            </asp:ContentPlaceHolder>
+        </div> 
     </div>
     </form>
 </body>

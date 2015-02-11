@@ -21,6 +21,7 @@ public partial class Mobile_Mobile : System.Web.UI.MasterPage
         {
             //set literal value within page title
             PageTitle.Text = value;
+            PageTitleDisplay.Text = value;
         }
     }
 
