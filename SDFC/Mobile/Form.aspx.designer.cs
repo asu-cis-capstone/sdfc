@@ -10,52 +10,70 @@
 namespace SDFC.Mobile {
     
     
-    public partial class Login {
+    public partial class Form {
         
         /// <summary>
-        /// username control.
+        /// name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label username;
+        protected global::System.Web.UI.WebControls.Label name;
         
         /// <summary>
-        /// txtusername control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtusername;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
         
         /// <summary>
-        /// password control.
+        /// date control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label password;
+        protected global::System.Web.UI.WebControls.Label date;
         
         /// <summary>
-        /// txtpassword control.
+        /// txtDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpassword;
+        protected global::System.Web.UI.WebControls.TextBox txtDate;
         
         /// <summary>
-        /// loginButton control.
+        /// description control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button loginButton;
+        protected global::System.Web.UI.WebControls.Label description;
+        
+        /// <summary>
+        /// txtDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDescription;
+        
+        /// <summary>
+        /// submitButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button submitButton;
         
         /// <summary>
         /// Master property.

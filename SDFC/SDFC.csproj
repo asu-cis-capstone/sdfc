@@ -61,6 +61,7 @@
     <Content Include="Desktop\scripts\Interaction.js" />
     <Content Include="Desktop\stylesheets\desktop.css" />
     <Content Include="Mobile\Default.aspx" />
+    <Content Include="Mobile\Form.aspx" />
     <Content Include="Mobile\Login.aspx" />
     <Content Include="Mobile\scripts\Interaction.js" />
     <Content Include="Mobile\stylesheets\mobile.css" />
@@ -88,6 +89,13 @@
     <Compile Include="Mobile\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mobile\Form.aspx.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Form.aspx.designer.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mobile\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -104,6 +112,7 @@
     </Compile>
     <Compile Include="Models\DB_Connector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Processing.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Desktop\Desktop.master" />
