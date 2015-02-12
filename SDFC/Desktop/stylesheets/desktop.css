@@ -1,4 +1,8 @@
 ﻿body {
+    color: black;
+    background-color: yellow;
+    overflow-x: hidden;
+    font-family: Calibri;
 }
 
 h1 {
@@ -6,6 +10,145 @@ h1 {
     display:    none;
 }
 
-h2 {
-    display:    none;
+#header {
+    color: black;
+    background-color: green;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 2;
+}
+
+#navbar {
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    color: rgb(240, 240, 240);
+    background-color: #FFB310;
+    z-index:3;
+    padding: 0;
+}
+
+#navbarContents {
+}
+
+#navbarContents ul {
+    font-size: 0px;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#navbarContents li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    bottom:0;
+}
+
+
+.navbarli {
+    display: table-cell;
+    vertical-align: middle;
+    width: 170px;
+    height: 80px;
+    top: 20px;
+    color: black;
+    font-size: 24px;
+    text-align:center;
+    text-decoration: none;
+    background-color: #FFB310;
+    border:none;
+}
+
+.navbarli:hover {
+    background-color: #B27D0B;
+}
+
+.rightalign {
+    float:right;
+}
+
+.searchli {
+    color: black;
+    width: 300px;
+    height: 80px;
+    top: 20px;
+    margin-right:auto;
+    margin-left: auto;
+    text-align:center;
+    text-decoration: none;
+    border:none;
+}
+
+#searchlink {
+    color: black;
+    font-size: 24px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 300px;
+    height: 80px;
+    top: 20px;
+    left: 2px;
+    text-align:center;
+    text-decoration: none;
+    border:none;
+}
+
+#backarrow {
+    vertical-align: middle;
+    width: 300px;
+    height: 80px;
+    top: 20px;
+    left: 2px;
+    text-align:center;
+    text-decoration: none;
+    border:none;
+    z-index:4;
+}
+
+#searchlink:hover {
+    background-color:#B27D0B;
+}
+
+#sidebar {
+    color: black;
+    background-color: #FFB310;
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    top: 100px;
+    left: 0;
+    text-align: center;
+    z-index: 0;
+    display: block;
+}
+
+#ulCheckboxes{
+    list-style-type: none;
+}
+
+#ulCheckboxes li{
+    text-decoration: none;
+}
+
+#main {
+    display: inline-block;
+    position:absolute;
+    left: 0px;
+    top:100px;
+    height: 10000px;
+    float: left;
+    z-index:1;
+    color: black;
+    background-color: #990033;
+    width:100%;
+}
+
+#recentRecords {
+    color:white;
 }

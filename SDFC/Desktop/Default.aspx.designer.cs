@@ -12,6 +12,15 @@
 public partial class _Default {
     
     /// <summary>
+    /// recordType control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Label recordType;
+    
+    /// <summary>
     /// Master property.
     /// </summary>
     /// <remarks>
