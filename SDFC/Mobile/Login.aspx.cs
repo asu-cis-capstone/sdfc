@@ -4,11 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using SDFC.Models;
 
 namespace SDFC.Mobile
 {
     public partial class Login : System.Web.UI.Page
     {
+        private DB_Connector myConnector;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //check if user has logged in. 
@@ -20,17 +23,21 @@ namespace SDFC.Mobile
 
             if (!this.IsPostBack)
             {
+                //initialize connector
+                myConnector = new DB_Connector();
+
+                //set page title
                 this.Master.Title = "log In";
             }
             else
             {
-
+                myConnector = (DB_Connector)Session["myConnector"];
             }
         }
 
         protected void Page_Unload(object sender, EventArgs e)
         {
-
+            Session["myConnector"] = myConnector;
         }
 
         /// <summary>
@@ -43,11 +50,20 @@ namespace SDFC.Mobile
         }
 
         protected void loginButton_Click(object sender, EventArgs e)
-        {
-            //To do: add a means of authenticating users
-            Session["Username"] = "Username"; //for the time being, give a generic username
+        {           
+            if (myConnector.LogIn(txtusername.Text, txtpassword.Text))
+            {
+                //store credentials in session
+                Session["Username"] = txtusername.Text; 
+                Session["Password"] = txtpassword.Text;
 
-            Response.Redirect("Default.aspx");
+                //send to login
+                Response.Redirect("Default.aspx");
+            }
+            else
+            {
+                //to do: add error messages for invalid credentials
+            }
         }
     }
 }

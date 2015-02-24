@@ -20,7 +20,8 @@ namespace SDFC.Mobile
 
             if (!this.IsPostBack)
             {
-                this.Master.Title = "select a form";
+                this.Master.Title = "form";
+                Master.HasSigPad = true;
             }
             else
             {

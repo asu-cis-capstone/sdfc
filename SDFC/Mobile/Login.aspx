@@ -2,7 +2,7 @@
 <%@ MasterType VirtualPath="~/Mobile/Mobile.master" %>
 
 <asp:Content ID="LoginForm" runat="server" ContentPlaceHolderID="MobileContent">
-    <div class="panel horizontalCenter">
+    <div class="horizontalCenter">
         <div id="loginInputs" class="horizontalCenter">
             <asp:Label ID="username" runat="server" ClientIDMode="Static">username</asp:Label>
             <br />
@@ -11,7 +11,7 @@
             
             <asp:Label ID="password" runat="server" ClientIDMode="Static">password</asp:Label>
             <br />
-            <asp:TextBox ID="txtpassword" runat="server" ClientIDMode="Static"></asp:TextBox>
+            <asp:TextBox ID="txtpassword" runat="server" ClientIDMode="Static" TextMode="Password"></asp:TextBox>
             <br />
             <br />
 

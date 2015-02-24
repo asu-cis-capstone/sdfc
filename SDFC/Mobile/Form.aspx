@@ -2,7 +2,7 @@
 <%@ MasterType VirtualPath="~/Mobile/Mobile.master" %>
 
 <asp:Content ID="Form" runat="server" ContentPlaceHolderID="MobileContent">
-    <div class="panel horizontalCenter">
+    <div class="horizontalCenter">
         <div id="formInputs" class="horizontalCenter">
             <asp:Label ID="name" runat="server" ClientIDMode="Static">name</asp:Label>
             <br />
@@ -22,12 +22,10 @@
 
             <asp:Label ID="signature" runat="server" ClientIDMode="Static">signature</asp:Label>
             <br />
-            <div id="signatureTemp">
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+            <div class="sig sigWrapper">
+                <div class="typed"></div>
+                <canvas class="pad" height="200" width="600"></canvas>
+                <input type="hidden" name="output" class="output" runat="server" />
             </div>
 
             <asp:Button ID="submitButton" runat="server" ClientIDMode="Static" CssClass="button" Text="submit" OnClick="submitButton_Click"/>

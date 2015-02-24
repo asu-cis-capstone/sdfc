@@ -21,6 +21,15 @@ public partial class Mobile_Default {
     protected global::System.Web.UI.WebControls.Label welcomeLabel;
     
     /// <summary>
+    /// hyperlink control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.HyperLink hyperlink;
+    
+    /// <summary>
     /// Master property.
     /// </summary>
     /// <remarks>

@@ -39,6 +39,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.9.5\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -59,6 +62,22 @@
   <ItemGroup>
     <Content Include="Desktop\Default.aspx" />
     <Content Include="Desktop\scripts\Interaction.js" />
+    <Content Include="Mobile\scripts\sigpad\.gitignore" />
+    <Content Include="Mobile\scripts\sigpad\assets\flashcanvas.js" />
+    <Content Include="Mobile\scripts\sigpad\assets\flashcanvas.swf" />
+    <Content Include="Mobile\scripts\sigpad\assets\journal.svg" />
+    <Content Include="Mobile\scripts\sigpad\assets\jquery.signaturepad.css" />
+    <Content Include="Mobile\scripts\sigpad\assets\json2.min.js" />
+    <Content Include="Mobile\scripts\sigpad\assets\pen.cur" />
+    <Content Include="Mobile\scripts\sigpad\examples\accept-multiple-signatures.html" />
+    <Content Include="Mobile\scripts\sigpad\examples\accept-signature.html" />
+    <Content Include="Mobile\scripts\sigpad\examples\full-window.html" />
+    <Content Include="Mobile\scripts\sigpad\examples\regenerate-signature.html" />
+    <Content Include="Mobile\scripts\sigpad\examples\require-drawn-signature.html" />
+    <Content Include="Mobile\scripts\sigpad\examples\sample-signature-output.js" />
+    <Content Include="Mobile\scripts\sigpad\jquery.signaturepad.js" />
+    <Content Include="Mobile\scripts\sigpad\jquery.signaturepad.min.js" />
+    <Content Include="Mobile\scripts\sigpad\LICENSE.txt" />
     <Content Include="Desktop\stylesheets\desktop.css" />
     <Content Include="Mobile\Default.aspx" />
     <Content Include="Mobile\Form.aspx" />
@@ -117,6 +136,17 @@
   <ItemGroup>
     <Content Include="Desktop\Desktop.master" />
     <Content Include="Mobile\Mobile.master" />
+    <Content Include="Mobile\scripts\sigpad\.editorconfig" />
+    <Content Include="Mobile\scripts\sigpad\.jshintrc" />
+    <Content Include="Mobile\scripts\sigpad\assets\journal.eot" />
+    <Content Include="Mobile\scripts\sigpad\assets\journal.ttf" />
+    <Content Include="Mobile\scripts\sigpad\assets\journal.woff" />
+    <Content Include="Mobile\scripts\sigpad\CHANGELOG.md" />
+    <Content Include="Mobile\scripts\sigpad\Gruntfile.coffee" />
+    <Content Include="Mobile\scripts\sigpad\package.json" />
+    <Content Include="Mobile\scripts\sigpad\pen.psd" />
+    <Content Include="Mobile\scripts\sigpad\README.md" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

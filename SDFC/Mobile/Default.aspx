@@ -6,8 +6,8 @@
         <asp:Label ID="welcomeLabel" runat="server" ClientIDMode="Static"></asp:Label>
     </div>
     <div id="select">
-        <asp:Hyperlink runat="server" NavigateUrl="Form.aspx?ID=1">
-            <div class="panel horizontalCenter selection">
+        <asp:Hyperlink id="hyperlink" runat="server" NavigateUrl="Form.aspx?ID=1">
+            <div class="horizontalCenter selection">
                 <asp:Label runat="server">Accident Report</asp:Label>
             </div>
         </asp:Hyperlink>
