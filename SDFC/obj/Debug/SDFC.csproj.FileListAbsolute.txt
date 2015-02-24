@@ -9,3 +9,8 @@ C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\obj\Debug\SDFC.dll
 C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\obj\Debug\SDFC.pdb
 C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\obj\Debug\SDFC.csprojResolveAssemblyReference.cache
 C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\bin\MySql.Data.dll
+C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\SDFC.dll
+C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\SDFC.pdb
+C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\obj\Debug\SDFC.csprojResolveAssemblyReference.cache
+C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\obj\Debug\SDFC.dll
+C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\obj\Debug\SDFC.pdb
