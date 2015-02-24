@@ -60,7 +60,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Desktop\Default.aspx" />
+    <Content Include="Desktop\Home.aspx" />
+    <Content Include="Desktop\Login.aspx" />
+    <Content Include="Desktop\stylesheets\login.css" />
+    <Content Include="Desktop\stylesheets\main.css" />
+    <Content Include="Desktop\Manage.aspx" />
+    <Content Include="Desktop\Report.aspx" />
     <Content Include="Desktop\scripts\Interaction.js" />
     <Content Include="Mobile\scripts\sigpad\.gitignore" />
     <Content Include="Mobile\scripts\sigpad\assets\flashcanvas.js" />
@@ -87,19 +92,36 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Desktop\Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Desktop\Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Desktop\Desktop.master.cs">
       <DependentUpon>Desktop.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Desktop\Desktop.master.designer.cs">
       <DependentUpon>Desktop.master</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mobile\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
