@@ -14,3 +14,9 @@ C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\SDFC.pdb
 C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\obj\Debug\SDFC.csprojResolveAssemblyReference.cache
 C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\obj\Debug\SDFC.dll
 C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\obj\Debug\SDFC.pdb
+F:\My Documents\GitHub\sdfc\SDFC\bin\SDFC.dll.config
+F:\My Documents\GitHub\sdfc\SDFC\bin\SDFC.dll
+F:\My Documents\GitHub\sdfc\SDFC\bin\SDFC.pdb
+F:\My Documents\GitHub\sdfc\SDFC\obj\Debug\SDFC.csprojResolveAssemblyReference.cache
+F:\My Documents\GitHub\sdfc\SDFC\obj\Debug\SDFC.dll
+F:\My Documents\GitHub\sdfc\SDFC\obj\Debug\SDFC.pdb

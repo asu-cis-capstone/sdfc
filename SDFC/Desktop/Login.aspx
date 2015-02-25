@@ -57,23 +57,17 @@
 
 
     <div id="loginDiv"> <%--z index--%>
-        <form id="login" action="Home.aspx" method="post" >
-            <label for="username">Username:</label><br />
-			<input type="text" id="username" name="username" 
-                required 
-			    title="Username: 4-15 chars, numbers, u/l case letters and -, _, ! $ only!" 
-			    pattern="[a-zA-Z0-9-_!$]{4,15}"/>
+        <form runat="server">
+            <!-- username -->
+            <asp:Label runat="server" Text="Username:"></asp:Label><br />
+            <asp:TextBox runat="server" ID="tbxUsername" required="required"></asp:TextBox>
 			<br /><br />
 			
 			<!-- password -->
-			<label for="password">Password:</label><br />
-			<input type="password" id="password" name="password" 
-			    required 
-			    title="Password: 5-15 chars, numbers, u/l case letters and -, _, ! $ only!" 
-			    pattern="[a-zA-Z0-9-_!$]{5,15}"/>
-			<br />
+            <asp:Label runat="server" Text="Password:"></asp:Label><br />
+            <asp:TextBox runat="server" ID="tbxPassword" TextMode="Password" required="required"></asp:TextBox>
 
-            <input type="submit" value="Login"/>
+            <asp:Button runat="server" ID="btnLogin" OnClick="btnLogin_Click" />
         </form>
     </div>
 
