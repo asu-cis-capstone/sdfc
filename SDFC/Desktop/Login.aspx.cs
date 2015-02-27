@@ -24,7 +24,7 @@ namespace SDFC.Desktop
             try
             {
                 //Create MySQL connection
-                MySqlConnection conn = new MySqlConnection("SERVER=cis440.cj1rt5lolr7p.us-west-2.rds.amazonaws.com;DATABASE=cis440db;UID=capstone;PASSWORD=");
+                MySqlConnection conn = new MySqlConnection("SERVER=cis440.cj1rt5lolr7p.us-west-2.rds.amazonaws.com;DATABASE=cis440db;UID=capstone;PASSWORD=cis440clark");
 
                 //Open Connection
                 conn.Open();
@@ -44,22 +44,24 @@ namespace SDFC.Desktop
                 //Set data adapter and fill the data table
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 da.Fill(dt);
-
-                string pw = dt.Rows[0][0].ToString();
-
+                
                 //Close the connection
                 conn.Close();
 
-                //Test password match
-                if (password.Equals(dt.Rows[0][0].ToString()))
+                if (dt.Rows.Count > 0)
                 {
-                    Response.Redirect("Home.aspx");
+                    string pw = dt.Rows[0][0].ToString();
+                    //Test password match
+                    if (password.Equals(dt.Rows[0][0].ToString()))
+                    {
+                        Response.Redirect("Home.aspx");
+                    }
                 }
-                else
+                else 
                 {
-                    
+                    lblLoginError.Visible = true;
+                    main.Style.Add("top", "600px");
                 }
-
             }
             catch (Exception)
             {

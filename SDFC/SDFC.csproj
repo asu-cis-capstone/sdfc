@@ -89,7 +89,9 @@
     <Content Include="Mobile\Login.aspx" />
     <Content Include="Mobile\scripts\Interaction.js" />
     <Content Include="Mobile\stylesheets\mobile.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Desktop\Desktop.master.cs">

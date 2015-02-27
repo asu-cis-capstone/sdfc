@@ -2,7 +2,18 @@
 }
 
 .loginButton {
-    display: inline-block;
+    display: table-cell;
+    height:70px;
+    width: 110px;
+    background-color: purple;
+    text-align: center;
+    vertical-align:middle;
+    font-size: 24px;
+}
+
+.loginButton:hover {
+    background-color: yellow;
+    cursor:pointer;
 }
 
 #navbar {
@@ -10,7 +21,7 @@
     position: fixed;
     width: 100%;
     height: 80px;
-    background-color: lightblue;
+    background-color: rgb(20, 161, 31);
     top: 0;
     left: 0;
 }
@@ -19,12 +30,16 @@
     text-align:right;
 }
 
+#navbarContents li {
+    display:inline-block;
+}
+
 #loginDiv {
     z-index: 0;
     width: 100%;
     height: 1000px;
     position: fixed;
-    background-color: red;
+    background-color: rgb(37, 83, 39);
     top: 80px;
     left: 0;
 }
@@ -32,7 +47,6 @@
 #login {
     margin-top: 200px;
     width: 50%;
-    background-color: green;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -42,7 +56,7 @@
     position:absolute;
     width: 100%;
     height: 2000px;
-    background-color: lightpink;
+    background-color: rgb(188, 255, 185);
     top: 0;
     left: 0;
     z-index: 1;
@@ -61,4 +75,9 @@
     text-align:center;
     margin-left: auto;
     margin-right: auto;
+}
+
+#lblLoginError {
+    color: red;
+    font-size: 18px;
 }

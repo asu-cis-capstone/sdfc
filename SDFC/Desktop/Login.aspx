@@ -32,7 +32,6 @@
 <body>
     
     <div id="navbar">
-            <span>formz</span>
         <div id="navbarContents">
             <ul>
                 <li class="loginButton">Login</li>
@@ -43,7 +42,7 @@
 
 
 
-    <div id="main">
+    <div id="main" runat="server">
         <div id="mainTitleDiv">
             <h1>formz</h1>
             <span>Managing and Submitting Forms, Documents, and Reports has never been easier</span>
@@ -57,7 +56,7 @@
 
 
     <div id="loginDiv"> <%--z index--%>
-        <form runat="server">
+        <form id="login" runat="server">
             <!-- username -->
             <asp:Label runat="server" Text="Username:"></asp:Label><br />
             <asp:TextBox runat="server" ID="tbxUsername" required="required"></asp:TextBox>
@@ -66,8 +65,12 @@
 			<!-- password -->
             <asp:Label runat="server" Text="Password:"></asp:Label><br />
             <asp:TextBox runat="server" ID="tbxPassword" TextMode="Password" required="required"></asp:TextBox>
+            <br /><br />
 
-            <asp:Button runat="server" ID="btnLogin" OnClick="btnLogin_Click" />
+            <asp:Button runat="server" ID="btnLogin" OnClick="btnLogin_Click" Text="Login"/>
+            <br /><br />
+
+            <asp:Label ID="lblLoginError" runat="server" Visible="false">Invalid Username or Password</asp:Label>
         </form>
     </div>
 

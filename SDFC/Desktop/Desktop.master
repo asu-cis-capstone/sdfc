@@ -54,8 +54,8 @@
         <h2 id="sidebarHeader">Search</h2>
 
         <form id="formSearch" runat="server">
-            <asp:TextBox runat="server" ID="txtSearch" Text="search..."></asp:TextBox>
-            <asp:Button runat="server" ID="btnSearchByTxt" Text="GO!" />
+            <asp:TextBox runat="server" ID="txtSearch"></asp:TextBox>
+            <asp:Button runat="server" ID="btnSearchByTxt" Text="GO!" OnClick="btnSearchByTxt_Click"/>
             <ul id="ulCheckboxes">
                 <li><asp:CheckBox runat="server" ID="chxOption1" Text="option1" /></li>
                 <li><asp:CheckBox runat="server" ID="chxOption2" Text="option2" /></li>
@@ -63,11 +63,14 @@
                 <li><asp:CheckBox runat="server" ID="chxOption4" Text="option4" /></li>
                 <li><asp:CheckBox runat="server" ID="chxOption5" Text="option5" /></li>
             </ul>
+
             <div id="datePicker">
                 <asp:TextBox runat="server" ID="txtDateStart"></asp:TextBox>
                 <asp:TextBox runat="server" ID="txtDateEnd"></asp:TextBox>
                 <asp:Button runat="server" ID="btnSearch" Text="Search"/>
             </div>
+
+            
         </form>
         
     </div>
