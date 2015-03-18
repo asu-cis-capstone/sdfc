@@ -1,0 +1,72 @@
+create table report (
+reportID int NOT NULL primary key,
+asuID int NOT NULL foreign key references (employee) asuID,
+reportStatus varchar (255),
+comments varchar (255),
+dateFiled datetime default getdate(),
+)
+
+create table activity(
+activityID int NOT NULL AUTO_INCREMENT primary key,
+activityName varchar(255),
+
+)
+
+create table location(
+locationID int NOT NULL AUTO_INCREMENT primary key,
+locationName varchar(255),
+)
+
+create table action(
+actionID int NOT NULL AUTO_INCREMENT primary key,
+actionName varchar(255),
+)
+
+create table injuryType(
+injuryTypeID int NOT NULL AUTO_INCREMENT primary key,
+injuryTypeName varchar(255),
+)
+
+create table injuryLocation(
+injuryLocationID int NOT NULL AUTO_INCREMENT primary key,
+injuryLocationName varchar(255),
+)
+
+create table treatment(
+treatmentID int NOT NULL AUTO_INCREMENT primary key,
+treatmentName varchar(255),
+)
+
+create table injury(
+reportID int NOT NULL primary key,
+activityID int NOT NULL foreign key,
+locationID int NOT NULL foreign key,
+actionID int NOT NULL foreign key,
+injuryTypeID int NOT NULL foreign key,
+injuryLocationID int NOT NULL foreign key,
+treatmentID int NOT NULL foreign key,
+asuID int,
+victimName varchar(55),
+address varchar(255),
+phone int,
+age int,
+genderMale bit,
+refusalSig varchar(255),
+treatmentProvider varchar(55),
+positionTitle varchar(55),
+managerCalled bit,
+notWhy varchar(255),
+timeCalled datetime,
+arrival datetime,
+transported varchar(255),
+emergencyCalled bit,
+emergencyReportNum varchar(255),
+medicalReportNum varchar(255),
+description varchar(255),
+witnessName varchar(255),
+witnessPhone int,
+victimSig varchar(255),
+FOREIGN KEY reportID references (report) reportID
+)
+
+
