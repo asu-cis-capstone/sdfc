@@ -62,8 +62,8 @@
   <ItemGroup>
     <Content Include="Desktop\Home.aspx" />
     <Content Include="Desktop\Login.aspx" />
+    <Content Include="Desktop\stylesheets\home.css" />
     <Content Include="Desktop\stylesheets\login.css" />
-    <Content Include="Desktop\stylesheets\main.css" />
     <Content Include="Desktop\Manage.aspx" />
     <Content Include="Desktop\Report.aspx" />
     <Content Include="Desktop\scripts\Interaction.js" />

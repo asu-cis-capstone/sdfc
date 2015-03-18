@@ -1,0 +1,31 @@
+﻿body {
+}
+
+#divHomeContent {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tblRecent {
+    border-collapse:collapse;
+}
+
+.trRepeater {
+    background: -webkit-linear-gradient(right, #990033 40%, rgb(76, 255, 0) 80%);
+    background-attachment: fixed;
+}
+
+.trRepeaterSpace {
+    height: 20px;
+}
+
+.trHdr {
+    width: 150px;
+    text-align: right;
+}
+
+.trVal {
+    width: 300px;
+    text-align: left;
+}
