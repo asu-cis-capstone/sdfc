@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SDFC.Desktop
 {
-    public partial class Manage : System.Web.UI.Page
+    public partial class WebForm2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

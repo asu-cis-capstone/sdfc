@@ -21,13 +21,13 @@ public partial class Desktop_Desktop {
     protected global::System.Web.UI.WebControls.Literal PageTitle;
     
     /// <summary>
-    /// formSearch control.
+    /// head control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.HtmlControls.HtmlForm formSearch;
+    protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
     
     /// <summary>
     /// txtSearch control.
@@ -36,16 +36,79 @@ public partial class Desktop_Desktop {
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox txtSearch;
+    protected global::System.Web.UI.HtmlControls.HtmlInputText txtSearch;
     
     /// <summary>
-    /// btnSearchByTxt control.
+    /// Checkbox20 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Button btnSearchByTxt;
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox20;
+    
+    /// <summary>
+    /// Checkbox21 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox21;
+    
+    /// <summary>
+    /// Checkbox22 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox22;
+    
+    /// <summary>
+    /// Checkbox23 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox23;
+    
+    /// <summary>
+    /// Checkbox24 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox24;
+    
+    /// <summary>
+    /// Checkbox25 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox25;
+    
+    /// <summary>
+    /// Checkbox26 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox26;
+    
+    /// <summary>
+    /// Checkbox27 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox27;
     
     /// <summary>
     /// chxOption1 control.
@@ -54,61 +117,196 @@ public partial class Desktop_Desktop {
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.CheckBox chxOption1;
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox chxOption1;
     
     /// <summary>
-    /// chxOption2 control.
+    /// Checkbox1 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.CheckBox chxOption2;
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox1;
     
     /// <summary>
-    /// chxOption3 control.
+    /// Checkbox2 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.CheckBox chxOption3;
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox2;
     
     /// <summary>
-    /// chxOption4 control.
+    /// Checkbox3 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.CheckBox chxOption4;
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox3;
     
     /// <summary>
-    /// chxOption5 control.
+    /// Checkbox4 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.CheckBox chxOption5;
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox4;
     
     /// <summary>
-    /// txtDateStart control.
+    /// Checkbox5 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox txtDateStart;
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox5;
     
     /// <summary>
-    /// txtDateEnd control.
+    /// Checkbox6 control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.TextBox txtDateEnd;
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox6;
+    
+    /// <summary>
+    /// Checkbox7 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox7;
+    
+    /// <summary>
+    /// Checkbox8 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox8;
+    
+    /// <summary>
+    /// Checkbox9 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox9;
+    
+    /// <summary>
+    /// Checkbox10 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox10;
+    
+    /// <summary>
+    /// Checkbox11 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox11;
+    
+    /// <summary>
+    /// Checkbox12 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox12;
+    
+    /// <summary>
+    /// Checkbox13 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox13;
+    
+    /// <summary>
+    /// Checkbox14 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox14;
+    
+    /// <summary>
+    /// Checkbox15 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox15;
+    
+    /// <summary>
+    /// Checkbox16 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox16;
+    
+    /// <summary>
+    /// Checkbox17 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox17;
+    
+    /// <summary>
+    /// Checkbox18 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox18;
+    
+    /// <summary>
+    /// Checkbox19 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox Checkbox19;
+    
+    /// <summary>
+    /// txtStartDate control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputText txtStartDate;
+    
+    /// <summary>
+    /// txtEndDate control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.HtmlControls.HtmlInputText txtEndDate;
     
     /// <summary>
     /// btnSearch control.
@@ -117,7 +315,7 @@ public partial class Desktop_Desktop {
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Button btnSearch;
+    protected global::System.Web.UI.HtmlControls.HtmlButton btnSearch;
     
     /// <summary>
     /// DesktopContentPlaceholder control.

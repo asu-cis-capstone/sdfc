@@ -62,11 +62,14 @@
   <ItemGroup>
     <Content Include="Desktop\Home.aspx" />
     <Content Include="Desktop\Login.aspx" />
+    <Content Include="Desktop\scripts\HomeScripts.js" />
+    <Content Include="Desktop\scripts\SearchScripts.js" />
     <Content Include="Desktop\stylesheets\home.css" />
     <Content Include="Desktop\stylesheets\login.css" />
-    <Content Include="Desktop\Manage.aspx" />
-    <Content Include="Desktop\Report.aspx" />
     <Content Include="Desktop\scripts\Interaction.js" />
+    <Content Include="Desktop\stylesheets\report.css" />
+    <Content Include="Desktop\Report.aspx" />
+    <Content Include="Desktop\Manage.aspx" />
     <Content Include="Mobile\scripts\sigpad\.gitignore" />
     <Content Include="Mobile\scripts\sigpad\assets\flashcanvas.js" />
     <Content Include="Mobile\scripts\sigpad\assets\flashcanvas.swf" />
@@ -115,19 +118,19 @@
     <Compile Include="Desktop\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Desktop\Manage.aspx.cs">
-      <DependentUpon>Manage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Desktop\Manage.aspx.designer.cs">
-      <DependentUpon>Manage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Desktop\Report.aspx.cs">
       <DependentUpon>Report.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Desktop\Report.aspx.designer.cs">
       <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Desktop\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mobile\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

@@ -14,6 +14,11 @@
 
     <!--Link to JS files -->
     <script type="text/javascript" src="scripts/interaction.js"></script>
+    <script type="text/javascript" src="scripts/searchscripts.js"></script>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+        
+        </asp:ContentPlaceHolder>
 
     <script type="text/javascript">
         var clicked = true;
@@ -40,9 +45,9 @@
         <div id="navbarContents">
             <ul>
                 <li><span id="searchlink">Search</span><img id="backarrow" src="/images/backarrow.png" style="display:none" /></li>
-                <li><a class="navbarli" href="#">Home</a></li>
-                <li><a class="navbarli" href="#">Report</a></li>
-                <li><a class="navbarli" href="#">Manage</a></li>
+                <li><a class="navbarli" href="Home.aspx">Home</a></li>
+                <li><a class="navbarli" href="Report.aspx">Report</a></li>
+                <li><a class="navbarli" href="Manage.aspx">Manage</a></li>
                 <li class="rightalign"><a class="navbarli" href="#">Sign Out</a></li>
                 <li class="rightalign"><a class="navbarli" href="#">My Account</a></li>
             </ul>
@@ -53,25 +58,56 @@
     <div id="sidebar">
         <h2 id="sidebarHeader">Search</h2>
 
-        <form id="formSearch" runat="server">
-            <asp:TextBox runat="server" ID="txtSearch"></asp:TextBox>
-            <asp:Button runat="server" ID="btnSearchByTxt" Text="GO!" OnClick="btnSearchByTxt_Click"/>
-            <ul id="ulCheckboxes">
-                <li><asp:CheckBox runat="server" ID="chxOption1" Text="option1" /></li>
-                <li><asp:CheckBox runat="server" ID="chxOption2" Text="option2" /></li>
-                <li><asp:CheckBox runat="server" ID="chxOption3" Text="option3" /></li>
-                <li><asp:CheckBox runat="server" ID="chxOption4" Text="option4" /></li>
-                <li><asp:CheckBox runat="server" ID="chxOption5" Text="option5" /></li>
+        <div id="formSearch">
+            <input type="text" runat="server" id="txtSearch" />
+            <%--<button runat="server" id="btnSearchByTxt" value="GO!" onclick="btnSearchByTxt_Click"/>--%>
+            
+            <label>Activity:</label>
+            <ul id="ul1">
+                <li><input type="checkbox" runat="server" id="Checkbox20" value="option1" />Intramurals</li>
+                <li><input type="checkbox" runat="server" id="Checkbox21" value="option1" />Sport Clubs</li>
+                <li><input type="checkbox" runat="server" id="Checkbox22" value="option1" />Informal Recreation</li>
+                <li><input type="checkbox" runat="server" id="Checkbox23" value="option1" />Group Fitness</li>
+                <li><input type="checkbox" runat="server" id="Checkbox24" value="option1" />Kid's Camp</li>
+                <li><input type="checkbox" runat="server" id="Checkbox25" value="option1" />Swim Rental</li>
+                <li><input type="checkbox" runat="server" id="Checkbox26" value="option1" />Special Event</li>
+                <li><input type="checkbox" runat="server" id="Checkbox27" value="option1" />Other</li>
+            </ul>
+            
+            <label>Location:</label>
+            <ul id="ulSearchLocation">
+                <li><input type="checkbox" runat="server" id="chxOption1" value="option1" />Maroon Gym</li>
+                <li><input type="checkbox" runat="server" id="Checkbox1" value="option1" />Gold Gym</li>
+                <li><input type="checkbox" runat="server" id="Checkbox2" value="option1" />Green Gym</li>
+                <li><input type="checkbox" runat="server" id="Checkbox3" value="option1" />Two-Bay Gym</li>
+                <li><input type="checkbox" runat="server" id="Checkbox4" value="option1" />Mac Gym</li>
+                <li><input type="checkbox" runat="server" id="Checkbox5" value="option1" />Three-Bay Gym</li>
+                <li><input type="checkbox" runat="server" id="Checkbox6" value="option1" />Indoor Track</li>
+                <li><input type="checkbox" runat="server" id="Checkbox7" value="option1" />Outdoor Track</li>
+                <li><input type="checkbox" runat="server" id="Checkbox8" value="option1" />Pool</li>
+                <li><input type="checkbox" runat="server" id="Checkbox9" value="option1" />Locker Room</li>
+                <li><input type="checkbox" runat="server" id="Checkbox10" value="option1" />West Weight Room</li>
+                <li><input type="checkbox" runat="server" id="Checkbox11" value="option1" />East Weight Room</li>
+                <li><input type="checkbox" runat="server" id="Checkbox12" value="option1" />Wellness Suite</li>
+                <li><input type="checkbox" runat="server" id="Checkbox13" value="option1" />Assessment Lab</li>
+                <li><input type="checkbox" runat="server" id="Checkbox14" value="option1" />Upstairs Loft West</li>
+                <li><input type="checkbox" runat="server" id="Checkbox15" value="option1" />Upstairs Loft East</li>
+                <li><input type="checkbox" runat="server" id="Checkbox16" value="option1" />Raquetball Court</li>
+                <li><input type="checkbox" runat="server" id="Checkbox17" value="option1" />Small Gym</li>
+                <li><input type="checkbox" runat="server" id="Checkbox18" value="option1" />Field</li>
+                <li><input type="checkbox" runat="server" id="Checkbox19" value="option1" />Other</li>
             </ul>
 
+
+
             <div id="datePicker">
-                <asp:TextBox runat="server" ID="txtDateStart"></asp:TextBox>
-                <asp:TextBox runat="server" ID="txtDateEnd"></asp:TextBox>
-                <asp:Button runat="server" ID="btnSearch" Text="Search"/>
+                <input runat="server" id="txtStartDate" type="text" />
+                <input runat="server" id="txtEndDate" type="text" />
+                <button runat="server" id="btnSearch" value="Search"/>
             </div>
 
             
-        </form>
+        </div>
         
     </div>
 

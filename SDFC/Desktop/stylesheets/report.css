@@ -1,0 +1,8 @@
+﻿body {
+}
+
+#reportSearchPanel {
+    width: 800px;
+    height: 220px;
+    background-color: red;
+}

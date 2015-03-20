@@ -1,4 +1,11 @@
 ﻿body {
+    color: #000
+}
+
+h2 {
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #divHomeContent {
@@ -7,12 +14,12 @@
     margin-right: auto;
 }
 
-#tblRecent {
+.tblRecent {
     border-collapse:collapse;
 }
 
 .trRepeater {
-    background: -webkit-linear-gradient(right, #990033 40%, rgb(76, 255, 0) 80%);
+    background: -webkit-linear-gradient(right, #990033 40%, #FFB310 80%);
     background-attachment: fixed;
 }
 
@@ -28,4 +35,15 @@
 .trVal {
     width: 300px;
     text-align: left;
+}
+
+.tblRecent:hover {
+    cursor: pointer;
+}
+
+.details {
+    color:black; 
+    background-color:white; 
+    height: 800px; 
+    width: 400px; 
 }
