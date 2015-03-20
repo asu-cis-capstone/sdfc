@@ -26,7 +26,7 @@
         $(document).on('click', '#searchlink', function () {
             if (clicked) {
                 $('#main').animate({ left: '300px' }, 500);
-                $('#searchlink').html('');
+                $('#searchlink').html('Hide');
                 $('#backarrow').css('display', 'normal');
             }
             else {
@@ -37,7 +37,8 @@
             clicked = !clicked;
         });
     </script>
-
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 
 </head>
 <body>
