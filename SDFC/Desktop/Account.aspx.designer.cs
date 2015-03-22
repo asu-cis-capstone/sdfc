@@ -10,16 +10,7 @@
 namespace SDFC.Desktop {
     
     
-    public partial class WebForm2 {
-        
-        /// <summary>
-        /// divRecent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divRecent;
+    public partial class WebForm3 {
         
         /// <summary>
         /// lblTitle control.
@@ -29,14 +20,5 @@ namespace SDFC.Desktop {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblTitle;
-        
-        /// <summary>
-        /// rptrRecent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptrRecent;
     }
 }

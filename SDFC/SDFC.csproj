@@ -63,13 +63,16 @@
     <Content Include="Desktop\Home.aspx" />
     <Content Include="Desktop\Login.aspx" />
     <Content Include="Desktop\scripts\HomeScripts.js" />
+    <Content Include="Desktop\scripts\ManageScripts.js" />
     <Content Include="Desktop\scripts\SearchScripts.js" />
     <Content Include="Desktop\stylesheets\home.css" />
     <Content Include="Desktop\stylesheets\login.css" />
     <Content Include="Desktop\scripts\Interaction.js" />
+    <Content Include="Desktop\stylesheets\manage.css" />
     <Content Include="Desktop\stylesheets\report.css" />
     <Content Include="Desktop\Report.aspx" />
     <Content Include="Desktop\Manage.aspx" />
+    <Content Include="Desktop\Account.aspx" />
     <Content Include="Mobile\scripts\sigpad\.gitignore" />
     <Content Include="Mobile\scripts\sigpad\assets\flashcanvas.js" />
     <Content Include="Mobile\scripts\sigpad\assets\flashcanvas.swf" />
@@ -131,6 +134,13 @@
     </Compile>
     <Compile Include="Desktop\Manage.aspx.designer.cs">
       <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Desktop\Account.aspx.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Desktop\Account.aspx.designer.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
     </Compile>
     <Compile Include="Mobile\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

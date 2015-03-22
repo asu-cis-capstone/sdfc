@@ -22,18 +22,6 @@ public partial class Desktop_Desktop {
     
     /// <summary>
     /// head control.
-<<<<<<< HEAD
-=======
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
-    
-    /// <summary>
-    /// formSearch control.
->>>>>>> c051dcd0f4cd1966f017dd099e5feef5c91e05b9
     /// </summary>
     /// <remarks>
     /// Auto-generated field.

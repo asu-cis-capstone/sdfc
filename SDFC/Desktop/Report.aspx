@@ -6,19 +6,20 @@
 
 <asp:Content ID="ReportContent" ContentPlaceHolderID="DesktopContentPlaceholder" runat="server">
     
-    <div id="divHomeContent">
-        <asp:Label id="lblReportTitle" runat="server">Reports</asp:Label>
+    <div id="divContent">
+        <asp:Label id="lblReportTitle" CssClass="titleCss" runat="server">Reports</asp:Label>
         <div id="reportSearchPanel">
-            <label>Start Date:</label>
-            <input runat="server" id="txtStartDate" type="text" />
-            <label>End Date:</label>
-            <input runat="server" id="txtEndDate" type="text" />
-
+            <div id="reportSearchPanelContents">
+                <label>Start Date:</label>
+                <input runat="server" id="txtStartDate" type="text" />
+                <label>End Date:</label>
+                <input runat="server" id="txtEndDate" type="text" />
+            </div>
         </div>
 
         <div id="reportResults">
-            <button runat="server" id="btnExportCsv" value="exportcsv">Export as .CSV</button>
-            <button runat="server" id="btnExportXls" value="exportxls">Export as .XLS</button>
+            <button runat="server" id="btnExportCsv" value="exportcsv" class="btnClass rightalign">Export .CSV</button>
+            <button runat="server" id="btnExportXls" value="exportxls" class="btnClass rightalign">Export .XLS</button>
 
             <form runat="server">
                 <asp:GridView runat="server" ID="gvReportResults" AllowPaging="false" AllowSorting="false" AutoGenerateColumns="false">

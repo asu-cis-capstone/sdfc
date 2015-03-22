@@ -1,6 +1,11 @@
 ﻿$(document).ready(function () {
-});
 
-$('.tblRecent').click(function () {
-    $('.details').css('background-color', 'red');
-})
+    $('.tblRepeater').click(function () {
+        if ($(this).next('.recordDetails').css('display') == 'none') {
+            $(this).next('.recordDetails').slideDown();
+        } else {
+            $(this).next('.recordDetails').slideUp();
+        }
+    })
+
+});

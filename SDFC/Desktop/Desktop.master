@@ -27,30 +27,26 @@
             if (clicked) {
                 $('#main').animate({ left: '300px' }, 500);
                 $('#searchlink').html('Hide');
-                $('#backarrow').css('display', 'normal');
             }
             else {
                 $('#main').animate({ left: '0px' }, 500);
                 $('#searchlink').html('Search');
-                $('#backarrow').css('display', 'none');
             }
             clicked = !clicked;
         });
     </script>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
 
 </head>
 <body>
     <div id="navbar">
         <div id="navbarContents">
             <ul>
-                <li><span id="searchlink">Search</span><img id="backarrow" src="/images/backarrow.png" style="display:none" /></li>
+                <li><a id="searchlink" class="navbarli" href="#">Search</a></li>
                 <li><a class="navbarli" href="Home.aspx">Home</a></li>
                 <li><a class="navbarli" href="Report.aspx">Report</a></li>
                 <li><a class="navbarli" href="Manage.aspx">Manage</a></li>
                 <li class="rightalign"><a class="navbarli" href="#">Sign Out</a></li>
-                <li class="rightalign"><a class="navbarli" href="#">My Account</a></li>
+                <li class="rightalign"><a class="navbarli" href="Account.aspx">My Account</a></li>
             </ul>
                 
         </div>

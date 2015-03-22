@@ -2,7 +2,26 @@
 }
 
 #reportSearchPanel {
+    width: 100%;
+    height: 150px;
+    background-color: #FFB310;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+#reportSearchPanelContents {
     width: 800px;
-    height: 220px;
-    background-color: red;
+    height: 150px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+#reportResults {
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+.btnClass {
+    margin-left: 4px;
 }
