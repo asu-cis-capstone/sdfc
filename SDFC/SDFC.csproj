@@ -65,6 +65,7 @@
     <Content Include="Desktop\scripts\HomeScripts.js" />
     <Content Include="Desktop\scripts\ManageScripts.js" />
     <Content Include="Desktop\scripts\SearchScripts.js" />
+    <Content Include="Desktop\stylesheets\account.css" />
     <Content Include="Desktop\stylesheets\home.css" />
     <Content Include="Desktop\stylesheets\login.css" />
     <Content Include="Desktop\scripts\Interaction.js" />

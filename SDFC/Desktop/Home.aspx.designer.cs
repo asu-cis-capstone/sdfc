@@ -39,13 +39,13 @@ public partial class _Default {
     protected global::System.Web.UI.WebControls.Label lblHomeTitle;
     
     /// <summary>
-    /// rptrRecent control.
+    /// rptrHome control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Repeater rptrRecent;
+    protected global::System.Web.UI.WebControls.Repeater rptrHome;
     
     /// <summary>
     /// Master property.

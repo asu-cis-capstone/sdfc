@@ -17,152 +17,87 @@
         <div id="recentRecords">
             <div id="divRecent" class="recentRecord" runat="server">
                 <asp:Label id="lblHomeTitle" runat="server">Recently Submitted</asp:Label>
-                <asp:Repeater runat="server" ID="rptrRecent">
+                
+                <asp:Repeater runat="server" ID="rptrHome">
                     <HeaderTemplate>
-                        <table id="tblRecords">
+                        <div class="divRepeater">
                     </HeaderTemplate>
                     <ItemTemplate>
-                        <tr class="trRepeater">
-                            <td>
-                                Date: 
-                            </td>
-                            <td>
-                                <%# DataBinder.Eval(Container.DataItem, "date")%>
-                            </td>
-                            <td>
-                                Type: 
-                            </td>
-                            <td>
-                                 <%# DataBinder.Eval(Container.DataItem, "reportType")%>
-                            </td>
-                        </tr>
-                        <tr class="trRepeater">
-                            <td>
-                                Submitted By:
-                            </td>
-                            <td>
-                                 <%# DataBinder.Eval(Container.DataItem, "submittedBy")%>
-                            </td>
-                            <td>
-                                Victim:
-                            </td>
-                            <td>
-                                 <%# DataBinder.Eval(Container.DataItem, "victim")%>
-                            </td>
-                        </tr>
-                        <tr class="trRepeaterSpace">
-
-                        </tr>
+                        <%--first table is for record snippet collapsed--%>
+                        <table class="tblRepeater"> 
+                            <tr class="trRepeater">
+                                <td class="trHdr">
+                                    Date: 
+                                </td>
+                                <td class="trVal">
+                                    <%# DataBinder.Eval(Container.DataItem, "date")%>
+                                </td>
+                                <td class="trHdr">
+                                    Type: 
+                                </td>
+                                <td class="trVal">
+                                    <%# DataBinder.Eval(Container.DataItem, "date")%>
+                                </td>
+                            </tr>
+                            <tr class="trRepeater">
+                                <td class="trHdr">
+                                    Submitted By:
+                                </td>
+                                <td class="trVal">
+                                    <%# DataBinder.Eval(Container.DataItem, "date")%>
+                                </td>
+                                <td class="trHdr">
+                                    Victim:
+                                </td>
+                                <td class="trVal">
+                                    <%# DataBinder.Eval(Container.DataItem, "date")%>
+                                </td>
+                            </tr>
+                        </table>
+                        <%--second table is actual form when expanded and wha you download as pdf--%>
+                        <table class="recordDetails">
+                            <tr>
+                                <td class="trHdr">
+                                    Date: 
+                                </td>
+                                <td class="trVal">
+                                    <%# DataBinder.Eval(Container.DataItem, "date")%>
+                                </td>
+                                <td class="trHdr">
+                                    Type: 
+                                </td>
+                                <td class="trVal">
+                                    <%# DataBinder.Eval(Container.DataItem, "date")%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="trHdr">
+                                    Date: 
+                                </td>
+                                <td class="trVal">
+                                    <%# DataBinder.Eval(Container.DataItem, "date")%>
+                                </td>
+                                <td class="trHdr">
+                                    Type: 
+                                </td>
+                                <td class="trVal">
+                                    <%# DataBinder.Eval(Container.DataItem, "type")%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="btnClass">Export .PDF</button>
+                                </td>
+                            </tr>
+                        </table>
                     </ItemTemplate>
                     <FooterTemplate>
-                        </table>
+                        </div>
                     </FooterTemplate>
                 </asp:Repeater>
 
-                    <%--<table id="tblRecent">
-                            <tr class="trRepeater">
-                                <td class="trHdr">
-                                    Date: 
-                                </td>
-                                <td class="trVal">
-                                    3/15/15
-                                </td>
-                                <td class="trHdr">
-                                    Type: 
-                                </td>
-                                <td class="trVal">
-                                     Accident Report
-                                </td>
-                            </tr>
-                            <tr class="trRepeater">
-                                <td class="trHdr">
-                                    Submitted By:
-                                </td>
-                                <td class="trVal">
-                                     Facility Manager
-                                </td>
-                                <td class="trHdr">
-                                    Victim:
-                                </td>
-                                <td class="trVal">
-                                    Tim O'Leary
-                                </td>
-                                <td>
 
-                                </td>
-                            </tr>
-                            <tr class="trRepeaterSpace">
-
-                            </tr>
-                        </table>--%>
-                    <div class="divRepeater">
-                        <table class="tblRepeater">
-                            <tr class="trRepeater">
-                                <td class="trHdr">
-                                    Date: 
-                                </td>
-                                <td class="trVal">
-                                    3/15/15
-                                </td>
-                                <td class="trHdr">
-                                    Type: 
-                                </td>
-                                <td class="trVal">
-                                     Accident Report
-                                </td>
-                            </tr>
-                            <tr class="trRepeater">
-                                <td class="trHdr">
-                                    Submitted By:
-                                </td>
-                                <td class="trVal">
-                                     Facility Manager
-                                </td>
-                                <td class="trHdr">
-                                    Victim:
-                                </td>
-                                <td class="trVal">
-                                    Tim O'Leary
-                                </td>
-                                <td>
-
-                                </td>
-                            </tr>
-                            <tr class="trRepeaterSpace">
-                            </tr>
-                    </table>
-                    <table class="recordDetails">
-                        <tr>
-                            <td class="trHdr">
-                                Date: 
-                            </td>
-                            <td class="trVal">
-                                3/15/15
-                            </td>
-                            <td class="trHdr">
-                                Type: 
-                            </td>
-                            <td class="trVal">
-                                 Accident Report
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="trHdr">
-                                Date: 
-                            </td>
-                            <td class="trVal">
-                                3/15/15
-                            </td>
-                            <td class="trHdr">
-                                Type: 
-                            </td>
-                            <td class="trVal">
-                                 Accident Report
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
+                <%--test data start--%>
                 <div class="divRepeater">
                         <table class="tblRepeater">
                             <tr class="trRepeater">
@@ -225,6 +160,139 @@
                         </tr>
                     </table>
                 </div>
+
+                <div class="divRepeater">
+                    <table class="tblRepeater">
+                        <tr class="trRepeater">
+                            <td class="trHdr">
+                                Date: 
+                            </td>
+                            <td class="trVal">
+                                3/15/15
+                            </td>
+                            <td class="trHdr">
+                                Type: 
+                            </td>
+                            <td class="trVal">
+                                 Accident Report
+                            </td>
+                        </tr>
+                        <tr class="trRepeater">
+                            <td class="trHdr">
+                                Submitted By:
+                            </td>
+                            <td class="trVal">
+                                 Facility Manager
+                            </td>
+                            <td class="trHdr">
+                                Victim:
+                            </td>
+                            <td class="trVal">
+                                Tim O'Leary
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr class="trRepeaterSpace">
+                        </tr>
+                    </table>
+                    <table class="recordDetails">
+                        <tr>
+                            <td class="trHdr">
+                                Date: 
+                            </td>
+                            <td class="trVal">
+                                3/15/15
+                            </td>
+                            <td class="trHdr">
+                                Type: 
+                            </td>
+                            <td class="trVal">
+                                 Accident Report
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="trHdr">
+                                Date: 
+                            </td>
+                            <td class="trVal">
+                                3/15/15
+                            </td>
+                            <td class="trHdr">
+                                Type: 
+                            </td>
+                            <td class="trVal">
+                                 Accident Report
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="divRepeater">
+                    <table class="tblRepeater">
+                        <tr class="trRepeater">
+                            <td class="trHdr">
+                                Date: 
+                            </td>
+                            <td class="trVal">
+                                3/15/15
+                            </td>
+                            <td class="trHdr">
+                                Type: 
+                            </td>
+                            <td class="trVal">
+                                 Accident Report
+                            </td>
+                        </tr>
+                        <tr class="trRepeater">
+                            <td class="trHdr">
+                                Submitted By:
+                            </td>
+                            <td class="trVal">
+                                 Facility Manager
+                            </td>
+                            <td class="trHdr">
+                                Victim:
+                            </td>
+                            <td class="trVal">
+                                Tim O'Leary
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="recordDetails">
+                        <tr>
+                            <td class="trHdr">
+                                Date: 
+                            </td>
+                            <td class="trVal">
+                                3/15/15
+                            </td>
+                            <td class="trHdr">
+                                Type: 
+                            </td>
+                            <td class="trVal">
+                                 Accident Report
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="trHdr">
+                                Date: 
+                            </td>
+                            <td class="trVal">
+                                3/15/15
+                            </td>
+                            <td class="trHdr">
+                                Type: 
+                            </td>
+                            <td class="trVal">
+                                 Accident Report
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <%--test data end--%>
+
 
             </div>
         </div>

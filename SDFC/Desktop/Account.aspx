@@ -8,7 +8,11 @@
 
 <asp:Content ID="AccountContent" ContentPlaceHolderID="DesktopContentPlaceholder" runat="server">
     <div id="divContent">
-        <asp:Label id="lblTitle" CssClass="titleCss" runat="server">My Account</asp:Label>
+        <div id="divAccount">
+            <asp:Label id="lblTitle" CssClass="titleCss" runat="server">My Account</asp:Label>
+            <div id="divAccountContents">
 
+            </div>
+        </div>
     </div>
 </asp:Content>

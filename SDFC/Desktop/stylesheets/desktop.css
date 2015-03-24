@@ -1,6 +1,5 @@
 ﻿body {
     color: black;
-    background-color: yellow;
     overflow-x: hidden;
     font-family: Calibri;
 }
@@ -73,8 +72,34 @@ h1 {
     float:right;
 }
 
+#tblSearch {
+    margin-left:auto;
+    margin-right:auto;
+    text-align: left;
+    border: black 1px solid;
+}
+
+.date {
+    display: block;
+    width: 96%;
+    height: 24px;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    text-align: left;
+    padding-left: 4px;
+    white-space: nowrap;
+    line-height: 26px;
+    color: #444;
+    text-decoration: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
 .searchli {
-    color: black;
     width: 300px;
     height: 80px;
     top: 20px;
@@ -96,15 +121,14 @@ h1 {
 }
 
 #sidebar {
-    color: black;
     background-color: #FFB310;
     position: fixed;
     width: 300px;
     height: 100%;
     top: 70px;
-    left: 0;
+    left: -300px;
     text-align: center;
-    z-index: 0;
+    z-index: 5;
     display: block;
 }
 
@@ -121,10 +145,9 @@ h1 {
     position:absolute;
     left: 0px;
     top:70px;
-    height: 10000px;
+    height: calc(100% - 70px);
     float: left;
     z-index:1;
-    color: black;
     background-color: #990033;
     width:100%;
 }
@@ -137,7 +160,7 @@ h1 {
 }
 
 #recentRecords {
-    color:white;
+    /*color:white;*/
 }
 
 #divContent {
@@ -167,7 +190,7 @@ h1 {
 
 .tblRepeater {
     border-collapse: collapse;
-    color: white;
+    /*color: white;*/
 }
 
 .trRepeater {
