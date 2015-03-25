@@ -24,6 +24,7 @@ namespace SDFC.Models
             //create db connection
             myConnection = new MySqlConnection(connectionString);
         }
+
         /// <summary>
         /// Attempts to authenticate user against database
         /// </summary>
@@ -68,6 +69,12 @@ namespace SDFC.Models
             }
             //return query result
             return result;
+        }
+
+        public bool AddReport(AccidentReport report)
+        {
+            //temporary
+            return true;
         }
     }
 }
