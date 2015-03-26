@@ -13,6 +13,60 @@ namespace SDFC.Mobile {
     public partial class Form {
         
         /// <summary>
+        /// ActionList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource ActionList;
+        
+        /// <summary>
+        /// ActivityList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource ActivityList;
+        
+        /// <summary>
+        /// InjuryLocationList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource InjuryLocationList;
+        
+        /// <summary>
+        /// LocationList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource LocationList;
+        
+        /// <summary>
+        /// InjuryTypeList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource InjuryTypeList;
+        
+        /// <summary>
+        /// TreatmentList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource TreatmentList;
+        
+        /// <summary>
         /// name control.
         /// </summary>
         /// <remarks>
@@ -130,13 +184,22 @@ namespace SDFC.Mobile {
         protected global::System.Web.UI.WebControls.Label gender;
         
         /// <summary>
+        /// genderSelect control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList genderSelect;
+        
+        /// <summary>
         /// genderMale control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton genderMale;
+        protected global::System.Web.UI.WebControls.ListItem genderMale;
         
         /// <summary>
         /// genderFemale control.
@@ -145,7 +208,7 @@ namespace SDFC.Mobile {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton genderFemale;
+        protected global::System.Web.UI.WebControls.ListItem genderFemale;
         
         /// <summary>
         /// activity control.
@@ -283,13 +346,22 @@ namespace SDFC.Mobile {
         protected global::System.Web.UI.WebControls.Label facMan;
         
         /// <summary>
+        /// facManSelection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList facManSelection;
+        
+        /// <summary>
         /// facManYes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton facManYes;
+        protected global::System.Web.UI.WebControls.ListItem facManYes;
         
         /// <summary>
         /// facManNo control.
@@ -298,7 +370,7 @@ namespace SDFC.Mobile {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton facManNo;
+        protected global::System.Web.UI.WebControls.ListItem facManNo;
         
         /// <summary>
         /// contacted control.
@@ -310,22 +382,31 @@ namespace SDFC.Mobile {
         protected global::System.Web.UI.WebControls.Label contacted;
         
         /// <summary>
+        /// contactedSelection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList contactedSelection;
+        
+        /// <summary>
         /// contactedYes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton contactedYes;
+        protected global::System.Web.UI.WebControls.ListItem contactedYes;
         
         /// <summary>
-        /// cotactedNo control.
+        /// contactedNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton cotactedNo;
+        protected global::System.Web.UI.WebControls.ListItem contactedNo;
         
         /// <summary>
         /// ReportNum control.
@@ -533,6 +614,15 @@ namespace SDFC.Mobile {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label signature;
+        
+        /// <summary>
+        /// output control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden output;
         
         /// <summary>
         /// submitButton control.

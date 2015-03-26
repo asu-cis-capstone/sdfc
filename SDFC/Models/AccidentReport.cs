@@ -34,6 +34,7 @@ namespace SDFC.Models
         public string Description { get; set; }
         public string WitnessName { get; set; }
         public string WitnessPhone { get; set; }
+        public string SignatureJSON { get; set; }
 
 
     }

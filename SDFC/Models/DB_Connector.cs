@@ -74,6 +74,74 @@ namespace SDFC.Models
         public bool AddReport(AccidentReport report)
         {
             //temporary
+            //create command
+            MySqlCommand cmd = new MySqlCommand("SomeProcedure");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddRange(new MySqlParameter[] {
+                new MySqlParameter("", report.Action),
+                new MySqlParameter("", report.Activity),
+                new MySqlParameter("", report.Address),
+                new MySqlParameter("", report.Age),
+                new MySqlParameter("", report.ArrivalTime),
+                new MySqlParameter("", report.Comments),
+                new MySqlParameter("", report.Description),
+                new MySqlParameter("", report.FacilitiesManagemet),
+                new MySqlParameter("", report.InjuryLocation),
+                new MySqlParameter("", report.InjuryType),
+                new MySqlParameter("", report.location),
+                new MySqlParameter("", report.Male),
+                new MySqlParameter("", report.ManagerCalled),
+                new MySqlParameter("", report.MedicalReport),
+                new MySqlParameter("", report.Name),
+                new MySqlParameter("", report.Phone),
+                new MySqlParameter("", report.PoliceContacted),
+                new MySqlParameter("", report.PositionTitles),
+                new MySqlParameter("", report.ReportNumber),
+                new MySqlParameter("", report.SignatureJSON),
+                new MySqlParameter("", report.TimeCalled),
+                new MySqlParameter("", report.TransportedTo),
+                new MySqlParameter("", report.Treatment),
+                new MySqlParameter("", report.Treator),
+                new MySqlParameter("", report.VictimName),
+                new MySqlParameter("", report.WhyNot),
+                new MySqlParameter("", report.WitnessName),
+                new MySqlParameter("", report.WitnessPhone)
+                }
+            );
+            //create reader
+            MySqlDataReader reader = null;
+
+            //give connection to cmd
+            cmd.Connection = myConnection;
+
+            //create and initialize boolean to store query result
+            bool result = false;
+
+            try
+            {
+                //open connection to mySql server
+                myConnection.Open();
+
+                //prepare statement
+                cmd.Prepare();
+
+                //run command
+                reader = cmd.ExecuteReader();
+
+                //store whether a record was found
+                result = reader.HasRows;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                //dispose
+                myConnection.Close();
+            }
+            
+            //return query result            
             return true;
         }
     }

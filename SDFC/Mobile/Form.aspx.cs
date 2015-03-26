@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using SDFC.Models;
+using System.Web.Configuration;
+using System.Web.UI.HtmlControls;
 
 namespace SDFC.Mobile
 {
@@ -32,9 +34,18 @@ namespace SDFC.Mobile
 
             if (!this.IsPostBack)
             {
+                string conString = WebConfigurationManager.AppSettings["ConnectionString"];
+                ActionList.ConnectionString = conString;
+                ActivityList.ConnectionString = conString;
+                InjuryLocationList.ConnectionString = conString;
+                InjuryTypeList.ConnectionString = conString;
+                LocationList.ConnectionString = conString;
+                TreatmentList.ConnectionString = conString;
+
                 this.Master.Title = "form";
                 Master.HasSigPad = true;
                 myConnector = new DB_Connector();
+                
             }
             else
             {
@@ -44,29 +55,35 @@ namespace SDFC.Mobile
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
+            //get control with JSON data from page
+            ContentPlaceHolder cph = (ContentPlaceHolder)this.Master.FindControl("MobileContent");
+            HtmlInputHidden myControl = (HtmlInputHidden)cph.FindControl("output");
+
             //create new accident report
             AccidentReport myReport = new AccidentReport();            
             
             //populate object with values from inputs
+            //myReport.SignatureJSON = output.Value;
+            myReport.SignatureJSON = myControl.Value;
             myReport.Name = txtName.Text;
             myReport.Comments = txtComments.Text;
             myReport.VictimName = txtVictimName.Text;
             myReport.Address = txtAddress.Text;
             myReport.Phone = txtPhone.Text;
             myReport.Age = Convert.ToInt32(txtAge.Text);
-            myReport.Male = genderMale.Checked;
-            myReport.Activity = txtActivity.SelectedIndex;
-            myReport.location = txtLocation.SelectedIndex;
-            myReport.Action = txtAction.SelectedIndex;
-            myReport.InjuryType = txtInjuryType.SelectedIndex;
-            myReport.InjuryLocation = txtLocation.SelectedIndex;
-            myReport.Treatment = txtTreatment.SelectedIndex;
+            myReport.Male = genderMale.Selected;
+            myReport.Activity = Convert.ToInt32(txtActivity.SelectedValue);
+            myReport.location = Convert.ToInt32(txtLocation.SelectedValue);
+            myReport.Action = Convert.ToInt32(txtAction.SelectedValue);
+            myReport.InjuryType = Convert.ToInt32(txtInjuryType.SelectedValue);
+            myReport.InjuryLocation = Convert.ToInt32(txtLocation.SelectedValue);
+            myReport.Treatment = Convert.ToInt32(txtTreatment.SelectedValue);
             myReport.Treator = txtTreator.Text;
-            myReport.FacilitiesManagemet = facManYes.Checked;
-            myReport.PoliceContacted = contactedYes.Checked;
+            myReport.FacilitiesManagemet = facManYes.Selected;
+            myReport.PoliceContacted = contactedYes.Selected;
             myReport.ReportNumber = txtReportNum.Text;
             myReport.TimeCalled = Convert.ToDateTime(txtTimeCalled.Text);
-            myReport.TimeCalled = Convert.ToDateTime(txtArrivalTime.Text);
+            myReport.ArrivalTime = Convert.ToDateTime(txtArrivalTime.Text);
             myReport.TransportedTo = txtTransportedTo.Text;
             myReport.MedicalReport = txtMedicalReport.Text;
             myReport.PositionTitles = txtPositionTitles.Text;
@@ -74,7 +91,8 @@ namespace SDFC.Mobile
             myReport.WhyNot = txtNotWhy.Text;
             myReport.Description = txtDescription.Text;
             myReport.WitnessName = txtWitnessName.Text;
-            myReport.WitnessPhone = txtWitnessPhone.Text;
+            myReport.WitnessPhone = txtWitnessPhone.Text;            
+            //myReport.SignatureJSON = output.Value;
 
             //add the report to the database
             myConnector.AddReport(myReport);

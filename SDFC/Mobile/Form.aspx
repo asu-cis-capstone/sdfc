@@ -2,6 +2,12 @@
 <%@ MasterType VirtualPath="~/Mobile/Mobile.master" %>
 
 <asp:Content ID="Form" runat="server" ContentPlaceHolderID="MobileContent">
+    <asp:SqlDataSource ID="ActionList" runat="server" SelectCommand="SELECT actionsID, actionName from actions" ProviderName="Mysql.Data.MySqlClient"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="ActivityList" runat="server" SelectCommand="SELECT activityID, activityName from activity" ProviderName="Mysql.Data.MySqlClient"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="InjuryLocationList" runat="server" SelectCommand="SELECT injuryLocationID, injuryLocationName FROM injuryLocation" ProviderName="Mysql.Data.MySqlClient"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="LocationList" runat="server" SelectCommand="SELECT locationID, locationName FROM location" ProviderName="Mysql.Data.MySqlClient"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="InjuryTypeList" runat="server" SelectCommand="SELECT injuryTypeID, injuryTypeName FROM injuryType" ProviderName="Mysql.Data.MySqlClient"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="TreatmentList" runat="server" SelectCommand="SELECT treatmentID, treatmentName FROM treatment" ProviderName="Mysql.Data.MySqlClient"></asp:SqlDataSource>
     <div class="horizontalCenter">
         <div id="formInputs" class="horizontalCenter">
             <asp:Label ID="name" runat="server" ClientIDMode="Static">Name</asp:Label>
@@ -36,39 +42,43 @@
 
             <asp:Label ID="gender" runat="server">Gender</asp:Label>
             <br />
-            <asp:RadioButton ID="genderMale" runat="server" Text="Male" GroupName="genderSelection"/>
-            <asp:RadioButton ID="genderFemale" runat="server" Text="Female" GroupName="genderSelection"/>
+            <asp:RadioButtonList ID="genderSelect" runat="server" RepeatDirection="Horizontal">
+                <asp:ListItem ID="genderMale" runat="server" Text="Male"></asp:ListItem>
+                <asp:ListItem ID="genderFemale" runat="server" Text="Female"></asp:ListItem>
+            </asp:RadioButtonList>
+            <%--<asp:RadioButton ID="genderMale" runat="server" Text="Male" GroupName="genderSelection"/>
+            <asp:RadioButton ID="genderFemale" runat="server" Text="Female" GroupName="genderSelection"/>--%>
             <br />
 
             <asp:Label ID="activity" runat="server">Activity</asp:Label>
             <br />
-            <asp:DropDownList ID="txtActivity" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="txtActivity" runat="server" DataSourceID="ActivityList" DataTextField="activityName" DataValueField="activityID"></asp:DropDownList>
             <br />
 
             <asp:Label ID="location" runat="server">Location</asp:Label>
             <br />
-            <asp:DropDownList ID="txtLocation" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="txtLocation" runat="server" DataSourceID="LocationList" DataTextField="locationName" DataValueField="locationID"></asp:DropDownList>
             <br />
 
 
             <asp:Label ID="action" runat="server">Action Taken</asp:Label>
             <br />
-            <asp:DropDownList ID="txtAction" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="txtAction" runat="server" DataSourceID="ActionList" DataTextField="actionName" DataValueField="actionsID"></asp:DropDownList>
             <br />
 
             <asp:Label ID="injuryType" runat="server">Suspected Injury Type</asp:Label>
             <br />
-            <asp:DropDownList ID="txtInjuryType" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="txtInjuryType" runat="server" DataSourceID="InjuryTypeList" DataTextField="injuryTypeName" DataValueField="injuryTypeID"></asp:DropDownList>
             <br />
 
             <asp:Label ID="injuryLocation" runat="server">Location of Injury</asp:Label>
             <br />
-            <asp:DropDownList ID="txtInjuryLocation" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="txtInjuryLocation" runat="server" DataSourceID="InjuryLocationList" DataTextField="injuryLocationName" DataValueField="injuryLocationID"></asp:DropDownList>
             <br />
 
             <asp:Label ID="treatment" runat="server">Method of Treatment</asp:Label>
             <br />
-            <asp:DropDownList ID="txtTreatment" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="txtTreatment" runat="server" DataSourceID="TreatmentList" DataTextField="treatmentName" DataValueField="treatmentID"></asp:DropDownList>
             <br />            
 
             <asp:Label ID="treator" runat="server">Name of Treator</asp:Label>
@@ -78,14 +88,18 @@
 
             <asp:Label ID="facMan" runat="server">Fac. Man. Contacted?</asp:Label>
             <br />            
-            <asp:RadioButton runat="server" ID="facManYes" GroupName="facManSelection" Text="Yes" />
-            <asp:RadioButton runat="server" ID="facManNo" GroupName="facManSelection" Text="No" />
+            <asp:RadioButtonList ID="facManSelection" runat="server" RepeatDirection="Horizontal">
+                <asp:ListItem ID="facManYes" runat="server" Text="Yes"></asp:ListItem>
+                <asp:ListItem ID="facManNo" runat="server" Text="No"></asp:ListItem>
+            </asp:RadioButtonList>
             <br />
 
             <asp:Label ID="contacted" runat="server">911 Contacted?</asp:Label>
             <br />
-            <asp:RadioButton runat="server" ID="contactedYes" GroupName="facManSelection" Text="Yes" />
-            <asp:RadioButton runat="server" ID="cotactedNo" GroupName="facManSelection" Text="No" />
+            <asp:RadioButtonList ID="contactedSelection" runat="server" RepeatDirection="Horizontal">
+                <asp:ListItem ID="contactedYes" runat="server" Text="Yes"></asp:ListItem>
+                <asp:ListItem ID="contactedNo" runat="server" Text="No"></asp:ListItem>
+            </asp:RadioButtonList>
             <br />
 
             <asp:Label ID="ReportNum" runat="server">911 Report Number</asp:Label>
@@ -147,7 +161,8 @@
             <div class="sig sigWrapper">
                 <div class="typed"></div>
                 <canvas class="pad" height="200" width="600"></canvas>
-                <input type="hidden" name="output" class="output" runat="server" />
+                <input type="hidden" id="output" name="output" class="output" runat="server" />
+                <%--<asp:HiddenField ID="output" runat="server" />--%>
             </div>
 
             <asp:Button ID="submitButton" runat="server" ClientIDMode="Static" CssClass="button" Text="submit" OnClick="submitButton_Click"/>
