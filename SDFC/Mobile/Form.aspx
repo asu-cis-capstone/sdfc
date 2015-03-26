@@ -10,7 +10,7 @@
     <asp:SqlDataSource ID="TreatmentList" runat="server" SelectCommand="SELECT treatmentID, treatmentName FROM treatment" ProviderName="Mysql.Data.MySqlClient"></asp:SqlDataSource>
     <div class="horizontalCenter">
         <div id="formInputs" class="horizontalCenter">
-            <asp:Label ID="name" runat="server" ClientIDMode="Static">Name</asp:Label>
+            <asp:Label ID="name" runat="server" ClientIDMode="Static">ASU ID</asp:Label>
             <br />
             <asp:TextBox ID="txtName" runat="server" ClientIDMode="Static"></asp:TextBox>
             <br />                                                
@@ -100,7 +100,7 @@
                 <asp:ListItem ID="contactedYes" runat="server" Text="Yes"></asp:ListItem>
                 <asp:ListItem ID="contactedNo" runat="server" Text="No"></asp:ListItem>
             </asp:RadioButtonList>
-            <br />
+            <br />            
 
             <asp:Label ID="ReportNum" runat="server">911 Report Number</asp:Label>
             <br />
@@ -156,7 +156,7 @@
             <asp:TextBox ID="txtWitnessPhone" runat="server"></asp:TextBox>
             <br />
 
-            <asp:Label ID="signature" runat="server" ClientIDMode="Static">signature</asp:Label>
+            <asp:Label ID="victimSignature" runat="server" ClientIDMode="Static">victim signature</asp:Label>
             <br />
             <div class="sig sigWrapper">
                 <div class="typed"></div>

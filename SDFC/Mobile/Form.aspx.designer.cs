@@ -607,13 +607,13 @@ namespace SDFC.Mobile {
         protected global::System.Web.UI.WebControls.TextBox txtWitnessPhone;
         
         /// <summary>
-        /// signature control.
+        /// victimSignature control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label signature;
+        protected global::System.Web.UI.WebControls.Label victimSignature;
         
         /// <summary>
         /// output control.
