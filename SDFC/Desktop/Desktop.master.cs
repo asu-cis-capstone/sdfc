@@ -36,7 +36,7 @@ public partial class Desktop_Desktop : System.Web.UI.MasterPage
 
     protected void btnSearchByTxt_Click(object sender, EventArgs e)
     {
-        string search = txtSearch.Text;
+        string search = "";//txtSearch.Text;
         //Create MySQL connection
         MySqlConnection conn = new MySqlConnection("SERVER=cis440.cj1rt5lolr7p.us-west-2.rds.amazonaws.com;DATABASE=cis440db;UID=capstone;PASSWORD=cis440clark");
 

@@ -1,6 +1,5 @@
 ﻿body {
     color: black;
-    background-color: yellow;
     overflow-x: hidden;
     font-family: Calibri;
 }
@@ -24,7 +23,7 @@ h1 {
 #navbar {
     top: 0;
     left: 0;
-    height: 100px;
+    height: 70px;
     width: 100%;
     position: fixed;
     color: rgb(240, 240, 240);
@@ -40,7 +39,7 @@ h1 {
     font-size: 0px;
     list-style-type: none;
     padding: 0;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #navbarContents li {
@@ -55,10 +54,10 @@ h1 {
     display: table-cell;
     vertical-align: middle;
     width: 170px;
-    height: 80px;
-    top: 20px;
+    height: 60px;
+    top: 10px;
     color: black;
-    font-size: 24px;
+    font-size: 16px;
     text-align:center;
     text-decoration: none;
     background-color: #FFB310;
@@ -73,11 +72,39 @@ h1 {
     float:right;
 }
 
+#tblSearch {
+    margin-left:auto;
+    margin-right:auto;
+    text-align: left;
+    border: black 1px solid;
+}
+
+.date {
+    display: block;
+    width: 96%;
+    height: 24px;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    text-align: left;
+    padding-left: 4px;
+    white-space: nowrap;
+    line-height: 26px;
+    color: #444;
+    text-decoration: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
 .searchli {
-    color: black;
     width: 300px;
     height: 80px;
     top: 20px;
+    display: inline-block;
+    vertical-align: middle;
     margin-right:auto;
     margin-left: auto;
     text-align:center;
@@ -86,29 +113,7 @@ h1 {
 }
 
 #searchlink {
-    color: black;
-    font-size: 24px;
-    display: table-cell;
-    vertical-align: middle;
     width: 300px;
-    height: 80px;
-    top: 20px;
-    left: 2px;
-    text-align:center;
-    text-decoration: none;
-    border:none;
-}
-
-#backarrow {
-    vertical-align: middle;
-    width: 300px;
-    height: 80px;
-    top: 20px;
-    left: 2px;
-    text-align:center;
-    text-decoration: none;
-    border:none;
-    z-index:4;
 }
 
 #searchlink:hover {
@@ -116,15 +121,14 @@ h1 {
 }
 
 #sidebar {
-    color: black;
     background-color: #FFB310;
     position: fixed;
     width: 300px;
     height: 100%;
-    top: 100px;
-    left: 0;
+    top: 70px;
+    left: -300px;
     text-align: center;
-    z-index: 0;
+    z-index: 5;
     display: block;
 }
 
@@ -140,15 +144,70 @@ h1 {
     display: inline-block;
     position:absolute;
     left: 0px;
-    top:100px;
-    height: 10000px;
+    top:70px;
+    height: calc(100% - 70px);
     float: left;
     z-index:1;
-    color: black;
     background-color: #990033;
     width:100%;
 }
 
+.titleCss {
+    color: white;
+    font-size: 16px;
+    padding-top: 150px;
+    margin-bottom: 15px;
+}
+
 #recentRecords {
-    color:white;
+    /*color:white;*/
+}
+
+#divContent {
+    width: 87%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+.btnClass {
+    width: 100px;
+    background-color: #FFB310;
+    color: black;
+}
+
+.btnClass:hover {
+    background-color: #B27D0B;
+    cursor: pointer;
+}
+
+
+
+.divRepeater {
+    margin-bottom: 20px;
+}
+
+.tblRepeater {
+    border-collapse: collapse;
+    /*color: white;*/
+}
+
+.trRepeater {
+    background: -webkit-linear-gradient(right, #990033 40%, #FFB310 80%);
+    background-attachment: fixed;
+}
+
+.trHdr {
+    width: 150px;
+    text-align: right;
+}
+
+.trVal {
+    width: 300px;
+    text-align: left;
+}
+
+.tblRepeater:hover {
+    cursor: pointer;
 }

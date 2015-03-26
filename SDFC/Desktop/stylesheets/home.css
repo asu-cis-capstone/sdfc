@@ -1,0 +1,10 @@
+﻿body {
+}
+
+.recordDetails {
+    /*color:black;*/ 
+    background-color:white; 
+    height: 500px; 
+    width: 1200px; 
+    display: none;
+}
