@@ -27,30 +27,30 @@
                         <table class="tblRepeater"> 
                             <tr class="trRepeater">
                                 <td class="trHdr">
-                                    Date: 
+                                    Victim Name: 
                                 </td>
                                 <td class="trVal">
-                                    <%# DataBinder.Eval(Container.DataItem, "date")%>
+                                    <%# DataBinder.Eval(Container.DataItem, "victimName")%>
                                 </td>
                                 <td class="trHdr">
-                                    Type: 
+                                    ASU ID: 
                                 </td>
                                 <td class="trVal">
-                                    <%# DataBinder.Eval(Container.DataItem, "date")%>
+                                    <%# DataBinder.Eval(Container.DataItem, "asuID")%>
                                 </td>
                             </tr>
                             <tr class="trRepeater">
                                 <td class="trHdr">
+                                    Date:
+                                </td>
+                                <td class="trVal">
+                                    <%# DataBinder.Eval(Container.DataItem, "locationID")%>
+                                </td>
+                                <td class="trHdr">
                                     Submitted By:
                                 </td>
                                 <td class="trVal">
-                                    <%# DataBinder.Eval(Container.DataItem, "date")%>
-                                </td>
-                                <td class="trHdr">
-                                    Victim:
-                                </td>
-                                <td class="trVal">
-                                    <%# DataBinder.Eval(Container.DataItem, "date")%>
+                                    <%# DataBinder.Eval(Container.DataItem, "treatmentProvider")%>
                                 </td>
                             </tr>
                         </table>
@@ -58,30 +58,30 @@
                         <table class="recordDetails">
                             <tr>
                                 <td class="trHdr">
-                                    Date: 
+                                    Victim Address: 
                                 </td>
                                 <td class="trVal">
-                                    <%# DataBinder.Eval(Container.DataItem, "date")%>
+                                    <%# DataBinder.Eval(Container.DataItem, "address")%>
                                 </td>
                                 <td class="trHdr">
-                                    Type: 
+                                    Victim Phone: 
                                 </td>
                                 <td class="trVal">
-                                    <%# DataBinder.Eval(Container.DataItem, "date")%>
+                                    <%# DataBinder.Eval(Container.DataItem, "phone")%>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="trHdr">
-                                    Date: 
+                                    Victim Age: 
                                 </td>
                                 <td class="trVal">
-                                    <%# DataBinder.Eval(Container.DataItem, "date")%>
+                                    <%# DataBinder.Eval(Container.DataItem, "age")%>
                                 </td>
                                 <td class="trHdr">
-                                    Type: 
+                                    Description of Event: 
                                 </td>
                                 <td class="trVal">
-                                    <%# DataBinder.Eval(Container.DataItem, "type")%>
+                                    <%# DataBinder.Eval(Container.DataItem, "description")%>
                                 </td>
                             </tr>
                             <tr>
@@ -98,7 +98,7 @@
 
 
                 <%--test data start--%>
-                <div class="divRepeater">
+                <%--<div class="divRepeater">
                         <table class="tblRepeater">
                             <tr class="trRepeater">
                                 <td class="trHdr">
@@ -290,7 +290,7 @@
                             </td>
                         </tr>
                     </table>
-                </div>
+                </div>--%>
                 <%--test data end--%>
 
 
