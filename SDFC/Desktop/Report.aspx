@@ -21,15 +21,16 @@
             <button runat="server" id="btnExportCsv" value="exportcsv" class="btnClass rightalign">Export .CSV</button>
             <button runat="server" id="btnExportXls" value="exportxls" class="btnClass rightalign">Export .XLS</button>
 
-            <form runat="server">
+            <form runat="server" id="gvForm">
                 <asp:GridView runat="server" ID="gvReportResults" AllowPaging="false" AllowSorting="false" AutoGenerateColumns="false">
                     <Columns>
-                        <asp:BoundField HeaderText="Date" DataField="date" />
-                        <asp:BoundField HeaderText="Type" DataField="type" />
-                        <asp:BoundField HeaderText="Victim" DataField="victim" />
-                        <asp:BoundField HeaderText="Employee" DataField="employee" />
-                        <asp:BoundField HeaderText="Location" DataField="date" />
-                        <asp:BoundField HeaderText="Summary" DataField="notes" />
+                        <asp:BoundField HeaderText="ASU ID" DataField="asuID" />
+                        <asp:BoundField HeaderText="Victim" DataField="treatmentProvider" />
+                        <asp:BoundField HeaderText="Address" DataField="address" />
+                        <asp:BoundField HeaderText="Phone" DataField="phone" />
+                        <asp:BoundField HeaderText="Age" DataField="age" />
+                        <asp:BoundField HeaderText="Location" DataField="locationName" />
+                        <asp:BoundField HeaderText="Summary" DataField="description" />
                     </Columns>
                 </asp:GridView>
             </form>

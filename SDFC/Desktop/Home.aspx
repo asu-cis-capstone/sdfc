@@ -41,10 +41,10 @@
                             </tr>
                             <tr class="trRepeater">
                                 <td class="trHdr">
-                                    Date:
+                                    Location:
                                 </td>
                                 <td class="trVal">
-                                    <%# DataBinder.Eval(Container.DataItem, "locationID")%>
+                                    <%# DataBinder.Eval(Container.DataItem, "locationName")%>
                                 </td>
                                 <td class="trHdr">
                                     Submitted By:

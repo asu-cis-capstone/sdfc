@@ -25,3 +25,8 @@
 .btnClass {
     margin-left: 4px;
 }
+
+#gvForm {
+    background-color: #FFB310;
+    width: 100%;
+}

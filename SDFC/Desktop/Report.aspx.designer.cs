@@ -58,6 +58,15 @@ namespace SDFC.Desktop {
         protected global::System.Web.UI.HtmlControls.HtmlButton btnExportXls;
         
         /// <summary>
+        /// gvForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm gvForm;
+        
+        /// <summary>
         /// gvReportResults control.
         /// </summary>
         /// <remarks>

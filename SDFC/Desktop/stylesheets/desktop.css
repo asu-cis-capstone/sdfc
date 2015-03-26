@@ -2,6 +2,7 @@
     color: black;
     overflow-x: hidden;
     font-family: Calibri;
+    background-color: #990033;
 }
 
 h1 {
@@ -190,8 +191,11 @@ h1 {
 
 .tblRepeater {
     border-collapse: collapse;
-    margin-bottom: 20px;
     /*color: white;*/
+}
+
+.tblRepeater:not(first) {
+    margin-top: 20px;
 }
 
 .trRepeater {

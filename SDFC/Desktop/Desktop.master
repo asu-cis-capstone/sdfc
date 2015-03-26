@@ -45,7 +45,7 @@
             if (clicked) {
                 $('#sidebar').animate({ left: '0px' }, 500);
                 $('#searchlink').html('Hide');
-                $('select').multipleSelect('checkAll');
+                //$('select').multipleSelect('checkAll');
             }
             else {
                 $('#sidebar').animate({ left: '-300px' }, 500);
