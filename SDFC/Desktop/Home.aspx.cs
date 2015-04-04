@@ -31,7 +31,7 @@ public partial class _Default : System.Web.UI.Page
             DataTable dt = new DataTable();
 
             //Call stored procedure with stored procedure name and connection
-            MySqlCommand cmd = new MySqlCommand("viewReports", conn);
+            MySqlCommand cmd = new MySqlCommand("spGetRecentAccidentReport", conn);
             //SELECT top 10 FROM reports WHERE manager='this manager' ORDER BY date DESC
 
             //Set command as a stored procedure
