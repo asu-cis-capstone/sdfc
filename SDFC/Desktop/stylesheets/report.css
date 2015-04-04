@@ -1,7 +1,4 @@
-﻿body {
-}
-
-#reportSearchPanel {
+﻿#reportSearchPanel {
     width: 100%;
     height: 150px;
     background-color: #FFB310;
@@ -19,7 +16,15 @@
 #reportResults {
     margin-left:auto;
     margin-right: auto;
-    margin-top: 15px;
+    margin-top: 35px;
+}
+
+#gvDiv {
+    margin-top: 10px;
+}
+
+#btnDiv {
+    margin-top: 14px;
 }
 
 .btnClass {
@@ -27,6 +32,17 @@
 }
 
 #gvForm {
-    background-color: #FFB310;
+    margin-top: 15px;
+}
+
+.gvReportResults {
+    background-color: white;
     width: 100%;
 }
+
+.searchPanelDiv {
+    width: 33%;
+    height: 100%;
+    float:left;
+}
+
