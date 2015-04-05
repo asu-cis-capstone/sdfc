@@ -94,7 +94,8 @@
                                             Gender: 
                                         </td>
                                         <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "genderMale")%>
+                                            <%--<%# DataBinder.Eval(Container.DataItem, "genderMale")%>--%>
+                                            <%# DataBinder.Eval(Container.DataItem, "genderMale").ToString() == "1" ? "Male" : "Female" %>
                                         </td>
                                         <td class="trHdr">
                                             ASU ID#: 
@@ -115,141 +116,137 @@
                                 </table>
                             </div>
                             <div class="reportInfo">
-                                <table>
-                                    <tr>
-                                        <td class="trHdr">
-                                            Activity: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "activityName")%>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="trHdr">
-                                            Accident/Injury Location: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "locationName")%>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="trHdr">
-                                            Action Taken: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "actionName")%>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="trHdr">
-                                            Suspected Type of Injury: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "injuryTypeName")%>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="trHdr">
-                                            Location of Injury: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "injuryLocationName")%>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="trHdr">
-                                            Method of Treatment: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "treatmentName")%>
-                                        </td>
-                                    </tr>
-                                </table>
+                                <p class="hdr">
+                                    Activity: 
+                                </p>
+                                <p class="val">
+                                    <%# DataBinder.Eval(Container.DataItem, "activityName")%>
+                                </p>
+                                <p class="hdr">
+                                    Accident/Injury Location: 
+                                </p>
+                                <p class="val">
+                                    <%# DataBinder.Eval(Container.DataItem, "locationName")%>
+                                </p>
+                                <p class="hdr">
+                                    Action Taken: 
+                                </p>
+                                <p class="val">
+                                    <%# DataBinder.Eval(Container.DataItem, "actionName")%>
+                                </p>
+                                <p class="hdr">
+                                    Suspected Type of Injury: 
+                                </p>
+                                <p class="val">
+                                    <%# DataBinder.Eval(Container.DataItem, "injuryTypeName")%>
+                                </p>
+                                <p class="hdr">
+                                    Location of Injury: 
+                                </p>
+                                <p class="val">
+                                    <%# DataBinder.Eval(Container.DataItem, "injuryLocationName")%>
+                                </p>
+                                <p class="hdr">
+                                    Method of Treatment: 
+                                </p>
+                                <p class="val">
+                                    <%# DataBinder.Eval(Container.DataItem, "treatmentName")%>
+                                </p>
                             </div>
                             <div class="treatmentInfo">
-                                <table>
-                                    <tr>
-                                        <td class="trHdr">
-                                            Name of Person Providing Treatment: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "treatmentProvider")%>
-                                        </td>
-                                        <td class="trHdr">
-                                            Position Title: 
-                                        </td>
-                                        <td class="trVal">
+                                <div class="treatmentContent">
+                                    <table>
+                                        <tr>
+                                            <td class="hdr" colspan="2">
+                                                Name of Treatment Provider: 
+                                            </td>
+                                            <td colspan="2">
+                                                <%# DataBinder.Eval(Container.DataItem, "treatmentProvider")%>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hdr" colspan="2">
+                                                Was the Facility Manager Called: 
+                                            </td>
+                                            <td colspan="2">
+                                                <%# DataBinder.Eval(Container.DataItem, "managerCalled").ToString() == "1" ? "Yes" : "No" %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hdr" colspan="2">
+                                                Was 911 Called: 
+                                            </td>
+                                            <td colspan="2">
+                                                <%# DataBinder.Eval(Container.DataItem, "emergencyCalled").ToString() == "1" ? "Yes" : "No" %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hdr">
+                                                911 Report #: 
+                                            </td>
+                                            <td>
+                                                <%# DataBinder.Eval(Container.DataItem, "emergencyReportNum")%>
+                                            </td>
+                                            <td class="hdr">
+                                                Medical Report #: 
+                                            </td>
+                                            <td>
+                                                <%# DataBinder.Eval(Container.DataItem, "medicalReportNum")%>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="treatmentContent">
+                                    <table>
+                                        <tr>
+                                            <td class="hdr" colspan="2">
+                                                Position Title: 
+                                            </td>
+                                            <td colspan="2">
                                             <%# DataBinder.Eval(Container.DataItem, "positionTitle")%>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="trHdr">
-                                            Was the Facility Manager Called: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "managerCalled")%>
-                                        </td>
-                                        <td class="trHdr">
-                                            If not, why: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "notWhy")%>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="trHdr">
-                                            Was 911 Called: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "emergencyCalled")%>
-                                        </td>
-                                        <td class="trHdr">
-                                            Time Called: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "timeCalled")%>
-                                        </td>
-                                        <td class="trHdr">
-                                            Arrival Time: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "arrival")%>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="trHdr">
-                                            911 Report #: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "emergencyReportNum")%>
-                                        </td>
-                                        <td class="trHdr">
-                                            Transported To: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "transported")%>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="trHdr">
-                                            Medical Report #: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "medicalReportNum")%>
-                                        </td>
-                                    </tr>
-                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hdr" colspan="2">
+                                                If not, why: 
+                                            </td>
+                                            <td colspan="2">
+                                                <%# DataBinder.Eval(Container.DataItem, "notWhy")%>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hdr">
+                                                Time Called: 
+                                            </td>
+                                            <td>
+                                                <%# DataBinder.Eval(Container.DataItem, "timeCalled")%>
+                                            </td>
+                                            <td class="hdr">
+                                                Arrival Time: 
+                                            </td>
+                                            <td>
+                                                <%# DataBinder.Eval(Container.DataItem, "arrival")%>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="hdr" colspan="2">
+                                                Transported To:
+                                            </td>
+                                            <td colspan="2">
+                                                <%# DataBinder.Eval(Container.DataItem, "transported")%>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
                             <div class="description">
+                                <p class="hdr">
+                                    Description: 
+                                </p>
+                                <p class="val">
+                                    <%# DataBinder.Eval(Container.DataItem, "description")%>
+                                </p>
                                 <table>
-                                    <tr>
-                                        <td class="trHdr">
-                                            Description: 
-                                        </td>
-                                        <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "description")%>
-                                        </td>
-                                    </tr>
                                     <tr>
                                         <td class="trHdr">
                                             Witness Name: 

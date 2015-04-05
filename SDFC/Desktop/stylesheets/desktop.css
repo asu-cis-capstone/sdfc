@@ -205,7 +205,8 @@ h1 {
 
 .trHdr {
     width: 150px;
-    text-align: right;
+    text-align: left;
+    font-weight: bold;
 }
 
 .trVal {
@@ -216,3 +217,54 @@ h1 {
 .tblRepeater:hover {
     cursor: pointer;
 }
+
+/* Start CSS for pdf of report */
+
+.recordDetails {
+    /*color:black;*/ 
+    background-color:white; 
+    height: 900px; 
+    width: 910px; 
+    display: none;
+    padding: 5px;
+}
+
+.recordDetails h1 {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+}
+
+.victimInfo {
+}
+
+.reportInfo {
+}
+
+.hdr {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.val {
+    padding-left: 15px;
+    margin-top: 0;
+}
+
+.reportInfo trVal {
+    width: 400px;
+}
+
+.treatmentInfo {
+}
+
+.treatmentContent {
+    width: 450px;
+    display: inline-block;
+    float: left;
+}
+
+.description {
+}
+
+/* End CSS for pdf of report */
