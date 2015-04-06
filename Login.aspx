@@ -35,7 +35,6 @@
         <div id="navbarContents">
             <ul>
                 <li class="brand">SDFC Forms Management</li>
-                <li class="loginButton">Register</li>
                 <li class="loginButton">Login</li>
                 
             </ul>
@@ -82,8 +81,5 @@
         </form>
     </div>
 
-    
-
-    
 </body>
 </html>
