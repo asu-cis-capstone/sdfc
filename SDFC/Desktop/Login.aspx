@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="SDFC.Desktop.Login" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="SDFC.Desktop.Login" %>
 
 <!DOCTYPE html>
 
@@ -26,44 +26,51 @@
         });
     </script>
 
-    <title></title>
+    <title>LOGIN</title>
 </head>
 
-<body>
+<body id="container">
     
     <div id="navbar">
         <div id="navbarContents">
             <ul>
+                <li class="brand">SDFC Forms Management</li>
                 <li class="loginButton">Login</li>
-                <li class="loginButton">Register</li>
+                
             </ul>
         </div>
     </div>
 
-
-
     <div id="main" runat="server">
         <div id="mainTitleDiv">
-            <h1>formz</h1>
-            <span>Managing and Submitting Forms, Documents, and Reports has never been easier</span>
-            <div class="mainButton">how it works</div>
+            <h1>Data Reporting and Management Application</h1>
+            <span class="mainText">Managing and Submitting Forms, Documents, and Reports has never been easier!</span>
+            <br /><br />
+
+            <a href="#instructions">Learn More...</a>
         </div>
         <div id="mainContent">
-            <span>instructions brah</span>
+            <h1><a id="instructions">Instructions Brah</a></h1>
         </div>
+
+        <div id="footer">
+            <h1>
+                &copy;2015, SDFC
+            </h1>
     </div>
 
-
+    </div>
 
     <div id="loginDiv"> <%--z index--%>
         <form id="login" runat="server">
             <!-- username -->
-            <asp:Label runat="server" Text="Username:"></asp:Label><br />
+            <br />
+            <asp:Label ID="Label1" runat="server" Text="Username:"></asp:Label>
             <asp:TextBox runat="server" ID="tbxUsername" required="required"></asp:TextBox>
 			<br /><br />
 			
 			<!-- password -->
-            <asp:Label runat="server" Text="Password:"></asp:Label><br />
+            <asp:Label ID="Label2" runat="server" Text="Password:"></asp:Label>
             <asp:TextBox runat="server" ID="tbxPassword" TextMode="Password" required="required"></asp:TextBox>
             <br /><br />
 
@@ -73,8 +80,6 @@
             <asp:Label ID="lblLoginError" runat="server" Visible="false">Invalid Username or Password</asp:Label>
         </form>
     </div>
-
-    <div id="footer"></div>
 
 </body>
 </html>
