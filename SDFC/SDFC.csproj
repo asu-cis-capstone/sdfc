@@ -38,6 +38,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Desktop\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa, Version=5.5.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Desktop\bin\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra, Version=5.5.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Desktop\bin\itextsharp.xtra.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data">
       <HintPath>..\packages\MySql.Data.6.9.5\lib\net45\MySql.Data.dll</HintPath>
@@ -60,10 +72,41 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\SDFC.dll" />
+    <Content Include="bin\SDFC.pdb" />
+    <Content Include="Desktop\bin\itextsharp.dll" />
+    <Content Include="Desktop\bin\itextsharp.pdfa.dll" />
+    <Content Include="Desktop\bin\itextsharp.xml" />
+    <Content Include="Desktop\bin\itextsharp.xtra.dll" />
     <Content Include="Desktop\Home.aspx" />
     <Content Include="Desktop\Login.aspx" />
     <Content Include="Desktop\scripts\HomeScripts.js" />
     <Content Include="Desktop\scripts\ManageScripts.js" />
+    <Content Include="Desktop\scripts\multiple-select-master\demos\assets\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Desktop\scripts\multiple-select-master\demos\assets\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Desktop\scripts\multiple-select-master\demos\assets\bootstrap\css\bootstrap.css" />
+    <Content Include="Desktop\scripts\multiple-select-master\demos\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Desktop\scripts\multiple-select-master\demos\assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Desktop\scripts\multiple-select-master\demos\assets\bootstrap\js\bootstrap.js" />
+    <Content Include="Desktop\scripts\multiple-select-master\demos\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Desktop\scripts\multiple-select-master\demos\assets\jquery.min.js" />
+    <Content Include="Desktop\scripts\multiple-select-master\demos\index.html" />
+    <Content Include="Desktop\scripts\multiple-select-master\docs\assets\es5-shim.min.js" />
+    <Content Include="Desktop\scripts\multiple-select-master\docs\assets\flatdoc\flatdoc.js" />
+    <Content Include="Desktop\scripts\multiple-select-master\docs\assets\flatdoc\legacy.js" />
+    <Content Include="Desktop\scripts\multiple-select-master\docs\assets\flatdoc\theme-white\script.js" />
+    <Content Include="Desktop\scripts\multiple-select-master\docs\assets\flatdoc\theme-white\style.css" />
+    <Content Include="Desktop\scripts\multiple-select-master\docs\assets\html5shiv.js" />
+    <Content Include="Desktop\scripts\multiple-select-master\docs\assets\jquery.min.js" />
+    <Content Include="Desktop\scripts\multiple-select-master\docs\assets\respond.min.js" />
+    <Content Include="Desktop\scripts\multiple-select-master\docs\css\base.css" />
+    <Content Include="Desktop\scripts\multiple-select-master\docs\index.html" />
+    <Content Include="Desktop\scripts\multiple-select-master\docs\js\index.js" />
+    <Content Include="Desktop\scripts\multiple-select-master\index.html" />
+    <Content Include="Desktop\scripts\multiple-select-master\jquery.multiple.select.js" />
+    <Content Include="Desktop\scripts\multiple-select-master\multiple-select.css" />
+    <Content Include="Desktop\scripts\multiple-select-master\multiple-select.png" />
     <Content Include="Desktop\scripts\SearchScripts.js" />
     <Content Include="Desktop\stylesheets\account.css" />
     <Content Include="Desktop\stylesheets\home.css" />
@@ -190,6 +233,23 @@
     <Content Include="Mobile\scripts\sigpad\pen.psd" />
     <Content Include="Mobile\scripts\sigpad\README.md" />
     <Content Include="packages.config" />
+    <Content Include="bin\SDFC.dll.config" />
+    <Content Include="Desktop\reference\accidentReport.pdf" />
+    <Content Include="Desktop\bin\itextsharp.dll.refresh" />
+    <Content Include="Desktop\bin\itextsharp.pdfa.dll.refresh" />
+    <Content Include="Desktop\bin\itextsharp.xtra.dll.refresh" />
+    <Content Include="Desktop\scripts\multiple-select-master\.gitignore" />
+    <Content Include="Desktop\scripts\multiple-select-master\bower.json" />
+    <Content Include="Desktop\scripts\multiple-select-master\CHANGELOG.md" />
+    <Content Include="Desktop\scripts\multiple-select-master\CONTRIBUTORS.md" />
+    <Content Include="Desktop\scripts\multiple-select-master\demos\assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Desktop\scripts\multiple-select-master\demos\assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Desktop\scripts\multiple-select-master\demos\assets\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Desktop\scripts\multiple-select-master\docs\README-ZH-CN.md" />
+    <Content Include="Desktop\scripts\multiple-select-master\docs\README.md" />
+    <Content Include="Desktop\scripts\multiple-select-master\LICENSE" />
+    <Content Include="Desktop\scripts\multiple-select-master\multiple-select.jquery.json" />
+    <Content Include="Desktop\scripts\multiple-select-master\README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

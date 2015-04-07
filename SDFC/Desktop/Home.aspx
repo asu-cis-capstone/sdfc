@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="_Default" MasterPageFile="~/Desktop/Desktop.master" Codebehind="Home.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="_Default" MasterPageFile="~/Desktop/Desktop.master" Codebehind="Home.aspx.cs" EnableEventValidation="false" %>
 <%@ MasterType VirtualPath="~/Desktop/Desktop.master" %>
 
 <asp:Content ID="HomeHeadContent" ContentPlaceHolderID="head" runat="server">
@@ -18,6 +18,9 @@
             <div id="divRecent" class="recentRecord" runat="server">
                 <asp:Label id="lblHomeTitle" runat="server">Recently Submitted</asp:Label>
                 
+                
+                <form runat="server">
+
                 <asp:Repeater runat="server" ID="rptrHome">
                     <HeaderTemplate>
                         <div class="divRepeater">
@@ -64,7 +67,8 @@
                                             Victim's Name: 
                                         </td>
                                         <td class="trVal" colspan="3">
-                                            <%# DataBinder.Eval(Container.DataItem, "victimName")%>
+                                            <%--<%# DataBinder.Eval(Container.DataItem, "victimName")%>--%>
+                                            <asp:Label ID="lblVictimName" Text='<%# DataBinder.Eval(Container.DataItem, "victimName")%>'  runat="server" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -72,7 +76,8 @@
                                             Address: 
                                         </td>
                                         <td class="trVal" colspan="3">
-                                            <%# DataBinder.Eval(Container.DataItem, "address")%>
+                                            <%--<%# DataBinder.Eval(Container.DataItem, "address")%>--%>
+                                            <asp:Label ID="lblAddress" Text='<%# DataBinder.Eval(Container.DataItem, "address")%>'  runat="server" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -80,13 +85,15 @@
                                             Phone: 
                                         </td>
                                         <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "phone")%>
+                                            <%--<%# DataBinder.Eval(Container.DataItem, "phone")%>--%>
+                                            <asp:Label ID="lblPhone" Text='<%# DataBinder.Eval(Container.DataItem, "phone")%>'  runat="server" />
                                         </td>
                                         <td class="trHdr">
                                             Age: 
                                         </td>
                                         <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "age")%>
+                                            <%--<%# DataBinder.Eval(Container.DataItem, "age")%>--%>
+                                            <asp:Label ID="lblAge" Text='<%# DataBinder.Eval(Container.DataItem, "age")%>'  runat="server" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -95,13 +102,15 @@
                                         </td>
                                         <td class="trVal">
                                             <%--<%# DataBinder.Eval(Container.DataItem, "genderMale")%>--%>
-                                            <%# DataBinder.Eval(Container.DataItem, "genderMale").ToString() == "1" ? "Male" : "Female" %>
+                                            <%--<%# DataBinder.Eval(Container.DataItem, "genderMale").ToString() == "1" ? "Male" : "Female" %>--%>
+                                            <asp:Label ID="lblGender" Text='<%# DataBinder.Eval(Container.DataItem, "genderMale").ToString() == "1" ? "Male" : "Female" %>'  runat="server" />
                                         </td>
                                         <td class="trHdr">
                                             ASU ID#: 
                                         </td>
                                         <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "asuID")%>
+                                            <%--<%# DataBinder.Eval(Container.DataItem, "asuID")%>--%>
+                                            <asp:Label ID="lblAsuID" Text='<%# DataBinder.Eval(Container.DataItem, "asuID")%>'  runat="server" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -110,7 +119,7 @@
                                         </td>
                                         <td class="trVal" colspan="3">
                                             Student
-                                            <%--<%# DataBinder.Eval(Container.DataItem, "address")%>--%>
+                                            <%--<asp:Label ID="lblStatus" Text='<%# DataBinder.Eval(Container.DataItem, "victimName")%>'  runat="server" />--%>
                                         </td>
                                     </tr>
                                 </table>
@@ -120,37 +129,43 @@
                                     Activity: 
                                 </p>
                                 <p class="val">
-                                    <%# DataBinder.Eval(Container.DataItem, "activityName")%>
+                                    <%--<%# DataBinder.Eval(Container.DataItem, "activityName")%>--%>
+                                    <asp:Label ID="lblActivity" Text='<%# DataBinder.Eval(Container.DataItem, "activityName")%>'  runat="server" />
                                 </p>
                                 <p class="hdr">
                                     Accident/Injury Location: 
                                 </p>
                                 <p class="val">
-                                    <%# DataBinder.Eval(Container.DataItem, "locationName")%>
+                                    <%--<%# DataBinder.Eval(Container.DataItem, "locationName")%>--%>
+                                    <asp:Label ID="lblLocationName" Text='<%# DataBinder.Eval(Container.DataItem, "locationName")%>'  runat="server" />
                                 </p>
                                 <p class="hdr">
                                     Action Taken: 
                                 </p>
                                 <p class="val">
-                                    <%# DataBinder.Eval(Container.DataItem, "actionName")%>
+                                    <%--<%# DataBinder.Eval(Container.DataItem, "actionName")%>--%>
+                                    <asp:Label ID="lblActionName" Text='<%# DataBinder.Eval(Container.DataItem, "actionName")%>'  runat="server" />
                                 </p>
                                 <p class="hdr">
                                     Suspected Type of Injury: 
                                 </p>
                                 <p class="val">
-                                    <%# DataBinder.Eval(Container.DataItem, "injuryTypeName")%>
+                                    <%--<%# DataBinder.Eval(Container.DataItem, "injuryTypeName")%>--%>
+                                    <asp:Label ID="lblInjuryTypeName" Text='<%# DataBinder.Eval(Container.DataItem, "injuryTypeName")%>'  runat="server" />
                                 </p>
                                 <p class="hdr">
                                     Location of Injury: 
                                 </p>
                                 <p class="val">
-                                    <%# DataBinder.Eval(Container.DataItem, "injuryLocationName")%>
+                                    <%--<%# DataBinder.Eval(Container.DataItem, "injuryLocationName")%>--%>
+                                    <asp:Label ID="lblInjuryLocationName" Text='<%# DataBinder.Eval(Container.DataItem, "injuryLocationName")%>'  runat="server" />
                                 </p>
                                 <p class="hdr">
                                     Method of Treatment: 
                                 </p>
                                 <p class="val">
-                                    <%# DataBinder.Eval(Container.DataItem, "treatmentName")%>
+                                    <%--<%# DataBinder.Eval(Container.DataItem, "treatmentName")%>--%>
+                                    <asp:Label ID="lblTreatmentName" Text='<%# DataBinder.Eval(Container.DataItem, "treatmentName")%>'  runat="server" />
                                 </p>
                             </div>
                             <div class="treatmentInfo">
@@ -161,7 +176,8 @@
                                                 Name of Treatment Provider: 
                                             </td>
                                             <td colspan="2">
-                                                <%# DataBinder.Eval(Container.DataItem, "treatmentProvider")%>
+                                                <%--<%# DataBinder.Eval(Container.DataItem, "treatmentProvider")%>--%>
+                                                <asp:Label ID="lblTreatmentProvider" Text='<%# DataBinder.Eval(Container.DataItem, "treatmentProvider")%>'  runat="server" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -169,7 +185,8 @@
                                                 Was the Facility Manager Called: 
                                             </td>
                                             <td colspan="2">
-                                                <%# DataBinder.Eval(Container.DataItem, "managerCalled").ToString() == "1" ? "Yes" : "No" %>
+                                                <%--<%# DataBinder.Eval(Container.DataItem, "managerCalled").ToString() == "1" ? "Yes" : "No" %>--%>
+                                                <asp:Label ID="lblManagerCalled" Text='<%# DataBinder.Eval(Container.DataItem, "managerCalled").ToString() == "1" ? "Yes" : "No" %>'  runat="server" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -177,7 +194,8 @@
                                                 Was 911 Called: 
                                             </td>
                                             <td colspan="2">
-                                                <%# DataBinder.Eval(Container.DataItem, "emergencyCalled").ToString() == "1" ? "Yes" : "No" %>
+                                                <%--<%# DataBinder.Eval(Container.DataItem, "emergencyCalled").ToString() == "1" ? "Yes" : "No" %>--%>
+                                                <asp:Label ID="lblEmergencyCalled" Text='<%# DataBinder.Eval(Container.DataItem, "emergencyCalled").ToString() == "1" ? "Yes" : "No" %>'  runat="server" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -185,13 +203,15 @@
                                                 911 Report #: 
                                             </td>
                                             <td>
-                                                <%# DataBinder.Eval(Container.DataItem, "emergencyReportNum")%>
+                                                <%--<%# DataBinder.Eval(Container.DataItem, "emergencyReportNum")%>--%>
+                                                <asp:Label ID="lblEmergencyReportNum" Text='<%# DataBinder.Eval(Container.DataItem, "emergencyReportNum")%>'  runat="server" />
                                             </td>
                                             <td class="hdr">
                                                 Medical Report #: 
                                             </td>
                                             <td>
-                                                <%# DataBinder.Eval(Container.DataItem, "medicalReportNum")%>
+                                                <%--<%# DataBinder.Eval(Container.DataItem, "medicalReportNum")%>--%>
+                                                <asp:Label ID="lblMedicalReportNum" Text='<%# DataBinder.Eval(Container.DataItem, "medicalReportNum")%>'  runat="server" />
                                             </td>
                                         </tr>
                                     </table>
@@ -203,7 +223,8 @@
                                                 Position Title: 
                                             </td>
                                             <td colspan="2">
-                                            <%# DataBinder.Eval(Container.DataItem, "positionTitle")%>
+                                                <%--<%# DataBinder.Eval(Container.DataItem, "positionTitle")%>--%>
+                                                <asp:Label ID="lblPositionTitle" Text='<%# DataBinder.Eval(Container.DataItem, "positionTitle")%>'  runat="server" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -211,7 +232,8 @@
                                                 If not, why: 
                                             </td>
                                             <td colspan="2">
-                                                <%# DataBinder.Eval(Container.DataItem, "notWhy")%>
+                                                <%--<%# DataBinder.Eval(Container.DataItem, "notWhy")%>--%>
+                                                <asp:Label ID="lblNotWhy" Text='<%# DataBinder.Eval(Container.DataItem, "notWhy")%>'  runat="server" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -219,13 +241,15 @@
                                                 Time Called: 
                                             </td>
                                             <td>
-                                                <%# DataBinder.Eval(Container.DataItem, "timeCalled")%>
+                                                <%--<%# DataBinder.Eval(Container.DataItem, "timeCalled")%>--%>
+                                                <asp:Label ID="lblTimeCalled" Text='<%# DataBinder.Eval(Container.DataItem, "timeCalled")%>'  runat="server" />
                                             </td>
                                             <td class="hdr">
                                                 Arrival Time: 
                                             </td>
                                             <td>
-                                                <%# DataBinder.Eval(Container.DataItem, "arrival")%>
+                                                <%--<%# DataBinder.Eval(Container.DataItem, "arrival")%>--%>
+                                                <asp:Label ID="lblArrival" Text='<%# DataBinder.Eval(Container.DataItem, "arrival")%>'  runat="server" />
                                             </td>
                                         </tr>
                                         <tr>
@@ -233,7 +257,8 @@
                                                 Transported To:
                                             </td>
                                             <td colspan="2">
-                                                <%# DataBinder.Eval(Container.DataItem, "transported")%>
+                                                <%--<%# DataBinder.Eval(Container.DataItem, "transported")%>--%>
+                                                <asp:Label ID="lblTransported" Text='<%# DataBinder.Eval(Container.DataItem, "transported")%>'  runat="server" />
                                             </td>
                                         </tr>
                                     </table>
@@ -244,7 +269,8 @@
                                     Description: 
                                 </p>
                                 <p class="val">
-                                    <%# DataBinder.Eval(Container.DataItem, "description")%>
+                                    <%--<%# DataBinder.Eval(Container.DataItem, "description")%>--%>
+                                    <asp:Label ID="lblDescription" Text='<%# DataBinder.Eval(Container.DataItem, "description")%>'  runat="server" />
                                 </p>
                                 <table>
                                     <tr>
@@ -252,13 +278,15 @@
                                             Witness Name: 
                                         </td>
                                         <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "witnessName")%>
+                                            <%--<%# DataBinder.Eval(Container.DataItem, "witnessName")%>--%>
+                                            <asp:Label ID="lblWitnessName" Text='<%# DataBinder.Eval(Container.DataItem, "witnessName")%>'  runat="server" />
                                         </td>
                                         <td class="trHdr">
                                             Witness Phone: 
                                         </td>
                                         <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "witnessPhone")%>
+                                            <%--<%# DataBinder.Eval(Container.DataItem, "witnessPhone")%>--%>
+                                            <asp:Label ID="lblWitnessPhone" Text='<%# DataBinder.Eval(Container.DataItem, "witnessPhone")%>'  runat="server" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -266,10 +294,14 @@
                                             Victim's Signature: 
                                         </td>
                                         <td class="trVal">
-                                            <%# DataBinder.Eval(Container.DataItem, "victimSig")%>
+                                            <%--<%# DataBinder.Eval(Container.DataItem, "victimSig")%>--%>
+                                            <asp:Label ID="lblVictimSig" Text='<%# DataBinder.Eval(Container.DataItem, "victimSig")%>'  runat="server" />
                                         </td>
                                     </tr>
                                 </table>
+                            </div>
+                            <div class="btnPdf">
+                                <asp:Button runat="server" Text="Export as PDF" CssClass="btnClass btnPdf" OnClick="exportPdf_Click"/>
                             </div>
 
                         </div>
@@ -278,6 +310,9 @@
                         </div>
                     </FooterTemplate>
                 </asp:Repeater>
+
+                    
+                </form>
 
             </div>
         </div>
