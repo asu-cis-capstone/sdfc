@@ -42,7 +42,7 @@
 
             <asp:Label ID="gender" runat="server">Gender</asp:Label>
             <br />
-            <asp:RadioButtonList ID="genderSelect" runat="server" RepeatDirection="Horizontal">
+            <asp:RadioButtonList ID="genderSelect" runat="server" CssClass="radio">
                 <asp:ListItem ID="genderMale" runat="server" Text="Male"></asp:ListItem>
                 <asp:ListItem ID="genderFemale" runat="server" Text="Female"></asp:ListItem>
             </asp:RadioButtonList>
@@ -86,9 +86,9 @@
             <asp:TextBox ID="txtTreator" runat="server"></asp:TextBox>
             <br />
 
-            <asp:Label ID="facMan" runat="server">Fac. Man. Contacted?</asp:Label>
+            <asp:Label ID="facMan" runat="server" >Fac. Man. Contacted?</asp:Label>
             <br />            
-            <asp:RadioButtonList ID="facManSelection" runat="server" RepeatDirection="Horizontal">
+            <asp:RadioButtonList ID="facManSelection" runat="server" CssClass="radio">
                 <asp:ListItem ID="facManYes" runat="server" Text="Yes"></asp:ListItem>
                 <asp:ListItem ID="facManNo" runat="server" Text="No"></asp:ListItem>
             </asp:RadioButtonList>
@@ -96,7 +96,7 @@
 
             <asp:Label ID="contacted" runat="server">911 Contacted?</asp:Label>
             <br />
-            <asp:RadioButtonList ID="contactedSelection" runat="server" RepeatDirection="Horizontal">
+            <asp:RadioButtonList ID="contactedSelection" runat="server" CssClass="radio">
                 <asp:ListItem ID="contactedYes" runat="server" Text="Yes"></asp:ListItem>
                 <asp:ListItem ID="contactedNo" runat="server" Text="No"></asp:ListItem>
             </asp:RadioButtonList>

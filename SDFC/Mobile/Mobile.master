@@ -19,13 +19,15 @@
     <!--Link to JS files -->
     <script type="text/javascript" src="scripts/interaction.js" ></script>
 
+    <asp:Literal ID="metaTags" runat="server"></asp:Literal>
+
 </head>
 <body>
     <form id="myForm" runat="server">
     <div>
-        <div id="header" class="panel horizontalCenter contentBlock">
-            <div class="verticalCenter horizontalCenter">
-                <h1><asp:Literal ID="PageTitleDisplay" runat="server"></asp:Literal></h1> <!--Test Master Page-->
+        <div id="header" class="panel contentBlock">
+            <div class="verticalCenter">
+                <h1><asp:Literal ID="PageTitleDisplay" runat="server"></asp:Literal><asp:ImageButton ID="LogoutButton" ImageUrl="imgs/logout.png" Height="90" Width="98" OnClick="Logout_Click" runat="server" CssClass="logout" /></h1> <!--Test Master Page-->
             </div>
         </div>     
         <br />

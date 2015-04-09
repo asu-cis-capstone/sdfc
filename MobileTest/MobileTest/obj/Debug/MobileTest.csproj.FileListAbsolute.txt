@@ -1,0 +1,5 @@
+C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\MobileTest\MobileTest\bin\Debug\MobileTest.dll
+C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\MobileTest\MobileTest\bin\Debug\MobileTest.pdb
+C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\MobileTest\MobileTest\obj\Debug\MobileTest.csprojResolveAssemblyReference.cache
+C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\MobileTest\MobileTest\obj\Debug\MobileTest.dll
+C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\MobileTest\MobileTest\obj\Debug\MobileTest.pdb

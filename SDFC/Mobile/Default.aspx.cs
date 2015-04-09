@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class Mobile_Default : System.Web.UI.Page
 {    
+
     protected void Page_Load(object sender, EventArgs e)
     {
         //check if user has not logged in. 

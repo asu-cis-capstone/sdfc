@@ -1,0 +1,4 @@
+SDFC/bin/SDFC.dll
+*.dll
+SDFC/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.dll
