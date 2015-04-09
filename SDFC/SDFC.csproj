@@ -224,6 +224,7 @@
       <DependentUpon>Mobile.master</DependentUpon>
     </Compile>
     <Compile Include="Models\AccidentReport.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\DB_Connector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\Processing.cs" />

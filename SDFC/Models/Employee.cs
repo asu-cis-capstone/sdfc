@@ -14,5 +14,6 @@ namespace SDFC.Models
         public string Position { get; set; }
         public bool Active { get; set; }
         public bool Manager { get; set; }
+        public int ASUID { get; set; }
     }
 }
