@@ -75,4 +75,10 @@ public partial class Desktop_Desktop : System.Web.UI.MasterPage
         //    main.Style.Add("top", "600px");
         //}
     }
+
+    protected void signOut_Click(object sender, EventArgs e)
+    {
+        Session["Username"] = null;
+        Response.Redirect("Login.aspx");
+    }
 }

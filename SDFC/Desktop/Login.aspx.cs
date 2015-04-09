@@ -16,7 +16,17 @@ namespace SDFC.Desktop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            bool loggedIn = Convert.ToBoolean(Request.QueryString["li"]);
 
+            if (!loggedIn)
+            {
+                Session["Username"] = null;
+            }
+
+            if (Session["Username"] != null)
+            {
+                Response.Redirect("Home.aspx");
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -54,7 +64,9 @@ namespace SDFC.Desktop
                     //Test password match
                     if (password.Equals(dt.Rows[0][0].ToString()))
                     {
-                        Response.Redirect("Home.aspx");
+                        Response.Redirect("Home.aspx", false);
+                        Session["Username"] = asurite;
+                        Session["asuid"] = dt.Rows[0][1].ToString();
                     }
                 }
                 else 

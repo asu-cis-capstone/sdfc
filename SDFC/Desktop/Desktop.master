@@ -16,7 +16,7 @@
 
     <!--Link to JS files -->
     <script type="text/javascript" src="scripts/interaction.js"></script>
-    <script type="text/javascript" src="scripts/searchscripts.js"></script>
+    <script type="text/javascript" src="scripts/SearchScripts.js"></script>
     <script type="text/javascript" src="scripts/multiple-select-master/jquery.multiple.select.js"></script>
 
     <asp:ContentPlaceHolder id="head" runat="server">
@@ -30,18 +30,6 @@
         var clicked = true;
 
         $(document).on('click', '#searchlink', function () {
-            //if (clicked) {
-            //    $('#main').animate({ left: '300px' }, 500);
-            //    $('#searchlink').html('Hide');
-            //    $('select').multipleSelect('checkAll');
-            //}
-            //else {
-            //    $('#main').animate({ left: '0px' }, 500);
-            //    $('#searchlink').html('Search');
-            //}
-            //clicked = !clicked;
-
-
             if (clicked) {
                 $('#sidebar').animate({ left: '0px' }, 500);
                 $('#searchlink').html('Hide');
@@ -52,7 +40,18 @@
                 $('#searchlink').html('Search');
             }
             clicked = !clicked;
-            
+        });
+
+        
+        $(document).on('click', '#btnSearchByTxt', function () {
+            var lastName = $('#txtSearch').val();
+
+            var link = document.createElement('a');
+            link.href = 'Home.aspx?lastName=' + lastName;
+
+            document.body.appendChild(link);
+            link.click();
+
         });
     </script>
 
@@ -65,10 +64,10 @@
                 <li><a class="navbarli" href="Home.aspx">Home</a></li>
                 <li><a class="navbarli" href="Report.aspx">Report</a></li>
                 <li><a class="navbarli" href="Manage.aspx">Manage</a></li>
-                <li class="rightalign"><a class="navbarli" href="Login.aspx">Sign Out</a></li>
+                
+                <li class="rightalign"><a class="navbarli" href="Login.aspx?li=false">Sign Out</a></li>
                 <li class="rightalign"><a class="navbarli" href="Account.aspx">My Account</a></li>
             </ul>
-                
         </div>
     </div>
 
@@ -76,8 +75,8 @@
         <h2 id="sidebarHeader">Search</h2>
 
         <div id="formSearch">
-            <input type="text" runat="server" id="txtSearch" />
-            <%--<button runat="server" id="btnSearchByTxt" value="GO!" onclick="btnSearchByTxt_Click"/>--%>
+            <input type="text" id="txtSearch" />
+            <button id="btnSearchByTxt" onclick="SearchByTxt()">Search</button>
             <br />
             <table id="tblSearch">
                 <tr>

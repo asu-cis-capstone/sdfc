@@ -16,6 +16,12 @@ namespace SDFC.Desktop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Username"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+
+
             //This try/catch loads the 10 most recent records for the manager to display at home on page load
             try
             {
