@@ -34,7 +34,9 @@ namespace SDFC.Mobile
 
             if (!this.IsPostBack)
             {
+                //retrieve connection string from web.config
                 string conString = WebConfigurationManager.AppSettings["ConnectionString"];
+                //assign connection string to sqldatasources
                 ActionList.ConnectionString = conString;
                 ActivityList.ConnectionString = conString;
                 InjuryLocationList.ConnectionString = conString;
@@ -95,7 +97,10 @@ namespace SDFC.Mobile
             //myReport.SignatureJSON = output.Value;
 
             //add the report to the database
-            myConnector.AddReport(myReport);
+            if (myConnector.AddReport(myReport, Session["AsuID"].ToString()))
+                Response.Redirect("Confirmation.aspx");
+            else
+                Response.Write("<script>alert('Error creating form');</script>"); //if error occured, display message
         }
 
         protected void Page_Unload(object sender, EventArgs e)
