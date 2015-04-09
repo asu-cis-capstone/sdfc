@@ -31,10 +31,10 @@ namespace SDFC.Models
         /// <param name="userName">User's asurite ID</param>
         /// <param name="password">User's password</param>
         /// <returns></returns>
-        public bool LogIn(string userName, string password)
+        public bool LogIn(string userName, string password, ref string ID)
         {
             //create command
-            MySqlCommand cmd = new MySqlCommand("SELECT * FROM employee WHERE asurite='"+userName+"' AND password='"+password+"'");          
+            MySqlCommand cmd = new MySqlCommand("SELECT asuID FROM employee WHERE asurite='"+userName+"' AND password='"+password+"'");          
             //create reader
             MySqlDataReader reader = null;
 
@@ -57,6 +57,11 @@ namespace SDFC.Models
 
                 //store whether a record was found
                 result = reader.HasRows;
+
+                if (result && reader.Read())
+                {                    
+                    ID =  reader.GetString(0);
+                }
             }
             catch (Exception e)
             {
@@ -71,7 +76,7 @@ namespace SDFC.Models
             return result;
         }
 
-        public bool AddReport(AccidentReport report)
+        public bool AddReport(AccidentReport report, string asuID)
         {
             //temporary
             //create command
@@ -92,7 +97,7 @@ namespace SDFC.Models
                 new MySqlParameter("@Male", report.Male),
                 new MySqlParameter("@ManagerCalled", report.ManagerCalled),
                 new MySqlParameter("@MedicalReportNo", report.MedicalReport),
-                new MySqlParameter("@ASUID", report.Name),
+                new MySqlParameter("@ASUID", asuID),
                 new MySqlParameter("@Phone", report.Phone),
                 new MySqlParameter("@PoliceContacted", report.PoliceContacted),
                 new MySqlParameter("@PositionTitles", report.PositionTitles),
@@ -130,11 +135,11 @@ namespace SDFC.Models
                 reader = cmd.ExecuteReader();
 
                 //store whether a record was found
-                result = reader.HasRows;
+                result = true;
             }
             catch (Exception e)
             {
-                throw e;
+                result = false;
             }
             finally
             {
@@ -143,7 +148,7 @@ namespace SDFC.Models
             }
             
             //return query result            
-            return true;
+            return result;
         }
     }
 }

@@ -21,6 +21,15 @@ public partial class Mobile_Mobile {
     protected global::System.Web.UI.WebControls.Literal PageTitle;
     
     /// <summary>
+    /// metaTags control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Literal metaTags;
+    
+    /// <summary>
     /// myForm control.
     /// </summary>
     /// <remarks>
@@ -37,6 +46,15 @@ public partial class Mobile_Mobile {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.Literal PageTitleDisplay;
+    
+    /// <summary>
+    /// LogoutButton control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.ImageButton LogoutButton;
     
     /// <summary>
     /// MobileContent control.

@@ -74,6 +74,8 @@
     <Content Include="Desktop\Report.aspx" />
     <Content Include="Desktop\Manage.aspx" />
     <Content Include="Desktop\Account.aspx" />
+    <Content Include="Mobile\Confirmation.aspx" />
+    <Content Include="Mobile\imgs\logout.png" />
     <Content Include="Mobile\scripts\sigpad\.gitignore" />
     <Content Include="Mobile\scripts\sigpad\assets\flashcanvas.js" />
     <Content Include="Mobile\scripts\sigpad\assets\flashcanvas.swf" />
@@ -143,6 +145,13 @@
     <Compile Include="Desktop\Account.aspx.designer.cs">
       <DependentUpon>Account.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mobile\Confirmation.aspx.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Confirmation.aspx.designer.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Mobile\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -211,7 +220,7 @@
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>42943</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <DevelopmentServerVPath>/SDFC</DevelopmentServerVPath>
           <IISUrl>http://localhost:2424/</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
           <IISAppRootUrl>http://localhost:2424/</IISAppRootUrl>

@@ -12,6 +12,7 @@ namespace SDFC.Mobile
     {
         private DB_Connector myConnector;
 
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             //check if user has logged in. 
@@ -28,6 +29,8 @@ namespace SDFC.Mobile
 
                 //set page title
                 this.Master.Title = "log In";
+                //hide logout button on master
+                this.Master.ShowLogout = false;
             }
             else
             {
@@ -50,12 +53,14 @@ namespace SDFC.Mobile
         }
 
         protected void loginButton_Click(object sender, EventArgs e)
-        {           
-            if (myConnector.LogIn(txtusername.Text, txtpassword.Text))
+        {
+            string asuID = "";
+            if (myConnector.LogIn(txtusername.Text, txtpassword.Text, ref asuID))
             {
                 //store credentials in session
                 Session["Username"] = txtusername.Text; 
                 Session["Password"] = txtpassword.Text;
+                Session["AsuID"] = asuID;
 
                 //send to login
                 Response.Redirect("Default.aspx");
