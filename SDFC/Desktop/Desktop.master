@@ -65,7 +65,7 @@
                 <li><a class="navbarli" href="Home.aspx">Home</a></li>
                 <li><a class="navbarli" href="Report.aspx">Report</a></li>
                 <li><a class="navbarli" href="Manage.aspx">Manage</a></li>
-                <li class="rightalign"><a class="navbarli" href="Login.aspx">Sign Out</a></li>
+                <li class="rightalign"><a class="navbarli" href="#">Sign Out</a></li>
                 <li class="rightalign"><a class="navbarli" href="Account.aspx">My Account</a></li>
             </ul>
                 
