@@ -150,5 +150,58 @@ namespace SDFC.Models
             //return query result            
             return result;
         }
+        public bool AddEmployee(Employee employee, string asuID)
+        {
+            //temporary
+            //create command
+            MySqlCommand cmd = new MySqlCommand("addEmployee");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddRange(new MySqlParameter[] {
+                new MySqlParameter("@ASUID", employee.ASUID),
+                new MySqlParameter("@FirstName", employee.FirstName),
+                new MySqlParameter("@LastName", employee.LastName),
+                new MySqlParameter("@ASURite", employee.ASURite),
+                new MySqlParameter("@Password", employee.Password),
+                new MySqlParameter("@Position", employee.Position),
+                new MySqlParameter("@Active", employee.Active),
+                new MySqlParameter("@Manager", employee.Manager),
+                }
+            );
+            //create reader
+            MySqlDataReader reader = null;
+
+            //give connection to cmd
+            cmd.Connection = myConnection;
+
+            //create and initialize boolean to store query result
+            bool result = false;
+
+            try
+            {
+                //open connection to mySql server
+                myConnection.Open();
+
+                //prepare statement
+                cmd.Prepare();
+
+                //run command
+                reader = cmd.ExecuteReader();
+
+                //store whether a record was found
+                result = true;
+            }
+            catch (Exception e)
+            {
+                result = false;
+            }
+            finally
+            {
+                //dispose
+                myConnection.Close();
+            }
+
+            //return query result            
+            return result;
+        }
     }
 }
