@@ -24,3 +24,7 @@ F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.dll
 F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.pdfa.dll
 F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.xtra.dll
 F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.xml
+C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.dll
+C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.pdfa.dll
+C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.xtra.dll
+C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.xml
