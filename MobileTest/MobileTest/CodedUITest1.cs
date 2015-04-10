@@ -25,15 +25,26 @@ namespace MobileTest
         [TestMethod]
         public void CodedUITestMethod1()
         {
-
-            this.UIMap.PDFExport();
-
-            this.UIMap.LoginAndSubmit();
-            this.UIMap.BadLogin();
-
-
-
+            /*--Mobile tests--------------*/            
+            //attempt to login
             this.UIMap.NewLogin();
+            //submit a complete form
+            this.UIMap.LoginAndSubmit();
+            //submit a partially completed form
+            this.UIMap.SubmitBadForm();
+            //submit a form without a signature
+            this.UIMap.SubmitWithoutSig();
+            
+            /*--Desktop tests----------------*/
+            //perform a search
+            this.UIMap.NameSearch();
+            //export a report as a pdf
+            this.UIMap.PDFExport();            
+            //attempt to login to desktop with bad credentials
+            this.UIMap.BadLogin();    
+            //attempt to access the mobile site from a desktop browser
+            this.UIMap.MobileAccess();
+
             // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
             // For more information on generated code, see http://go.microsoft.com/fwlink/?LinkId=179463
         }

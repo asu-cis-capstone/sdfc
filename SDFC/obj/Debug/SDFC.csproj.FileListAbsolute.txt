@@ -24,19 +24,15 @@ F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.dll
 F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.pdfa.dll
 F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.xtra.dll
 F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.xml
-<<<<<<< HEAD
 C:\Users\Kevin Galati\Documents\School\Spring 2015\CIS 440\SDFC\SDFC\bin\SDFC.dll
 C:\Users\Kevin Galati\Documents\School\Spring 2015\CIS 440\SDFC\SDFC\bin\SDFC.pdb
 C:\Users\Kevin Galati\Documents\School\Spring 2015\CIS 440\SDFC\SDFC\bin\itextsharp.dll
 C:\Users\Kevin Galati\Documents\School\Spring 2015\CIS 440\SDFC\SDFC\bin\itextsharp.pdfa.dll
 C:\Users\Kevin Galati\Documents\School\Spring 2015\CIS 440\SDFC\SDFC\bin\itextsharp.xtra.dll
 C:\Users\Kevin Galati\Documents\School\Spring 2015\CIS 440\SDFC\SDFC\bin\itextsharp.xml
-C:\Users\Kevin Galati\Documents\School\Spring 2015\CIS 440\SDFC\SDFC\obj\Debug\SDFC.csprojResolveAssemblyReference.cache
 C:\Users\Kevin Galati\Documents\School\Spring 2015\CIS 440\SDFC\SDFC\obj\Debug\SDFC.dll
 C:\Users\Kevin Galati\Documents\School\Spring 2015\CIS 440\SDFC\SDFC\obj\Debug\SDFC.pdb
-=======
 C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.dll
 C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.pdfa.dll
 C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.xtra.dll
 C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.xml
->>>>>>> b7bbf9971549f8fa23ce6afbfb4211fd6fb5093c

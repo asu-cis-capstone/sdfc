@@ -792,6 +792,234 @@ namespace MobileTest
             // The following element is no longer available: IE web control; Process Id [8052], window handle [2949382]
         }
         
+        /// <summary>
+        /// Attempt to go from desktop application to mobile site
+        /// </summary>
+        public void MobileAccess()
+        {
+            #region Variable Declarations
+            WinEdit uIAddressandsearchusinEdit = this.UILOGINInternetExploreWindow.UIAddressBarClient.UIAddressandsearchusinEdit;
+            WpfTitleBar uISDFCRunningMicrosoftTitleBar = this.UISDFCRunningMicrosoftWindow.UISDFCRunningMicrosoftTitleBar;
+            BrowserWindow uILOGINInternetExploreWindow = this.UILOGINInternetExploreWindow;
+            #endregion
+
+            // Click 'Address and search using Yahoo' text box
+            Mouse.Click(uIAddressandsearchusinEdit, new Point(210, 12));
+
+            // Click 'SDFC (Running) - Microsoft Visual Studio' title bar
+            Mouse.Click(uISDFCRunningMicrosoftTitleBar, new Point(333, 18));
+
+            // Go to web page 'http://localhost:2424/Mobile/Default.aspx'
+            uILOGINInternetExploreWindow.NavigateToUrl(new System.Uri(this.MobileAccessParams.UILOGINInternetExploreWindowUrl));
+        }
+        
+        /// <summary>
+        /// Searching for a report by name and location
+        /// </summary>
+        public void NameSearch()
+        {
+            #region Variable Declarations
+            HtmlCustom uILoginCustom = this.UILOGINInternetExploreWindow.UILOGINDocument.UISDFCFormsManagementLPane.UILoginCustom;
+            HtmlEdit uITbxUsernameEdit = this.UILOGINInternetExploreWindow.UILOGINDocument.UITbxUsernameEdit;
+            HtmlEdit uITbxPasswordEdit = this.UILOGINInternetExploreWindow.UILOGINDocument.UITbxPasswordEdit;
+            HtmlInputButton uILoginButton = this.UILOGINInternetExploreWindow.UILOGINDocument.UILoginButton;
+            HtmlEdit uITxtSearchEdit = this.UILOGINInternetExploreWindow.UIHomeDocument.UITxtSearchEdit;
+            WinButton uIBreakButton = this.UIMicrosoftVisualStudiWindow.UIBreakWindow.UIBreakButton;
+            #endregion
+
+            // Click 'Login' custom control
+            Mouse.Click(uILoginCustom, new Point(11, 33));
+
+            // Click 'Login' custom control
+            Mouse.Click(uILoginCustom, new Point(28, 51));
+
+            // Type 'cgpuglie' in 'tbxUsername' text box
+            uITbxUsernameEdit.Text = this.NameSearchParams.UITbxUsernameEditText;
+
+            // Type '{Tab}' in 'tbxUsername' text box
+            Keyboard.SendKeys(uITbxUsernameEdit, this.NameSearchParams.UITbxUsernameEditSendKeys, ModifierKeys.None);
+
+            // Type '********' in 'tbxPassword' text box
+            uITbxPasswordEdit.Password = this.NameSearchParams.UITbxPasswordEditPassword;
+
+            // Click 'Login' button
+            Mouse.Click(uILoginButton, new Point(17, 16));
+
+            // The following element is no longer available: IE web control; Process Id [9924], window handle [7211450]
+
+            // The following element is no longer available: IE web control; Process Id [9924], window handle [7211450]
+
+            // The following element is no longer available: IE web control; Process Id [9924], window handle [7211450]
+
+            // The following element is no longer available: IE web control; Process Id [9924], window handle [7211450]
+
+            // The following element is no longer available: IE web control; Process Id [9924], window handle [7211450]
+
+            // Type 'joe' in 'txtSearch' text box
+            uITxtSearchEdit.Text = this.NameSearchParams.UITxtSearchEditText;
+
+            // The following element is no longer available: IE web control; Process Id [9924], window handle [7211450]
+
+            // Click '&Break' button
+            Mouse.Click(uIBreakButton, new Point(68, 16));
+        }
+        
+        /// <summary>
+        /// Attempt to submit a form without signing it
+        /// </summary>
+        public void SubmitWithoutSig()
+        {
+            #region Variable Declarations
+            HtmlEdit uITxtusernameEdit = this.UILogInInternetExploreWindow1.UILogInDocument.UITxtusernameEdit;
+            HtmlEdit uITxtpasswordEdit = this.UILogInInternetExploreWindow1.UILogInDocument.UITxtpasswordEdit;
+            #endregion
+
+            // Type 'cgpuglie' in 'txtusername' text box
+            uITxtusernameEdit.Text = this.SubmitWithoutSigParams.UITxtusernameEditText;
+
+            // Type '{Tab}' in 'txtusername' text box
+            Keyboard.SendKeys(uITxtusernameEdit, this.SubmitWithoutSigParams.UITxtusernameEditSendKeys, ModifierKeys.None);
+
+            // Type '********' in 'txtpassword' text box
+            uITxtpasswordEdit.Password = this.SubmitWithoutSigParams.UITxtpasswordEditPassword;
+
+            // Type '{Enter}' in 'txtpassword' text box
+            Keyboard.SendKeys(uITxtpasswordEdit, this.SubmitWithoutSigParams.UITxtpasswordEditSendKeys, ModifierKeys.None);
+
+            // The following element is no longer available: IE web control; Process Id [3240], window handle [17696178]
+
+            // The following element is no longer available: IE web control; Process Id [3240], window handle [17696178]
+        }
+        
+        /// <summary>
+        /// Attempt to submit a form with a signature, but incomplete
+        /// </summary>
+        public void SubmitIncompleteForm()
+        {
+            #region Variable Declarations
+            HtmlEdit uITxtusernameEdit = this.UILogInInternetExploreWindow1.UILogInDocument.UITxtusernameEdit;
+            HtmlEdit uITxtpasswordEdit = this.UILogInInternetExploreWindow1.UILogInDocument.UITxtpasswordEdit;
+            HtmlEdit uITxtNameEdit = this.UILogInInternetExploreWindow1.UIFormDocument.UITxtNameEdit;
+            HtmlTextArea uITxtCommentsEdit = this.UILogInInternetExploreWindow1.UIFormDocument.UITxtCommentsEdit;
+            HtmlEdit uITxtVictimNameEdit = this.UILogInInternetExploreWindow1.UIFormDocument.UITxtVictimNameEdit;
+            HtmlEdit uITxtAddressEdit = this.UILogInInternetExploreWindow1.UIFormDocument.UITxtAddressEdit;
+            HtmlEdit uITxtPhoneEdit = this.UILogInInternetExploreWindow1.UIFormDocument.UITxtPhoneEdit;
+            #endregion
+
+            // Type 'cgpuglie' in 'txtusername' text box
+            uITxtusernameEdit.Text = this.SubmitIncompleteFormParams.UITxtusernameEditText;
+
+            // Type '{Tab}' in 'txtusername' text box
+            Keyboard.SendKeys(uITxtusernameEdit, this.SubmitIncompleteFormParams.UITxtusernameEditSendKeys, ModifierKeys.None);
+
+            // Type '********' in 'txtpassword' text box
+            uITxtpasswordEdit.Password = this.SubmitIncompleteFormParams.UITxtpasswordEditPassword;
+
+            // Type '{Enter}' in 'txtpassword' text box
+            Keyboard.SendKeys(uITxtpasswordEdit, this.SubmitIncompleteFormParams.UITxtpasswordEditSendKeys, ModifierKeys.None);
+
+            // The following element is no longer available: IE web control; Process Id [3160], window handle [5899200]
+
+            // The following element is no longer available: IE web control; Process Id [3160], window handle [5899200]
+
+            // Type 'a' in 'txtName' text box
+            uITxtNameEdit.Text = this.SubmitIncompleteFormParams.UITxtNameEditText;
+
+            // Type '{Tab}' in 'txtName' text box
+            Keyboard.SendKeys(uITxtNameEdit, this.SubmitIncompleteFormParams.UITxtNameEditSendKeys, ModifierKeys.None);
+
+            // Type 'a' in 'txtComments' text box
+            uITxtCommentsEdit.Text = this.SubmitIncompleteFormParams.UITxtCommentsEditText;
+
+            // Type '{Tab}' in 'txtComments' text box
+            Keyboard.SendKeys(uITxtCommentsEdit, this.SubmitIncompleteFormParams.UITxtCommentsEditSendKeys, ModifierKeys.None);
+
+            // Type 'a' in 'txtVictimName' text box
+            uITxtVictimNameEdit.Text = this.SubmitIncompleteFormParams.UITxtVictimNameEditText;
+
+            // Type '{Tab}' in 'txtVictimName' text box
+            Keyboard.SendKeys(uITxtVictimNameEdit, this.SubmitIncompleteFormParams.UITxtVictimNameEditSendKeys, ModifierKeys.None);
+
+            // Type 'a' in 'txtAddress' text box
+            uITxtAddressEdit.Text = this.SubmitIncompleteFormParams.UITxtAddressEditText;
+
+            // Type '{Tab}' in 'txtAddress' text box
+            Keyboard.SendKeys(uITxtAddressEdit, this.SubmitIncompleteFormParams.UITxtAddressEditSendKeys, ModifierKeys.None);
+
+            // Type 'a' in 'txtPhone' text box
+            uITxtPhoneEdit.Text = this.SubmitIncompleteFormParams.UITxtPhoneEditText;
+
+            // The following element is no longer available: IE web control; Process Id [3160], window handle [5899200]
+        }
+        
+        /// <summary>
+        /// Partially complete form, including signature, then attempt to submit
+        /// </summary>
+        public void SubmitBadForm()
+        {
+            #region Variable Declarations
+            HtmlEdit uITxtusernameEdit = this.UILogInInternetExploreWindow1.UILogInDocument.UITxtusernameEdit;
+            HtmlEdit uITxtpasswordEdit = this.UILogInInternetExploreWindow1.UILogInDocument.UITxtpasswordEdit;
+            HtmlEdit uITxtNameEdit = this.UILogInInternetExploreWindow1.UIFormDocument.UITxtNameEdit;
+            HtmlTextArea uITxtCommentsEdit = this.UILogInInternetExploreWindow1.UIFormDocument.UITxtCommentsEdit;
+            HtmlEdit uITxtVictimNameEdit = this.UILogInInternetExploreWindow1.UIFormDocument.UITxtVictimNameEdit;
+            HtmlEdit uITxtAddressEdit = this.UILogInInternetExploreWindow1.UIFormDocument.UITxtAddressEdit;
+            HtmlEdit uITxtPhoneEdit = this.UILogInInternetExploreWindow1.UIFormDocument.UITxtPhoneEdit;
+            #endregion
+
+            // Type 'cgpuglie' in 'txtusername' text box
+            uITxtusernameEdit.Text = this.SubmitBadFormParams.UITxtusernameEditText;
+
+            // Type '{Tab}' in 'txtusername' text box
+            Keyboard.SendKeys(uITxtusernameEdit, this.SubmitBadFormParams.UITxtusernameEditSendKeys, ModifierKeys.None);
+
+            // Type '********' in 'txtpassword' text box
+            uITxtpasswordEdit.Password = this.SubmitBadFormParams.UITxtpasswordEditPassword;
+
+            // Type '{Enter}' in 'txtpassword' text box
+            Keyboard.SendKeys(uITxtpasswordEdit, this.SubmitBadFormParams.UITxtpasswordEditSendKeys, ModifierKeys.None);
+
+            // The following element is no longer available: IE web control; Process Id [752], window handle [7996838]
+
+            // The following element is no longer available: IE web control; Process Id [752], window handle [7996838]
+
+            // Type 'a' in 'txtName' text box
+            uITxtNameEdit.Text = this.SubmitBadFormParams.UITxtNameEditText;
+
+            // Type '{Tab}' in 'txtName' text box
+            Keyboard.SendKeys(uITxtNameEdit, this.SubmitBadFormParams.UITxtNameEditSendKeys, ModifierKeys.None);
+
+            // Type 'a' in 'txtComments' text box
+            uITxtCommentsEdit.Text = this.SubmitBadFormParams.UITxtCommentsEditText;
+
+            // Type '{Tab}' in 'txtComments' text box
+            Keyboard.SendKeys(uITxtCommentsEdit, this.SubmitBadFormParams.UITxtCommentsEditSendKeys, ModifierKeys.None);
+
+            // Type 'a' in 'txtVictimName' text box
+            uITxtVictimNameEdit.Text = this.SubmitBadFormParams.UITxtVictimNameEditText;
+
+            // Type '{Tab}' in 'txtVictimName' text box
+            Keyboard.SendKeys(uITxtVictimNameEdit, this.SubmitBadFormParams.UITxtVictimNameEditSendKeys, ModifierKeys.None);
+
+            // Type 'a' in 'txtAddress' text box
+            uITxtAddressEdit.Text = this.SubmitBadFormParams.UITxtAddressEditText;
+
+            // Type '{Tab}' in 'txtAddress' text box
+            Keyboard.SendKeys(uITxtAddressEdit, this.SubmitBadFormParams.UITxtAddressEditSendKeys, ModifierKeys.None);
+
+            // Type 'a' in 'txtPhone' text box
+            uITxtPhoneEdit.Text = this.SubmitBadFormParams.UITxtPhoneEditText;
+
+            // Type '{Tab}' in 'txtPhone' text box
+            Keyboard.SendKeys(uITxtPhoneEdit, this.SubmitBadFormParams.UITxtPhoneEditSendKeys, ModifierKeys.None);
+
+            // The following element is no longer available: IE web control; Process Id [752], window handle [7996838]
+
+            // The following element is no longer available: IE web control; Process Id [752], window handle [7996838]
+
+            // The following element is no longer available: IE web control; Process Id [752], window handle [7996838]
+        }
+        
         #region Properties
         public virtual LoginParams LoginParams
         {
@@ -838,6 +1066,66 @@ namespace MobileTest
                     this.mPDFExportParams = new PDFExportParams();
                 }
                 return this.mPDFExportParams;
+            }
+        }
+        
+        public virtual MobileAccessParams MobileAccessParams
+        {
+            get
+            {
+                if ((this.mMobileAccessParams == null))
+                {
+                    this.mMobileAccessParams = new MobileAccessParams();
+                }
+                return this.mMobileAccessParams;
+            }
+        }
+        
+        public virtual NameSearchParams NameSearchParams
+        {
+            get
+            {
+                if ((this.mNameSearchParams == null))
+                {
+                    this.mNameSearchParams = new NameSearchParams();
+                }
+                return this.mNameSearchParams;
+            }
+        }
+        
+        public virtual SubmitWithoutSigParams SubmitWithoutSigParams
+        {
+            get
+            {
+                if ((this.mSubmitWithoutSigParams == null))
+                {
+                    this.mSubmitWithoutSigParams = new SubmitWithoutSigParams();
+                }
+                return this.mSubmitWithoutSigParams;
+            }
+        }
+        
+        public virtual SubmitIncompleteFormParams SubmitIncompleteFormParams
+        {
+            get
+            {
+                if ((this.mSubmitIncompleteFormParams == null))
+                {
+                    this.mSubmitIncompleteFormParams = new SubmitIncompleteFormParams();
+                }
+                return this.mSubmitIncompleteFormParams;
+            }
+        }
+        
+        public virtual SubmitBadFormParams SubmitBadFormParams
+        {
+            get
+            {
+                if ((this.mSubmitBadFormParams == null))
+                {
+                    this.mSubmitBadFormParams = new SubmitBadFormParams();
+                }
+                return this.mSubmitBadFormParams;
             }
         }
         
@@ -888,6 +1176,42 @@ namespace MobileTest
                 return this.mUILOGINInternetExploreWindow;
             }
         }
+        
+        public UISDFCRunningMicrosoftWindow UISDFCRunningMicrosoftWindow
+        {
+            get
+            {
+                if ((this.mUISDFCRunningMicrosoftWindow == null))
+                {
+                    this.mUISDFCRunningMicrosoftWindow = new UISDFCRunningMicrosoftWindow();
+                }
+                return this.mUISDFCRunningMicrosoftWindow;
+            }
+        }
+        
+        public UIMicrosoftVisualStudiWindow UIMicrosoftVisualStudiWindow
+        {
+            get
+            {
+                if ((this.mUIMicrosoftVisualStudiWindow == null))
+                {
+                    this.mUIMicrosoftVisualStudiWindow = new UIMicrosoftVisualStudiWindow();
+                }
+                return this.mUIMicrosoftVisualStudiWindow;
+            }
+        }
+        
+        public UILogInInternetExploreWindow1 UILogInInternetExploreWindow1
+        {
+            get
+            {
+                if ((this.mUILogInInternetExploreWindow1 == null))
+                {
+                    this.mUILogInInternetExploreWindow1 = new UILogInInternetExploreWindow1();
+                }
+                return this.mUILogInInternetExploreWindow1;
+            }
+        }
         #endregion
         
         #region Fields
@@ -899,6 +1223,16 @@ namespace MobileTest
         
         private PDFExportParams mPDFExportParams;
         
+        private MobileAccessParams mMobileAccessParams;
+        
+        private NameSearchParams mNameSearchParams;
+        
+        private SubmitWithoutSigParams mSubmitWithoutSigParams;
+        
+        private SubmitIncompleteFormParams mSubmitIncompleteFormParams;
+        
+        private SubmitBadFormParams mSubmitBadFormParams;
+        
         private UILogInGoogleChromeWindow mUILogInGoogleChromeWindow;
         
         private UISelectaformInternetEWindow mUISelectaformInternetEWindow;
@@ -906,6 +1240,12 @@ namespace MobileTest
         private UISDFCDebuggingMicrosoWindow mUISDFCDebuggingMicrosoWindow;
         
         private UILOGINInternetExploreWindow mUILOGINInternetExploreWindow;
+        
+        private UISDFCRunningMicrosoftWindow mUISDFCRunningMicrosoftWindow;
+        
+        private UIMicrosoftVisualStudiWindow mUIMicrosoftVisualStudiWindow;
+        
+        private UILogInInternetExploreWindow1 mUILogInInternetExploreWindow1;
         #endregion
     }
     
@@ -1011,6 +1351,236 @@ namespace MobileTest
         /// Type '5/5/1969' in 'txtEndDate' text box
         /// </summary>
         public string UITxtEndDateEditText = "5/5/1969";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'MobileAccess'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class MobileAccessParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Go to web page 'http://localhost:2424/Mobile/Default.aspx'
+        /// </summary>
+        public string UILOGINInternetExploreWindowUrl = "http://localhost:2424/Mobile/Default.aspx";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'NameSearch'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class NameSearchParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'cgpuglie' in 'tbxUsername' text box
+        /// </summary>
+        public string UITbxUsernameEditText = "cgpuglie";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'tbxUsername' text box
+        /// </summary>
+        public string UITbxUsernameEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type '********' in 'tbxPassword' text box
+        /// </summary>
+        public string UITbxPasswordEditPassword = "QWwOodIXpSM441BCNCWNvH9k+8fhegdI";
+        
+        /// <summary>
+        /// Type 'joe' in 'txtSearch' text box
+        /// </summary>
+        public string UITxtSearchEditText = "joe";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'SubmitWithoutSig'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class SubmitWithoutSigParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'cgpuglie' in 'txtusername' text box
+        /// </summary>
+        public string UITxtusernameEditText = "cgpuglie";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'txtusername' text box
+        /// </summary>
+        public string UITxtusernameEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type '********' in 'txtpassword' text box
+        /// </summary>
+        public string UITxtpasswordEditPassword = "QWwOodIXpSM441BCNCWNvH9k+8fhegdI";
+        
+        /// <summary>
+        /// Type '{Enter}' in 'txtpassword' text box
+        /// </summary>
+        public string UITxtpasswordEditSendKeys = "{Enter}";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'SubmitIncompleteForm'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class SubmitIncompleteFormParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'cgpuglie' in 'txtusername' text box
+        /// </summary>
+        public string UITxtusernameEditText = "cgpuglie";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'txtusername' text box
+        /// </summary>
+        public string UITxtusernameEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type '********' in 'txtpassword' text box
+        /// </summary>
+        public string UITxtpasswordEditPassword = "QWwOodIXpSM441BCNCWNvH9k+8fhegdI";
+        
+        /// <summary>
+        /// Type '{Enter}' in 'txtpassword' text box
+        /// </summary>
+        public string UITxtpasswordEditSendKeys = "{Enter}";
+        
+        /// <summary>
+        /// Type 'a' in 'txtName' text box
+        /// </summary>
+        public string UITxtNameEditText = "a";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'txtName' text box
+        /// </summary>
+        public string UITxtNameEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type 'a' in 'txtComments' text box
+        /// </summary>
+        public string UITxtCommentsEditText = "a";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'txtComments' text box
+        /// </summary>
+        public string UITxtCommentsEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type 'a' in 'txtVictimName' text box
+        /// </summary>
+        public string UITxtVictimNameEditText = "a";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'txtVictimName' text box
+        /// </summary>
+        public string UITxtVictimNameEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type 'a' in 'txtAddress' text box
+        /// </summary>
+        public string UITxtAddressEditText = "a";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'txtAddress' text box
+        /// </summary>
+        public string UITxtAddressEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type 'a' in 'txtPhone' text box
+        /// </summary>
+        public string UITxtPhoneEditText = "a";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'SubmitBadForm'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class SubmitBadFormParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'cgpuglie' in 'txtusername' text box
+        /// </summary>
+        public string UITxtusernameEditText = "cgpuglie";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'txtusername' text box
+        /// </summary>
+        public string UITxtusernameEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type '********' in 'txtpassword' text box
+        /// </summary>
+        public string UITxtpasswordEditPassword = "QWwOodIXpSM441BCNCWNvH9k+8fhegdI";
+        
+        /// <summary>
+        /// Type '{Enter}' in 'txtpassword' text box
+        /// </summary>
+        public string UITxtpasswordEditSendKeys = "{Enter}";
+        
+        /// <summary>
+        /// Type 'a' in 'txtName' text box
+        /// </summary>
+        public string UITxtNameEditText = "a";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'txtName' text box
+        /// </summary>
+        public string UITxtNameEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type 'a' in 'txtComments' text box
+        /// </summary>
+        public string UITxtCommentsEditText = "a";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'txtComments' text box
+        /// </summary>
+        public string UITxtCommentsEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type 'a' in 'txtVictimName' text box
+        /// </summary>
+        public string UITxtVictimNameEditText = "a";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'txtVictimName' text box
+        /// </summary>
+        public string UITxtVictimNameEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type 'a' in 'txtAddress' text box
+        /// </summary>
+        public string UITxtAddressEditText = "a";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'txtAddress' text box
+        /// </summary>
+        public string UITxtAddressEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type 'a' in 'txtPhone' text box
+        /// </summary>
+        public string UITxtPhoneEditText = "a";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'txtPhone' text box
+        /// </summary>
+        public string UITxtPhoneEditSendKeys = "{Tab}";
         #endregion
     }
     
@@ -1298,12 +1868,26 @@ namespace MobileTest
                 return this.mUIHomeDocument;
             }
         }
+        
+        public UIAddressBarClient UIAddressBarClient
+        {
+            get
+            {
+                if ((this.mUIAddressBarClient == null))
+                {
+                    this.mUIAddressBarClient = new UIAddressBarClient(this);
+                }
+                return this.mUIAddressBarClient;
+            }
+        }
         #endregion
         
         #region Fields
         private UILOGINDocument mUILOGINDocument;
         
         private UIHomeDocument mUIHomeDocument;
+        
+        private UIAddressBarClient mUIAddressBarClient;
         #endregion
     }
     
@@ -1674,6 +2258,419 @@ namespace MobileTest
         private HtmlEdit mUITxtStartDateEdit;
         
         private HtmlEdit mUITxtEndDateEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIAddressBarClient : WinClient
+    {
+        
+        public UIAddressBarClient(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinControl.PropertyNames.Name] = "Address Bar";
+            this.WindowTitles.Add("LOGIN - Internet Explorer");
+            #endregion
+        }
+        
+        #region Properties
+        public WinEdit UIAddressandsearchusinEdit
+        {
+            get
+            {
+                if ((this.mUIAddressandsearchusinEdit == null))
+                {
+                    this.mUIAddressandsearchusinEdit = new WinEdit(this);
+                    #region Search Criteria
+                    this.mUIAddressandsearchusinEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Address and search using Yahoo";
+                    this.mUIAddressandsearchusinEdit.WindowTitles.Add("LOGIN - Internet Explorer");
+                    #endregion
+                }
+                return this.mUIAddressandsearchusinEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinEdit mUIAddressandsearchusinEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UISDFCRunningMicrosoftWindow : WpfWindow
+    {
+        
+        public UISDFCRunningMicrosoftWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[WpfWindow.PropertyNames.Name] = "SDFC (Running) - Microsoft Visual Studio";
+            this.SearchProperties.Add(new PropertyExpression(WpfWindow.PropertyNames.ClassName, "HwndWrapper", PropertyExpressionOperator.Contains));
+            this.WindowTitles.Add("SDFC (Running) - Microsoft Visual Studio");
+            #endregion
+        }
+        
+        #region Properties
+        public WpfTitleBar UISDFCRunningMicrosoftTitleBar
+        {
+            get
+            {
+                if ((this.mUISDFCRunningMicrosoftTitleBar == null))
+                {
+                    this.mUISDFCRunningMicrosoftTitleBar = new WpfTitleBar(this);
+                    #region Search Criteria
+                    this.mUISDFCRunningMicrosoftTitleBar.SearchProperties[WpfTitleBar.PropertyNames.AutomationId] = "TitleBar";
+                    this.mUISDFCRunningMicrosoftTitleBar.SearchProperties[WpfTitleBar.PropertyNames.Instance] = "2";
+                    this.mUISDFCRunningMicrosoftTitleBar.WindowTitles.Add("SDFC (Running) - Microsoft Visual Studio");
+                    #endregion
+                }
+                return this.mUISDFCRunningMicrosoftTitleBar;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WpfTitleBar mUISDFCRunningMicrosoftTitleBar;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIMicrosoftVisualStudiWindow : WinWindow
+    {
+        
+        public UIMicrosoftVisualStudiWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.Name] = "Microsoft Visual Studio";
+            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "#32770";
+            this.WindowTitles.Add("Microsoft Visual Studio");
+            #endregion
+        }
+        
+        #region Properties
+        public UIBreakWindow UIBreakWindow
+        {
+            get
+            {
+                if ((this.mUIBreakWindow == null))
+                {
+                    this.mUIBreakWindow = new UIBreakWindow(this);
+                }
+                return this.mUIBreakWindow;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIBreakWindow mUIBreakWindow;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIBreakWindow : WinWindow
+    {
+        
+        public UIBreakWindow(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "2";
+            this.WindowTitles.Add("Microsoft Visual Studio");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UIBreakButton
+        {
+            get
+            {
+                if ((this.mUIBreakButton == null))
+                {
+                    this.mUIBreakButton = new WinButton(this);
+                    #region Search Criteria
+                    this.mUIBreakButton.SearchProperties[WinButton.PropertyNames.Name] = "Break";
+                    this.mUIBreakButton.WindowTitles.Add("Microsoft Visual Studio");
+                    #endregion
+                }
+                return this.mUIBreakButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUIBreakButton;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UILogInInternetExploreWindow1 : BrowserWindow
+    {
+        
+        public UILogInInternetExploreWindow1()
+        {
+            #region Search Criteria
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "log In - Internet Explorer";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "IEFrame";
+            this.WindowTitles.Add("log In - Internet Explorer");
+            this.WindowTitles.Add("form - Internet Explorer");
+            #endregion
+        }
+        
+        public void LaunchUrl(System.Uri url)
+        {
+            this.CopyFrom(BrowserWindow.Launch(url));
+        }
+        
+        #region Properties
+        public UILogInDocument1 UILogInDocument
+        {
+            get
+            {
+                if ((this.mUILogInDocument == null))
+                {
+                    this.mUILogInDocument = new UILogInDocument1(this);
+                }
+                return this.mUILogInDocument;
+            }
+        }
+        
+        public UIFormDocument UIFormDocument
+        {
+            get
+            {
+                if ((this.mUIFormDocument == null))
+                {
+                    this.mUIFormDocument = new UIFormDocument(this);
+                }
+                return this.mUIFormDocument;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UILogInDocument1 mUILogInDocument;
+        
+        private UIFormDocument mUIFormDocument;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UILogInDocument1 : HtmlDocument
+    {
+        
+        public UILogInDocument1(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDocument.PropertyNames.Id] = null;
+            this.SearchProperties[HtmlDocument.PropertyNames.RedirectingPage] = "False";
+            this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
+            this.FilterProperties[HtmlDocument.PropertyNames.Title] = "log In";
+            this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/Mobile/Login.aspx";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "http://localhost:2424/Mobile/Login.aspx";
+            this.WindowTitles.Add("log In - Internet Explorer");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlEdit UITxtusernameEdit
+        {
+            get
+            {
+                if ((this.mUITxtusernameEdit == null))
+                {
+                    this.mUITxtusernameEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUITxtusernameEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "txtusername";
+                    this.mUITxtusernameEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "ctl00$MobileContent$txtusername";
+                    this.mUITxtusernameEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUITxtusernameEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUITxtusernameEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUITxtusernameEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUITxtusernameEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"ctl00$MobileContent$txtusername\" i";
+                    this.mUITxtusernameEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "4";
+                    this.mUITxtusernameEdit.WindowTitles.Add("log In - Internet Explorer");
+                    #endregion
+                }
+                return this.mUITxtusernameEdit;
+            }
+        }
+        
+        public HtmlEdit UITxtpasswordEdit
+        {
+            get
+            {
+                if ((this.mUITxtpasswordEdit == null))
+                {
+                    this.mUITxtpasswordEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUITxtpasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "txtpassword";
+                    this.mUITxtpasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "ctl00$MobileContent$txtpassword";
+                    this.mUITxtpasswordEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUITxtpasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "PASSWORD";
+                    this.mUITxtpasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUITxtpasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUITxtpasswordEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"ctl00$MobileContent$txtpassword\" i";
+                    this.mUITxtpasswordEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "5";
+                    this.mUITxtpasswordEdit.WindowTitles.Add("log In - Internet Explorer");
+                    #endregion
+                }
+                return this.mUITxtpasswordEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlEdit mUITxtusernameEdit;
+        
+        private HtmlEdit mUITxtpasswordEdit;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIFormDocument : HtmlDocument
+    {
+        
+        public UIFormDocument(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDocument.PropertyNames.Id] = null;
+            this.SearchProperties[HtmlDocument.PropertyNames.RedirectingPage] = "False";
+            this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
+            this.FilterProperties[HtmlDocument.PropertyNames.Title] = "form";
+            this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/Mobile/Form.aspx";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "http://localhost:2424/Mobile/Form.aspx?ID=1";
+            this.WindowTitles.Add("form - Internet Explorer");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlEdit UITxtNameEdit
+        {
+            get
+            {
+                if ((this.mUITxtNameEdit == null))
+                {
+                    this.mUITxtNameEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUITxtNameEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "txtName";
+                    this.mUITxtNameEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "ctl00$MobileContent$txtName";
+                    this.mUITxtNameEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUITxtNameEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUITxtNameEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUITxtNameEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUITxtNameEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"ctl00$MobileContent$txtName\" id=\"t";
+                    this.mUITxtNameEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "5";
+                    this.mUITxtNameEdit.WindowTitles.Add("form - Internet Explorer");
+                    #endregion
+                }
+                return this.mUITxtNameEdit;
+            }
+        }
+        
+        public HtmlTextArea UITxtCommentsEdit
+        {
+            get
+            {
+                if ((this.mUITxtCommentsEdit == null))
+                {
+                    this.mUITxtCommentsEdit = new HtmlTextArea(this);
+                    #region Search Criteria
+                    this.mUITxtCommentsEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "txtComments";
+                    this.mUITxtCommentsEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "ctl00$MobileContent$txtComments";
+                    this.mUITxtCommentsEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUITxtCommentsEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUITxtCommentsEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUITxtCommentsEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"ctl00$MobileContent$txtComments\" i";
+                    this.mUITxtCommentsEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "1";
+                    this.mUITxtCommentsEdit.WindowTitles.Add("form - Internet Explorer");
+                    #endregion
+                }
+                return this.mUITxtCommentsEdit;
+            }
+        }
+        
+        public HtmlEdit UITxtVictimNameEdit
+        {
+            get
+            {
+                if ((this.mUITxtVictimNameEdit == null))
+                {
+                    this.mUITxtVictimNameEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUITxtVictimNameEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "txtVictimName";
+                    this.mUITxtVictimNameEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "ctl00$MobileContent$txtVictimName";
+                    this.mUITxtVictimNameEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUITxtVictimNameEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUITxtVictimNameEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUITxtVictimNameEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUITxtVictimNameEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"ctl00$MobileContent$txtVictimName\"";
+                    this.mUITxtVictimNameEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "6";
+                    this.mUITxtVictimNameEdit.WindowTitles.Add("form - Internet Explorer");
+                    #endregion
+                }
+                return this.mUITxtVictimNameEdit;
+            }
+        }
+        
+        public HtmlEdit UITxtAddressEdit
+        {
+            get
+            {
+                if ((this.mUITxtAddressEdit == null))
+                {
+                    this.mUITxtAddressEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUITxtAddressEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "txtAddress";
+                    this.mUITxtAddressEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "ctl00$MobileContent$txtAddress";
+                    this.mUITxtAddressEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUITxtAddressEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUITxtAddressEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUITxtAddressEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUITxtAddressEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"ctl00$MobileContent$txtAddress\" id";
+                    this.mUITxtAddressEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "7";
+                    this.mUITxtAddressEdit.WindowTitles.Add("form - Internet Explorer");
+                    #endregion
+                }
+                return this.mUITxtAddressEdit;
+            }
+        }
+        
+        public HtmlEdit UITxtPhoneEdit
+        {
+            get
+            {
+                if ((this.mUITxtPhoneEdit == null))
+                {
+                    this.mUITxtPhoneEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUITxtPhoneEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "txtPhone";
+                    this.mUITxtPhoneEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "ctl00$MobileContent$txtPhone";
+                    this.mUITxtPhoneEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUITxtPhoneEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUITxtPhoneEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUITxtPhoneEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUITxtPhoneEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"ctl00$MobileContent$txtPhone\" id=\"";
+                    this.mUITxtPhoneEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "8";
+                    this.mUITxtPhoneEdit.WindowTitles.Add("form - Internet Explorer");
+                    #endregion
+                }
+                return this.mUITxtPhoneEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlEdit mUITxtNameEdit;
+        
+        private HtmlTextArea mUITxtCommentsEdit;
+        
+        private HtmlEdit mUITxtVictimNameEdit;
+        
+        private HtmlEdit mUITxtAddressEdit;
+        
+        private HtmlEdit mUITxtPhoneEdit;
         #endregion
     }
 }

@@ -19,7 +19,7 @@ namespace SDFC.Models
         public DB_Connector()
         {
             //get connection string from web.config
-            string connectionString = WebConfigurationManager.AppSettings["cisDB"];
+            string connectionString = WebConfigurationManager.ConnectionStrings["cisDB"].ToString();
 
             //create db connection
             myConnection = new MySqlConnection(connectionString);
@@ -93,7 +93,7 @@ namespace SDFC.Models
                 //new MySqlParameter("@FacMan", report.FacilitiesManagemet),
                 new MySqlParameter("@InjuryLocation", report.InjuryLocation),
                 new MySqlParameter("@InjuryType", report.InjuryType),
-                new MySqlParameter("@Location", report.location),
+                new MySqlParameter("@Location", report.Location),
                 new MySqlParameter("@Male", report.Male),
                 new MySqlParameter("@ManagerCalled", report.ManagerCalled),
                 new MySqlParameter("@MedicalReportNo", report.MedicalReport),

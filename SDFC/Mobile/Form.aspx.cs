@@ -35,7 +35,7 @@ namespace SDFC.Mobile
             if (!this.IsPostBack)
             {
                 //retrieve connection string from web.config
-                string conString = WebConfigurationManager.AppSettings["cisDB"];
+                string conString = WebConfigurationManager.ConnectionStrings["cisDB"].ToString();
                 //assign connection string to sqldatasources
                 ActionList.ConnectionString = conString;
                 ActivityList.ConnectionString = conString;
@@ -75,7 +75,7 @@ namespace SDFC.Mobile
             myReport.Age = Convert.ToInt32(txtAge.Text);
             myReport.Male = genderMale.Selected;
             myReport.Activity = Convert.ToInt32(txtActivity.SelectedValue);
-            myReport.location = Convert.ToInt32(txtLocation.SelectedValue);
+            myReport.Location = Convert.ToInt32(txtLocation.SelectedValue);
             myReport.Action = Convert.ToInt32(txtAction.SelectedValue);
             myReport.InjuryType = Convert.ToInt32(txtInjuryType.SelectedValue);
             myReport.InjuryLocation = Convert.ToInt32(txtLocation.SelectedValue);
