@@ -8,6 +8,7 @@ C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\bin\SDFC.pdb
 C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\obj\Debug\SDFC.dll
 C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\obj\Debug\SDFC.pdb
 C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\obj\Debug\SDFC.csprojResolveAssemblyReference.cache
+C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\bin\MySql.Data.dll
 C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\SDFC.dll
 C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\SDFC.pdb
 C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\obj\Debug\SDFC.csprojResolveAssemblyReference.cache
@@ -23,7 +24,7 @@ F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.dll
 F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.pdfa.dll
 F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.xtra.dll
 F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.xml
-C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\bin\itextsharp.dll
-C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\bin\itextsharp.pdfa.dll
-C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\bin\itextsharp.xtra.dll
-C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\SDFC\bin\itextsharp.xml
+C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.dll
+C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.pdfa.dll
+C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.xtra.dll
+C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.xml

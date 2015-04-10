@@ -7,3 +7,8 @@
     background-color: white;
     display: none;
 }
+
+    .empDetails table {
+        margin-left: auto;
+        margin-right: auto;
+    }
