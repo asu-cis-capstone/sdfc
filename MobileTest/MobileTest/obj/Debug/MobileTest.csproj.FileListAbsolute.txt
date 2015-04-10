@@ -3,3 +3,8 @@ C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\MobileTest\MobileTest\bin\Deb
 C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\MobileTest\MobileTest\obj\Debug\MobileTest.csprojResolveAssemblyReference.cache
 C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\MobileTest\MobileTest\obj\Debug\MobileTest.dll
 C:\Users\cgpuglie\Documents\Projects\Capstone\SDFC\MobileTest\MobileTest\obj\Debug\MobileTest.pdb
+C:\Users\Kevin Galati\Documents\School\Spring 2015\CIS 440\SDFC\MobileTest\MobileTest\bin\Debug\MobileTest.dll
+C:\Users\Kevin Galati\Documents\School\Spring 2015\CIS 440\SDFC\MobileTest\MobileTest\bin\Debug\MobileTest.pdb
+C:\Users\Kevin Galati\Documents\School\Spring 2015\CIS 440\SDFC\MobileTest\MobileTest\obj\Debug\MobileTest.csprojResolveAssemblyReference.cache
+C:\Users\Kevin Galati\Documents\School\Spring 2015\CIS 440\SDFC\MobileTest\MobileTest\obj\Debug\MobileTest.dll
+C:\Users\Kevin Galati\Documents\School\Spring 2015\CIS 440\SDFC\MobileTest\MobileTest\obj\Debug\MobileTest.pdb

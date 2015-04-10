@@ -18,6 +18,7 @@ namespace MobileTest
     using System.Windows.Input;
     using Microsoft.VisualStudio.TestTools.UITest.Extension;
     using Microsoft.VisualStudio.TestTools.UITesting;
+    using Microsoft.VisualStudio.TestTools.UITesting.HtmlControls;
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;
     using Microsoft.VisualStudio.TestTools.UITesting.WpfControls;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -675,6 +676,122 @@ namespace MobileTest
             Mouse.Click(uIDebugTargetMenuItem, new Point(79, 23));
         }
         
+        /// <summary>
+        /// Testing for entering incorrect credentials on login page
+        /// </summary>
+        public void BadLogin()
+        {
+            #region Variable Declarations
+            HtmlHyperlink uILearnMoreHyperlink = this.UILOGINInternetExploreWindow.UILOGINDocument.UIMainTitleDivPane.UILearnMoreHyperlink;
+            HtmlDiv uIInstructionsBrahPane = this.UILOGINInternetExploreWindow.UILOGINDocument.UIInstructionsBrahPane;
+            BrowserWindow uILOGINInternetExploreWindow = this.UILOGINInternetExploreWindow;
+            HtmlCustom uILoginCustom = this.UILOGINInternetExploreWindow.UILOGINDocument.UISDFCFormsManagementLPane.UILoginCustom;
+            HtmlEdit uITbxUsernameEdit = this.UILOGINInternetExploreWindow.UILOGINDocument.UITbxUsernameEdit;
+            HtmlEdit uITbxPasswordEdit = this.UILOGINInternetExploreWindow.UILOGINDocument.UITbxPasswordEdit;
+            HtmlInputButton uILoginButton = this.UILOGINInternetExploreWindow.UILOGINDocument.UILoginButton;
+            #endregion
+
+            // Click 'Learn More...' link
+            Mouse.Click(uILearnMoreHyperlink, new Point(31, 6));
+
+            // Click 'Instructions Brah' pane
+            Mouse.Click(uIInstructionsBrahPane, new Point(668, 388));
+
+            // Perform Back on Browser Window
+            uILOGINInternetExploreWindow.Back();
+
+            // Click 'Login' custom control
+            Mouse.Click(uILoginCustom, new Point(64, 44));
+
+            // Type 'guest' in 'tbxUsername' text box
+            uITbxUsernameEdit.Text = this.BadLoginParams.UITbxUsernameEditText;
+
+            // Type '{Tab}' in 'tbxUsername' text box
+            Keyboard.SendKeys(uITbxUsernameEdit, this.BadLoginParams.UITbxUsernameEditSendKeys, ModifierKeys.None);
+
+            // Type '********' in 'tbxPassword' text box
+            uITbxPasswordEdit.Password = this.BadLoginParams.UITbxPasswordEditPassword;
+
+            // Click 'Login' button
+            Mouse.Click(uILoginButton, new Point(24, 13));
+        }
+        
+        /// <summary>
+        /// Searching for reports, selecting and trying to export as PDF
+        /// </summary>
+        public void PDFExport()
+        {
+            #region Variable Declarations
+            HtmlCustom uILoginCustom = this.UILOGINInternetExploreWindow.UILOGINDocument.UISDFCFormsManagementLPane.UILoginCustom;
+            HtmlEdit uITbxPasswordEdit = this.UILOGINInternetExploreWindow.UILOGINDocument.UITbxPasswordEdit;
+            HtmlEdit uITbxUsernameEdit = this.UILOGINInternetExploreWindow.UILOGINDocument.UITbxUsernameEdit;
+            HtmlCustom uILoginCustom1 = this.UILOGINInternetExploreWindow.UILOGINDocument.UILoginCustom;
+            HtmlInputButton uILoginButton = this.UILOGINInternetExploreWindow.UILOGINDocument.UILoginButton;
+            HtmlEdit uITxtSearchEdit = this.UILOGINInternetExploreWindow.UIHomeDocument.UITxtSearchEdit;
+            HtmlEdit uITxtStartDateEdit = this.UILOGINInternetExploreWindow.UIHomeDocument.UITxtStartDateEdit;
+            HtmlEdit uITxtEndDateEdit = this.UILOGINInternetExploreWindow.UIHomeDocument.UITxtEndDateEdit;
+            #endregion
+
+            // Click 'Login' custom control
+            Mouse.Click(uILoginCustom, new Point(63, 43));
+
+            // Click 'tbxPassword' text box
+            Mouse.Click(uITbxPasswordEdit, new Point(48, 16));
+
+            // Type 'guest' in 'tbxUsername' text box
+            uITbxUsernameEdit.Text = this.PDFExportParams.UITbxUsernameEditText;
+
+            // Type '{Tab}' in 'tbxUsername' text box
+            Keyboard.SendKeys(uITbxUsernameEdit, this.PDFExportParams.UITbxUsernameEditSendKeys, ModifierKeys.None);
+
+            // Type '********' in 'tbxPassword' text box
+            uITbxPasswordEdit.Password = this.PDFExportParams.UITbxPasswordEditPassword;
+
+            // Click 'login' custom control
+            Mouse.Click(uILoginCustom1, new Point(202, 125));
+
+            // Click 'Login' button
+            Mouse.Click(uILoginButton, new Point(27, 15));
+
+            // The following element is no longer available: IE web control; Process Id [8052], window handle [2949382]
+
+            // The following element is no longer available: IE web control; Process Id [8052], window handle [2949382]
+
+            // Type 'person' in 'txtSearch' text box
+            uITxtSearchEdit.Text = this.PDFExportParams.UITxtSearchEditText;
+
+            // The following element is no longer available: IE web control; Process Id [8052], window handle [2949382]
+
+            // The following element is no longer available: IE web control; Process Id [8052], window handle [2949382]
+
+            // The following element is no longer available: IE web control; Process Id [8052], window handle [2949382]
+
+            // The following element is no longer available: IE web control; Process Id [8052], window handle [2949382]
+
+            // Type '1/1/2014' in 'txtStartDate' text box
+            uITxtStartDateEdit.Text = this.PDFExportParams.UITxtStartDateEditText;
+
+            // Type '{Tab}' in 'txtStartDate' text box
+            Keyboard.SendKeys(uITxtStartDateEdit, this.PDFExportParams.UITxtStartDateEditSendKeys, ModifierKeys.None);
+
+            // Type '5/5/1969' in 'txtEndDate' text box
+            uITxtEndDateEdit.Text = this.PDFExportParams.UITxtEndDateEditText;
+
+            // The following element is no longer available: IE web control; Process Id [8052], window handle [2949382]
+
+            // The following element is no longer available: IE web control; Process Id [8052], window handle [2949382]
+
+            // The following element is no longer available: IE web control; Process Id [8052], window handle [2949382]
+
+            // The following element is no longer available: IE web control; Process Id [8052], window handle [2949382]
+
+            // The following element is no longer available: IE web control; Process Id [8052], window handle [2949382]
+
+            // The following element is no longer available: IE web control; Process Id [8052], window handle [2949382]
+
+            // The following element is no longer available: IE web control; Process Id [8052], window handle [2949382]
+        }
+        
         #region Properties
         public virtual LoginParams LoginParams
         {
@@ -697,6 +814,30 @@ namespace MobileTest
                     this.mGoToDesktopSiteParams = new GoToDesktopSiteParams();
                 }
                 return this.mGoToDesktopSiteParams;
+            }
+        }
+        
+        public virtual BadLoginParams BadLoginParams
+        {
+            get
+            {
+                if ((this.mBadLoginParams == null))
+                {
+                    this.mBadLoginParams = new BadLoginParams();
+                }
+                return this.mBadLoginParams;
+            }
+        }
+        
+        public virtual PDFExportParams PDFExportParams
+        {
+            get
+            {
+                if ((this.mPDFExportParams == null))
+                {
+                    this.mPDFExportParams = new PDFExportParams();
+                }
+                return this.mPDFExportParams;
             }
         }
         
@@ -735,6 +876,18 @@ namespace MobileTest
                 return this.mUISDFCDebuggingMicrosoWindow;
             }
         }
+        
+        public UILOGINInternetExploreWindow UILOGINInternetExploreWindow
+        {
+            get
+            {
+                if ((this.mUILOGINInternetExploreWindow == null))
+                {
+                    this.mUILOGINInternetExploreWindow = new UILOGINInternetExploreWindow();
+                }
+                return this.mUILOGINInternetExploreWindow;
+            }
+        }
         #endregion
         
         #region Fields
@@ -742,11 +895,17 @@ namespace MobileTest
         
         private GoToDesktopSiteParams mGoToDesktopSiteParams;
         
+        private BadLoginParams mBadLoginParams;
+        
+        private PDFExportParams mPDFExportParams;
+        
         private UILogInGoogleChromeWindow mUILogInGoogleChromeWindow;
         
         private UISelectaformInternetEWindow mUISelectaformInternetEWindow;
         
         private UISDFCDebuggingMicrosoWindow mUISDFCDebuggingMicrosoWindow;
+        
+        private UILOGINInternetExploreWindow mUILOGINInternetExploreWindow;
         #endregion
     }
     
@@ -782,6 +941,76 @@ namespace MobileTest
         /// Go to web page 'http://localhost:2424/Desktop/Login.aspx'
         /// </summary>
         public string UISelectaformInternetEWindowUrl = "http://localhost:2424/Desktop/Login.aspx";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'BadLogin'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class BadLoginParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'guest' in 'tbxUsername' text box
+        /// </summary>
+        public string UITbxUsernameEditText = "guest";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'tbxUsername' text box
+        /// </summary>
+        public string UITbxUsernameEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type '********' in 'tbxPassword' text box
+        /// </summary>
+        public string UITbxPasswordEditPassword = "QWwOodIXpSNDHpkrpIpLGRhIuAJiH/Bf";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'PDFExport'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class PDFExportParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'guest' in 'tbxUsername' text box
+        /// </summary>
+        public string UITbxUsernameEditText = "guest";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'tbxUsername' text box
+        /// </summary>
+        public string UITbxUsernameEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type '********' in 'tbxPassword' text box
+        /// </summary>
+        public string UITbxPasswordEditPassword = "QWwOodIXpSM441BCNCWNvH9k+8fhegdI";
+        
+        /// <summary>
+        /// Type 'person' in 'txtSearch' text box
+        /// </summary>
+        public string UITxtSearchEditText = "person";
+        
+        /// <summary>
+        /// Type '1/1/2014' in 'txtStartDate' text box
+        /// </summary>
+        public string UITxtStartDateEditText = "1/1/2014";
+        
+        /// <summary>
+        /// Type '{Tab}' in 'txtStartDate' text box
+        /// </summary>
+        public string UITxtStartDateEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type '5/5/1969' in 'txtEndDate' text box
+        /// </summary>
+        public string UITxtEndDateEditText = "5/5/1969";
         #endregion
     }
     
@@ -1023,6 +1252,428 @@ namespace MobileTest
         
         #region Fields
         private WpfMenuItem mUIDebugTargetMenuItem;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UILOGINInternetExploreWindow : BrowserWindow
+    {
+        
+        public UILOGINInternetExploreWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "LOGIN - Internet Explorer";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "IEFrame";
+            this.WindowTitles.Add("LOGIN - Internet Explorer");
+            this.WindowTitles.Add("Home - Internet Explorer");
+            #endregion
+        }
+        
+        public void LaunchUrl(System.Uri url)
+        {
+            this.CopyFrom(BrowserWindow.Launch(url));
+        }
+        
+        #region Properties
+        public UILOGINDocument UILOGINDocument
+        {
+            get
+            {
+                if ((this.mUILOGINDocument == null))
+                {
+                    this.mUILOGINDocument = new UILOGINDocument(this);
+                }
+                return this.mUILOGINDocument;
+            }
+        }
+        
+        public UIHomeDocument UIHomeDocument
+        {
+            get
+            {
+                if ((this.mUIHomeDocument == null))
+                {
+                    this.mUIHomeDocument = new UIHomeDocument(this);
+                }
+                return this.mUIHomeDocument;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UILOGINDocument mUILOGINDocument;
+        
+        private UIHomeDocument mUIHomeDocument;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UILOGINDocument : HtmlDocument
+    {
+        
+        public UILOGINDocument(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDocument.PropertyNames.Id] = "container";
+            this.SearchProperties[HtmlDocument.PropertyNames.RedirectingPage] = "False";
+            this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
+            this.FilterProperties[HtmlDocument.PropertyNames.Title] = "LOGIN";
+            this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/Desktop/Login.aspx";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "http://localhost:2424/Desktop/Login.aspx";
+            this.WindowTitles.Add("LOGIN - Internet Explorer");
+            #endregion
+        }
+        
+        #region Properties
+        public UIMainTitleDivPane UIMainTitleDivPane
+        {
+            get
+            {
+                if ((this.mUIMainTitleDivPane == null))
+                {
+                    this.mUIMainTitleDivPane = new UIMainTitleDivPane(this);
+                }
+                return this.mUIMainTitleDivPane;
+            }
+        }
+        
+        public HtmlDiv UIInstructionsBrahPane
+        {
+            get
+            {
+                if ((this.mUIInstructionsBrahPane == null))
+                {
+                    this.mUIInstructionsBrahPane = new HtmlDiv(this);
+                    #region Search Criteria
+                    this.mUIInstructionsBrahPane.SearchProperties[HtmlDiv.PropertyNames.Id] = "mainContent";
+                    this.mUIInstructionsBrahPane.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+                    this.mUIInstructionsBrahPane.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Instructions Brah";
+                    this.mUIInstructionsBrahPane.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+                    this.mUIInstructionsBrahPane.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+                    this.mUIInstructionsBrahPane.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"mainContent\"";
+                    this.mUIInstructionsBrahPane.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "5";
+                    this.mUIInstructionsBrahPane.WindowTitles.Add("LOGIN - Internet Explorer");
+                    #endregion
+                }
+                return this.mUIInstructionsBrahPane;
+            }
+        }
+        
+        public UISDFCFormsManagementLPane UISDFCFormsManagementLPane
+        {
+            get
+            {
+                if ((this.mUISDFCFormsManagementLPane == null))
+                {
+                    this.mUISDFCFormsManagementLPane = new UISDFCFormsManagementLPane(this);
+                }
+                return this.mUISDFCFormsManagementLPane;
+            }
+        }
+        
+        public HtmlEdit UITbxUsernameEdit
+        {
+            get
+            {
+                if ((this.mUITbxUsernameEdit == null))
+                {
+                    this.mUITbxUsernameEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUITbxUsernameEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "tbxUsername";
+                    this.mUITbxUsernameEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "tbxUsername";
+                    this.mUITbxUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUITbxUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUITbxUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUITbxUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUITbxUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"tbxUsername\" id=\"tbxUsername\" requ";
+                    this.mUITbxUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "4";
+                    this.mUITbxUsernameEdit.WindowTitles.Add("LOGIN - Internet Explorer");
+                    #endregion
+                }
+                return this.mUITbxUsernameEdit;
+            }
+        }
+        
+        public HtmlEdit UITbxPasswordEdit
+        {
+            get
+            {
+                if ((this.mUITbxPasswordEdit == null))
+                {
+                    this.mUITbxPasswordEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUITbxPasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "tbxPassword";
+                    this.mUITbxPasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "tbxPassword";
+                    this.mUITbxPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUITbxPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "PASSWORD";
+                    this.mUITbxPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUITbxPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUITbxPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"tbxPassword\" id=\"tbxPassword\" requ";
+                    this.mUITbxPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "5";
+                    this.mUITbxPasswordEdit.WindowTitles.Add("LOGIN - Internet Explorer");
+                    #endregion
+                }
+                return this.mUITbxPasswordEdit;
+            }
+        }
+        
+        public HtmlInputButton UILoginButton
+        {
+            get
+            {
+                if ((this.mUILoginButton == null))
+                {
+                    this.mUILoginButton = new HtmlInputButton(this);
+                    #region Search Criteria
+                    this.mUILoginButton.SearchProperties[HtmlButton.PropertyNames.Id] = "btnLogin";
+                    this.mUILoginButton.SearchProperties[HtmlButton.PropertyNames.Name] = "btnLogin";
+                    this.mUILoginButton.FilterProperties[HtmlButton.PropertyNames.DisplayText] = "Login";
+                    this.mUILoginButton.FilterProperties[HtmlButton.PropertyNames.Type] = "submit";
+                    this.mUILoginButton.FilterProperties[HtmlButton.PropertyNames.Title] = null;
+                    this.mUILoginButton.FilterProperties[HtmlButton.PropertyNames.Class] = null;
+                    this.mUILoginButton.FilterProperties[HtmlButton.PropertyNames.ControlDefinition] = "name=\"btnLogin\" id=\"btnLogin\" type=\"subm";
+                    this.mUILoginButton.FilterProperties[HtmlButton.PropertyNames.TagInstance] = "6";
+                    this.mUILoginButton.WindowTitles.Add("LOGIN - Internet Explorer");
+                    #endregion
+                }
+                return this.mUILoginButton;
+            }
+        }
+        
+        public HtmlCustom UILoginCustom
+        {
+            get
+            {
+                if ((this.mUILoginCustom == null))
+                {
+                    this.mUILoginCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUILoginCustom.SearchProperties["TagName"] = "FORM";
+                    this.mUILoginCustom.SearchProperties["Id"] = "login";
+                    this.mUILoginCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUILoginCustom.FilterProperties["Class"] = null;
+                    this.mUILoginCustom.FilterProperties["ControlDefinition"] = "id=\"login\" action=\"Login.aspx\" method=\"p";
+                    this.mUILoginCustom.FilterProperties["TagInstance"] = "1";
+                    this.mUILoginCustom.WindowTitles.Add("LOGIN - Internet Explorer");
+                    #endregion
+                }
+                return this.mUILoginCustom;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIMainTitleDivPane mUIMainTitleDivPane;
+        
+        private HtmlDiv mUIInstructionsBrahPane;
+        
+        private UISDFCFormsManagementLPane mUISDFCFormsManagementLPane;
+        
+        private HtmlEdit mUITbxUsernameEdit;
+        
+        private HtmlEdit mUITbxPasswordEdit;
+        
+        private HtmlInputButton mUILoginButton;
+        
+        private HtmlCustom mUILoginCustom;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIMainTitleDivPane : HtmlDiv
+    {
+        
+        public UIMainTitleDivPane(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "mainTitleDiv";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Data Reporting and Management Applicatio";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"mainTitleDiv\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "4";
+            this.WindowTitles.Add("LOGIN - Internet Explorer");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlHyperlink UILearnMoreHyperlink
+        {
+            get
+            {
+                if ((this.mUILearnMoreHyperlink == null))
+                {
+                    this.mUILearnMoreHyperlink = new HtmlHyperlink(this);
+                    #region Search Criteria
+                    this.mUILearnMoreHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Id] = null;
+                    this.mUILearnMoreHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Name] = null;
+                    this.mUILearnMoreHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = null;
+                    this.mUILearnMoreHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = "Learn More...";
+                    this.mUILearnMoreHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/Desktop/Login.aspx";
+                    this.mUILearnMoreHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Title] = null;
+                    this.mUILearnMoreHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "http://localhost:2424/Desktop/Login.aspx#instructions";
+                    this.mUILearnMoreHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Class] = null;
+                    this.mUILearnMoreHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "href=\"#instructions\"";
+                    this.mUILearnMoreHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.TagInstance] = "1";
+                    this.mUILearnMoreHyperlink.WindowTitles.Add("LOGIN - Internet Explorer");
+                    #endregion
+                }
+                return this.mUILearnMoreHyperlink;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlHyperlink mUILearnMoreHyperlink;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UISDFCFormsManagementLPane : HtmlDiv
+    {
+        
+        public UISDFCFormsManagementLPane(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "navbarContents";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "SDFC Forms Management\r\nLogin";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"navbarContents\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "2";
+            this.WindowTitles.Add("LOGIN - Internet Explorer");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlCustom UILoginCustom
+        {
+            get
+            {
+                if ((this.mUILoginCustom == null))
+                {
+                    this.mUILoginCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUILoginCustom.SearchProperties["TagName"] = "LI";
+                    this.mUILoginCustom.SearchProperties["Id"] = null;
+                    this.mUILoginCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUILoginCustom.FilterProperties["Class"] = "loginButton";
+                    this.mUILoginCustom.FilterProperties["ControlDefinition"] = "class=\"loginButton\"";
+                    this.mUILoginCustom.FilterProperties["InnerText"] = "Login";
+                    this.mUILoginCustom.FilterProperties["TagInstance"] = "2";
+                    this.mUILoginCustom.WindowTitles.Add("LOGIN - Internet Explorer");
+                    #endregion
+                }
+                return this.mUILoginCustom;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlCustom mUILoginCustom;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIHomeDocument : HtmlDocument
+    {
+        
+        public UIHomeDocument(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDocument.PropertyNames.Id] = null;
+            this.SearchProperties[HtmlDocument.PropertyNames.RedirectingPage] = "False";
+            this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
+            this.FilterProperties[HtmlDocument.PropertyNames.Title] = "Home";
+            this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/Desktop/Home.aspx";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "http://localhost:2424/Desktop/Home.aspx#";
+            this.WindowTitles.Add("Home - Internet Explorer");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlEdit UITxtSearchEdit
+        {
+            get
+            {
+                if ((this.mUITxtSearchEdit == null))
+                {
+                    this.mUITxtSearchEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUITxtSearchEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "txtSearch";
+                    this.mUITxtSearchEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = null;
+                    this.mUITxtSearchEdit.SearchProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUITxtSearchEdit.SearchProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUITxtSearchEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUITxtSearchEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUITxtSearchEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "id=\"txtSearch\" type=\"text\"";
+                    this.mUITxtSearchEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "1";
+                    this.mUITxtSearchEdit.WindowTitles.Add("Home - Internet Explorer");
+                    #endregion
+                }
+                return this.mUITxtSearchEdit;
+            }
+        }
+        
+        public HtmlEdit UITxtStartDateEdit
+        {
+            get
+            {
+                if ((this.mUITxtStartDateEdit == null))
+                {
+                    this.mUITxtStartDateEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUITxtStartDateEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "txtStartDate";
+                    this.mUITxtStartDateEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "ctl00$txtStartDate";
+                    this.mUITxtStartDateEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUITxtStartDateEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUITxtStartDateEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUITxtStartDateEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = "date";
+                    this.mUITxtStartDateEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"ctl00$txtStartDate\" class=\"date\" i";
+                    this.mUITxtStartDateEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "2";
+                    this.mUITxtStartDateEdit.WindowTitles.Add("Home - Internet Explorer");
+                    #endregion
+                }
+                return this.mUITxtStartDateEdit;
+            }
+        }
+        
+        public HtmlEdit UITxtEndDateEdit
+        {
+            get
+            {
+                if ((this.mUITxtEndDateEdit == null))
+                {
+                    this.mUITxtEndDateEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUITxtEndDateEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "txtEndDate";
+                    this.mUITxtEndDateEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "ctl00$txtEndDate";
+                    this.mUITxtEndDateEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = null;
+                    this.mUITxtEndDateEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUITxtEndDateEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUITxtEndDateEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = "date";
+                    this.mUITxtEndDateEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"ctl00$txtEndDate\" class=\"date\" id=";
+                    this.mUITxtEndDateEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "3";
+                    this.mUITxtEndDateEdit.WindowTitles.Add("Home - Internet Explorer");
+                    #endregion
+                }
+                return this.mUITxtEndDateEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlEdit mUITxtSearchEdit;
+        
+        private HtmlEdit mUITxtStartDateEdit;
+        
+        private HtmlEdit mUITxtEndDateEdit;
         #endregion
     }
 }
