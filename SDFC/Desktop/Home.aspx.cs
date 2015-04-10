@@ -147,8 +147,8 @@ public partial class _Default : System.Web.UI.Page
     {
         Button btn = (Button)sender;
         RepeaterItem item = (RepeaterItem)btn.NamingContainer;
-        string victimName = ((Label)item.FindControl("lblVictimName")).Text;
-        victimName = "Showing";
+        //string victimName = ((Label)item.FindControl("lblVictimName")).Text;
+        //victimName = "Showing";
 
         string name = ((Label)item.FindControl("lblVictimName")).Text;
         string address = ((Label)item.FindControl("lblAddress")).Text;
@@ -194,7 +194,9 @@ public partial class _Default : System.Web.UI.Page
 
         //string pdfTemplate = @"c:\Temp\pdfform.pdf";
         string pdfTemplate = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Desktop\reference\accidentReport.pdf");
-        string newFile = @"c:\Temp\result2.pdf";
+        string fileName = name + location;
+        //string newFile = @"c:\Temp\result2.pdf";
+        string newFile = @"c:\Temp\" + fileName + ".pdf";
 
         PdfReader pdfReader = new PdfReader(pdfTemplate);
         PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
@@ -219,11 +221,11 @@ public partial class _Default : System.Web.UI.Page
         pdfFormFields.SetField("injuryLocation", injuryLocation);
 
         pdfFormFields.SetField("treatmentPerson", treatmentPerson);
-        pdfFormFields.SetField("emergencyCalled", emergencyCalled);
-        pdfFormFields.SetField("managerCalled", managerCalled);
+        pdfFormFields.SetField("911Called", emergencyCalled);
+        pdfFormFields.SetField("fmCalled", managerCalled);
         pdfFormFields.SetField("reportNumber", reportNumber);
-        pdfFormFields.SetField("medicalNumber", medicalNumber);
-        pdfFormFields.SetField("treatmentMethod", treatmentMethod);
+        pdfFormFields.SetField("medicalReportNumber", medicalNumber);
+        pdfFormFields.SetField("treatment", treatmentMethod);
 
         pdfFormFields.SetField("positionTitle", position);
         pdfFormFields.SetField("timeCalled", timeCalled);

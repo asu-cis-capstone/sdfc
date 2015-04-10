@@ -9,7 +9,11 @@ body {
     position:           absolute;
     width:              100%;
     height:             inherit;
-    background-color:   whitesmoke;
+    background-image: -webkit-linear-gradient(top, #2bfff4, #070d7a);
+    background-image: -moz-linear-gradient(top, #2bfff4, #070d7a);
+    background-image: -ms-linear-gradient(top, #2bfff4, #070d7a);
+    background-image: -o-linear-gradient(top, #2bfff4, #070d7a);
+    background-image: linear-gradient(to bottom, #2bfff4, #070d7a);
     padding-bottom:     1em;
     top:                0;
     left:               0;
@@ -31,7 +35,7 @@ body {
     margin-left:        auto;
     margin-right:       auto;
     margin-top:         400px;
-    background-color:   whitesmoke;
+    
 }
 
 .mainText {

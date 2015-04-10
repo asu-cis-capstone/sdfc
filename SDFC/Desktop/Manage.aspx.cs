@@ -86,5 +86,65 @@ namespace SDFC.Desktop
             }
 
         }
+
+        protected void Update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Button btn = (Button)sender;
+                RepeaterItem item = (RepeaterItem)btn.NamingContainer;
+
+                string asuID = ((TextBox)item.FindControl("txtAsuID")).Text;
+                string asurite = ((TextBox)item.FindControl("txtAsurite")).Text;
+                string password = ((TextBox)item.FindControl("txtPassword")).Text;
+
+                string firstName = ((TextBox)item.FindControl("txtFirstName")).Text;
+                string lastName = ((TextBox)item.FindControl("txtLastName")).Text;
+                string position = ((TextBox)item.FindControl("txtPosition")).Text;
+
+                string active = ((TextBox)item.FindControl("txtActive")).Text;
+                string manager = ((TextBox)item.FindControl("txtManager")).Text;
+
+
+                //Create MySQL connection
+                MySqlConnection conn = new MySqlConnection("SERVER=cis440.cj1rt5lolr7p.us-west-2.rds.amazonaws.com;DATABASE=cis440db;UID=capstone;PASSWORD=cis440clark");
+
+                //Open Connection
+                conn.Open();
+
+                //Declare variables
+                DataTable dt = new DataTable();
+
+                //Call stored procedure with stored procedure name and connection
+                MySqlCommand cmd = new MySqlCommand("spUpdateEmployee", conn);
+                //SELECT top 10 FROM reports WHERE manager='this manager' ORDER BY date DESC
+
+                //Set command as a stored procedure
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@nasuID", asuID);
+                cmd.Parameters.AddWithValue("@nasurite", asurite);
+                cmd.Parameters.AddWithValue("@npassword", password);
+                cmd.Parameters.AddWithValue("@nfirstName", firstName);
+                cmd.Parameters.AddWithValue("@nlastName", lastName);
+                cmd.Parameters.AddWithValue("@nposition", position);
+                cmd.Parameters.AddWithValue("@nactive", active);
+                cmd.Parameters.AddWithValue("@nmanager", manager);
+
+                //Set data adapter and fill the data table
+                cmd.ExecuteNonQuery();
+
+                //Close the connection
+                conn.Close();
+
+                
+            }
+            catch (Exception)
+            {
+                //show error
+                throw;
+            }
+
+            //e.Item.FindControl("txtAsuID");
+        }
     }
 }

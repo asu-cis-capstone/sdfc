@@ -19,7 +19,7 @@ namespace SDFC.Models
         public DB_Connector()
         {
             //get connection string from web.config
-            string connectionString = WebConfigurationManager.AppSettings["ConnectionString"];
+            string connectionString = WebConfigurationManager.AppSettings["cisDB"];
 
             //create db connection
             myConnection = new MySqlConnection(connectionString);
