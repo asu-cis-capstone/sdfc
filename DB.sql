@@ -1,3 +1,19 @@
+CREATE TABLE `employee` (
+  `asuID` int(11) NOT NULL,
+  `asurite` varchar(10) DEFAULT NULL,
+  `password` varchar(15) NOT NULL,
+  `lastName` varchar(15) DEFAULT NULL,
+  `firstName` varchar(15) DEFAULT NULL,
+  `position` varchar(15) DEFAULT NULL,
+  `active` bit(1) DEFAULT NULL,
+  `manager` int(11) DEFAULT NULL,
+  PRIMARY KEY (`asuID`),
+  KEY `manager` (`manager`),
+  CONSTRAINT `employee_ibfk_1` FOREIGN KEY (`manager`) REFERENCES `employee` (`asuID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
 create table report (
 reportID int NOT NULL primary key auto_increment,
 asuID int NOT NULL,
@@ -78,13 +94,6 @@ FOREIGN KEY (injuryLocationID) references injuryLocation (injuryLocationID),
 FOREIGN KEY (treatmentID) references treatment (treatmentID)
 );
 
-insert into injury (reportID, activityID, locationID, actionsID, injuryTypeID, injuryLocationID, treatmentID, asuID,
-victimName, address, phone, age, genderMale, refusalSig, treatmentProvider, positionTitle, managerCalled,
-notWhy, timeCalled, arrival, transported, emergencyCalled, emergencyReportNum, medicalReportNum,
-description, witnessName, witnessPhone, victimSig) values (1, 2, 3, 4, 5, 1, 2, 1203960337, "Kevin Galati", "111 Anywhere",
-"9288469880", 23, 1, "sig.jpeg", "Banner", "Staff", 1, "lol", CURDATE(), CURDATE(), "Yeah he went", 1, 6969420, 4206969,
-"It was all pretty bad", "Cody Pugliese", "9282303781", "siglol.jpeg");
-
 DELIMITER $$
 CREATE PROCEDURE fileReport(Actions int, Activity int, Address varchar (255), Age int, ArrivalTime datetime, Comments varchar(255),
 Description varchar (255), InjuryLocation int, InjuryType int, Location int, Male bit, 
@@ -101,6 +110,16 @@ description, witnessName, witnessPhone, victimSig) values (LAST_INSERT_ID(), Act
 ASUID, VictimName, Address, Phone, Age, Male, RefusalSignature, Treator, PositionTitles, ManagerCalled, WhyNot, 
 TimeCalled, ArrivalTime, TransportedTo, PoliceContacted, ReportNo, MedicalReportNo, Description, WitnessName, 
 WitnessPhone, VictimSignature);
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE addEmployee(ASUID int, FirstName varchar(15), LastName varchar(15), ASURite varchar(10), Password varchar(15), 
+Position varchar(15), Active bit, Manager bit)
+BEGIN
+
+INSERT into employee (asuID, asurite, password, lastName, firstName, position, active, manager) values (ASUID, ASURITE,
+Password, LastName, FirstName, Position, Active, Manager);
 END$$
 DELIMITER ;
 

@@ -35,7 +35,7 @@ namespace SDFC.Mobile
             if (!this.IsPostBack)
             {
                 //retrieve connection string from web.config
-                string conString = WebConfigurationManager.AppSettings["ConnectionString"];
+                string conString = WebConfigurationManager.AppSettings["cisDB"];
                 //assign connection string to sqldatasources
                 ActionList.ConnectionString = conString;
                 ActivityList.ConnectionString = conString;
