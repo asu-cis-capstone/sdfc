@@ -36,3 +36,4 @@ C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.dll
 C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.pdfa.dll
 C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.xtra.dll
 C:\Users\mokam_000\Documents\GitHub\sdfc\SDFC\bin\itextsharp.xml
+C:\Users\Kevin Galati\Documents\School\Spring 2015\CIS 440\SDFC\SDFC\obj\Debug\SDFC.csprojResolveAssemblyReference.cache
