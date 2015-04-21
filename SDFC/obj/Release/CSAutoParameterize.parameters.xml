@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="cisDB-Web.config Connection String" description="cisDB Connection String used in web.config by the application to access the database." defaultValue="SERVER=cis440.cj1rt5lolr7p.us-west-2.rds.amazonaws.com;DATABASE=cis440db;User ID=capstone;PASSWORD=cis440clark;Convert Zero Datetime=True;Allow Zero Datetime=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="F:\\My\ Documents\\GitHub\\sdfc\\SDFC\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='cisDB']/@connectionString" />
+  </parameter>
+</parameters>

@@ -260,6 +260,7 @@
     <Content Include="Desktop\scripts\multiple-select-master\LICENSE" />
     <Content Include="Desktop\scripts\multiple-select-master\multiple-select.jquery.json" />
     <Content Include="Desktop\scripts\multiple-select-master\README.md" />
+    <None Include="Properties\PublishProfiles\mokamoto.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,48 @@
+﻿#reportSearchPanel {
+    width: 100%;
+    height: 150px;
+    background-color: #FFB310;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+#reportSearchPanelContents {
+    width: 800px;
+    height: 150px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+#reportResults {
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 35px;
+}
+
+#gvDiv {
+    margin-top: 10px;
+}
+
+#btnDiv {
+    margin-top: 14px;
+}
+
+.btnClass {
+    margin-left: 4px;
+}
+
+#gvForm {
+    margin-top: 15px;
+}
+
+.gvReportResults {
+    background-color: white;
+    width: 100%;
+}
+
+.searchPanelDiv {
+    width: 33%;
+    height: 100%;
+    float:left;
+}
+

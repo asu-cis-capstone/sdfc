@@ -1,0 +1,10 @@
+F:\My Documents\GitHub\sdfc\SDFC\bin\SDFC.dll.config
+F:\My Documents\GitHub\sdfc\SDFC\bin\SDFC.dll
+F:\My Documents\GitHub\sdfc\SDFC\bin\SDFC.pdb
+F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.dll
+F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.pdfa.dll
+F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.xtra.dll
+F:\My Documents\GitHub\sdfc\SDFC\bin\itextsharp.xml
+F:\My Documents\GitHub\sdfc\SDFC\obj\Release\SDFC.csprojResolveAssemblyReference.cache
+F:\My Documents\GitHub\sdfc\SDFC\obj\Release\SDFC.dll
+F:\My Documents\GitHub\sdfc\SDFC\obj\Release\SDFC.pdb

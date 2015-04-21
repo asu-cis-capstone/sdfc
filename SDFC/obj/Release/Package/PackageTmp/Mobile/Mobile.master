@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="Mobile_Mobile" Codebehind="Mobile.master.cs" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:Literal ID="PageTitle" runat="server"></asp:Literal></title>  
+    
+    <!--Link to JQuery Libs-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/sigpad/jquery.signaturepad.js"></script>
+    <script type="text/javascript" src="scripts/sigpad/assets/json2.min.js"></script>
+
+
+    <!--Link to StyleSheet-->
+    <link type="text/css" rel="stylesheet" href="stylesheets/mobile.css" />  
+    <link type="text/css" rel="stylesheet" href="scripts/sigpad/assets/jquery.signaturepad.css" />
+
+    <!--Link to JS files -->
+    <script type="text/javascript" src="scripts/interaction.js" ></script>
+
+    <asp:Literal ID="metaTags" runat="server"></asp:Literal>
+
+</head>
+<body>
+    <form id="myForm" runat="server">
+    <div>
+        <div id="header" class="panel contentBlock">
+            <div class="verticalCenter">
+                <h1><asp:Literal ID="PageTitleDisplay" runat="server"></asp:Literal><asp:ImageButton ID="LogoutButton" ImageUrl="imgs/logout.png" Height="90" Width="98" OnClick="Logout_Click" runat="server" CssClass="logout" /></h1> <!--Test Master Page-->
+            </div>
+        </div>     
+        <br />
+        <div id="main" class="horizontalCenter contentBlock">
+            <asp:ContentPlaceHolder id="MobileContent" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div> 
+    </div>
+    </form>
+</body>
+</html>
