@@ -1,8 +1,11 @@
 body {
     background-color:   black;
     width:              auto;
-    height:             auto;
-    padding:            5%;
+    height:             800px;
+    padding-top:        2%;
+    padding-left:       5%;
+    padding-right:      5%;
+    padding-bottom:     5%;
 }
 
 #container {
@@ -17,7 +20,7 @@ body {
 #header {
     z-index:            5;
     width:              100%;
-    min-height:         100px;
+    height:             100px;
     margin:             auto;
     position:           absolute;
     display:            block;
@@ -49,7 +52,7 @@ body {
 }
 
 #mainContent {
-    height:             100px;
+    height:             50px;
     width:              100%;
     padding-left:       5%;
     text-align:         left;
@@ -160,13 +163,13 @@ body {
     background-image:   url("../images/data5.jpg");
     background-color:   black;
     top:                50px;
-    margin: auto;
+    margin:             auto;
 }
 
 #login {
     z-index:            4;
-    height:             150px;
-    width:              30%;
+    height:             auto;
+    width:              40%;
     position:           relative;
     margin-top:         100px;
     margin-left:        auto;
@@ -209,6 +212,5 @@ body {
     border-top:         thick solid #4169e1;
     margin-top:         initial;
     margin:             auto;
-    bottom:             5px;
     background-color:   inherit;
 }
