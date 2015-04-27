@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <link type="text/css" rel="stylesheet" href="stylesheets/login.css" />
 
     <!--Link to google hosted JQuery Library-->
@@ -17,7 +17,7 @@
 
         $(document).on('click', '.loginButton', function () {
             if (clicked) {
-                $('#main').animate({ top: '400px' }, 500);
+                $('#main').animate({ top: '375px' }, 500);
             }
             else {
                 $('#main').animate({ top: '100px' }, 500);
