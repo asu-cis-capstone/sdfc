@@ -157,6 +157,7 @@ public partial class _Default : System.Web.UI.Page
         string age = ((Label)item.FindControl("lblAge")).Text;
         string asuID = ((Label)item.FindControl("lblAsuID")).Text;
         string status = ((Label)item.FindControl("lblVictimName")).Text;
+        string reportID = ((Label)item.FindControl("lblReportID")).Text;
 
         string activity = ((Label)item.FindControl("lblActivity")).Text;
         string location = ((Label)item.FindControl("lblLocationName")).Text;
@@ -181,24 +182,28 @@ public partial class _Default : System.Web.UI.Page
         string witnessName = ((Label)item.FindControl("lblWitnessName")).Text;
         string witnessPhone = ((Label)item.FindControl("lblWitnessPhone")).Text;
 
-
-
-        //string time = ((Label)item.FindControl("lblVictimName")).Text;
-        //string date = ((Label)item.FindControl("lblVictimName")).Text;
-        //string otherActivity = ((Label)item.FindControl("lblVictimName")).Text;
-        //string otherStatus = ((Label)item.FindControl("lblVictimName")).Text;
-        //string otherLocation = ((Label)item.FindControl("lblVictimName")).Text;
-        //string specialEvent = ((Label)item.FindControl("lblVictimName")).Text;
-        //string lrc = Request.Form["lrc"];
-
+        string mgrReview = ((TextBox)item.FindControl("txtMgrReview")).Text;
+        string mgrDate = Convert.ToString(System.DateTime.Now);
+        string mgrPosition = ((TextBox)item.FindControl("txtMgrPosition")).Text;
+        string mgrReferred = ((TextBox)item.FindControl("txtMgrReferred")).Text;
+        string mgrFollowup = ((TextBox)item.FindControl("txtMgrFollowup")).Text;
 
         //string pdfTemplate = @"c:\Temp\pdfform.pdf";
         string pdfTemplate = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Desktop\reference\accidentReport.pdf");
-        string fileName = name + location;
+
+        Random rnd = new Random();
+        string fileName = "report#" + reportID + "_" + rnd.Next(1, 999);
         //string newFile = @"c:\Temp\result2.pdf";
+        string path = @"c:\Temp\";
         string newFile = @"c:\Temp\" + fileName + ".pdf";
 
         PdfReader pdfReader = new PdfReader(pdfTemplate);
+
+        if (!Directory.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+
         PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
 
         AcroFields pdfFormFields = pdfStamper.AcroFields;
@@ -237,10 +242,67 @@ public partial class _Default : System.Web.UI.Page
         pdfFormFields.SetField("witnessName", witnessName);
         pdfFormFields.SetField("witnessPhone", witnessPhone);
 
+        pdfFormFields.SetField("manageDate", mgrDate);
+        pdfFormFields.SetField("manageReviewedBy", mgrReview);
+        pdfFormFields.SetField("manageSign", "");
+        pdfFormFields.SetField("managePosition", mgrPosition);
+        pdfFormFields.SetField("manageReferredTo", mgrReferred);
+        pdfFormFields.SetField("manageFollowup", mgrFollowup);
+
         // Closing Part
         pdfStamper.FormFlattening = false;
 
         pdfStamper.Close();
+
+        Response.Redirect("Home.aspx?file=" + fileName);
+
+    }
+
+    protected void saveFollowup_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            //Create MySQL connection
+            MySqlConnection conn = new MySqlConnection("SERVER=cis440.cj1rt5lolr7p.us-west-2.rds.amazonaws.com;DATABASE=cis440db;UID=capstone;PASSWORD=cis440clark");
+
+            //Open Connection
+            conn.Open();
+
+            Button btn = (Button)sender;
+            RepeaterItem item = (RepeaterItem)btn.NamingContainer;
+
+            int reportID = Convert.ToInt32(((Label)item.FindControl("lblReportID")).Text);
+            string mgrReview = ((TextBox)item.FindControl("txtMgrReview")).Text;
+            DateTime mgrDate = System.DateTime.Now;
+            string mgrPosition = ((TextBox)item.FindControl("txtMgrPosition")).Text;
+            string mgrReferred = ((TextBox)item.FindControl("txtMgrReferred")).Text;
+            string mgrFollowup = ((TextBox)item.FindControl("txtMgrFollowup")).Text;
+
+            //Call stored procedure with stored procedure name and connection
+            MySqlCommand cmd = new MySqlCommand("spUpdateRiskMgr", conn);
+            //SELECT top 10 FROM reports WHERE manager='this manager' ORDER BY date DESC
+
+            //Set command as a stored procedure
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@treportID", reportID);
+            cmd.Parameters.AddWithValue("@tmgrReview", mgrReview);
+            cmd.Parameters.AddWithValue("@tmgrDate", mgrDate);
+            cmd.Parameters.AddWithValue("@tmgrPosition", mgrPosition);
+            cmd.Parameters.AddWithValue("@tmgrReferred", mgrReferred);
+            cmd.Parameters.AddWithValue("@tmgrFollowup", mgrFollowup);
+
+            //Set data adapter and fill the data table
+            cmd.ExecuteNonQuery();
+
+            //Close the connection
+            conn.Close();
+
+        }
+        catch (Exception)
+        {
+            //show error
+            throw;
+        }
 
     }
 

@@ -30,16 +30,17 @@
                         <table class="tblRepeater"> 
                             <tr class="trRepeater">
                                 <td class="trHdr">
-                                    Victim Name: 
+                                    Report ID: 
                                 </td>
                                 <td class="trVal">
-                                    <%# DataBinder.Eval(Container.DataItem, "victimName")%>
+                                    <%--<<%# DataBinder.Eval(Container.DataItem, "reportID")%>--%>
+                                    <asp:Label ID="lblReportID" Text='<%# DataBinder.Eval(Container.DataItem, "reportID")%>'  runat="server" />
                                 </td>
                                 <td class="trHdr">
-                                    ASU ID: 
+                                    Date: 
                                 </td>
                                 <td class="trVal">
-                                    <%# DataBinder.Eval(Container.DataItem, "asuID")%>
+                                    <%# DataBinder.Eval(Container.DataItem, "dateFiled")%>
                                 </td>
                             </tr>
                             <tr class="trRepeater">
@@ -70,6 +71,13 @@
                                             <%--<%# DataBinder.Eval(Container.DataItem, "victimName")%>--%>
                                             <asp:Label ID="lblVictimName" Text='<%# DataBinder.Eval(Container.DataItem, "victimName")%>'  runat="server" />
                                         </td>
+                                        <td class="trHdr">
+                                            Date Submitted: 
+                                        </td>
+                                        <td class="trVal" colspan="3">
+                                            <%--<%# DataBinder.Eval(Container.DataItem, "address")%>--%>
+                                            <asp:Label ID="lblDateFiled" Text='<%# DataBinder.Eval(Container.DataItem, "dateFiled")%>'  runat="server" />
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="trHdr">
@@ -78,6 +86,13 @@
                                         <td class="trVal" colspan="3">
                                             <%--<%# DataBinder.Eval(Container.DataItem, "address")%>--%>
                                             <asp:Label ID="lblAddress" Text='<%# DataBinder.Eval(Container.DataItem, "address")%>'  runat="server" />
+                                        </td>
+                                        <td class="trHdr">
+                                            Employee: 
+                                        </td>
+                                        <td class="trVal" colspan="3">
+                                            <%--<%# DataBinder.Eval(Container.DataItem, "address")%>--%>
+                                            <asp:Label ID="lblEmployee" Text='<%# DataBinder.Eval(Container.DataItem, "lastName")%>'  runat="server" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -299,11 +314,68 @@
                                         </td>
                                     </tr>
                                 </table>
+                                <br /><br />
+                                <div class="riskMgmtContent">
+                                <table>
+                                    <tr>
+                                        <td colspan="2" class="bold">
+                                            For Risk Management Use Only
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="trHdr">
+                                            Date:
+                                        </td>
+                                        <td>
+                                            datetime.now
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="trHdr">
+                                            Reviewed By:
+                                        </td>
+                                        <td>
+                                            <asp:TextBox runat="server" ID="txtMgrReview" Text=<%# DataBinder.Eval(Container.DataItem, "mgrReviewedBy") != null && !String.IsNullOrEmpty(DataBinder.Eval(Container.DataItem, "mgrReviewedBy").ToString()) ? DataBinder.Eval(Container.DataItem, "mgrReviewedBy") : "" %>></asp:TextBox>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="trHdr">
+                                            Position:
+                                        </td>
+                                        <td>
+                                            <asp:TextBox runat="server" ID="txtMgrPosition" Text=<%# DataBinder.Eval(Container.DataItem, "mgrPosition") != null && !String.IsNullOrEmpty(DataBinder.Eval(Container.DataItem, "mgrPosition").ToString()) ? DataBinder.Eval(Container.DataItem, "mgrPosition") : "" %>></asp:TextBox>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="trHdr">
+                                            Was the employee referred to a physician/Student health for a follow-up?:
+                                        </td>
+                                        <td>
+                                            <asp:TextBox runat="server" ID="txtMgrReferred" Text=<%# DataBinder.Eval(Container.DataItem, "mgrReferred") != null && !String.IsNullOrEmpty(DataBinder.Eval(Container.DataItem, "mgrReferred").ToString()) ? DataBinder.Eval(Container.DataItem, "mgrReferred") : "" %>></asp:TextBox>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="trHdr">
+                                            Follow-up:
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <asp:TextBox runat="server" ID="txtMgrFollowup" Rows="5" CssClass="full-width" Text=<%# DataBinder.Eval(Container.DataItem, "mgrFollowup") != null && !String.IsNullOrEmpty(DataBinder.Eval(Container.DataItem, "mgrFollowup").ToString()) ? DataBinder.Eval(Container.DataItem, "mgrFollowup") : "" %>></asp:TextBox>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
                             </div>
                             <div class="btnPdf">
                                 <asp:Button runat="server" Text="Export as PDF" CssClass="btnClass btnPdf" OnClick="exportPdf_Click"/>
+                                <asp:Button runat="server" Text="Save Followup" CssClass="btnClass btnPdf" OnClick="saveFollowup_Click"/>
                             </div>
 
+                        </div>
+                        <div class="riskMgmt">
+                            
                         </div>
                     </ItemTemplate>
                     <FooterTemplate>
