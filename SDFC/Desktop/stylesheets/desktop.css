@@ -4,7 +4,8 @@ body {
     overflow-x:         hidden;
     font-family:        Calibri;
     background-color:   #FFB310;
-    width:              1800px;
+    width:              1200px;
+    z-index:            0;
     
 }
 
@@ -15,8 +16,8 @@ h1 {
 
 #header {
     color:              black;
-    background-color:   green;
-    position:           fixed;
+    background-color:   #990033;
+    position:           relative;
     top:                0;
     left:               0;
     height:             100px;
@@ -26,13 +27,18 @@ h1 {
 
 #navbar {
     top:                0;
-    left:               50px;
+    left:               0;
     height:             90px;
-    width:              1700px;
-    position:           absolute;
+    width:              100%;
+    position:           fixed;
+    display:            block;
     color:              rgb(240, 240, 240);
-    background-color:   #FFB310;
-    z-index:            3;
+    background-image:   -webkit-linear-gradient(right, #990033, #990033);
+    background-image:   -moz-linear-gradient(right, #990033, #990033);
+    background-image:   -ms-linear-gradient(right, #990033, #990033);
+    background-image:   -o-linear-gradient(right, #990033, #990033);
+    background-image:   linear-gradient(to right, #990033, #990033);
+    z-index:            6;
     padding:            0;
     border:             none; 
 }
@@ -50,6 +56,7 @@ h1 {
 #navbarContents li {
     display:        inline-block;
     padding:        0;
+    padding-right:  0;
     margin:         0;
     bottom:         0;
 }
@@ -58,33 +65,35 @@ h1 {
 .navbarli {
     display:            table-cell;
     vertical-align:     middle;
-    width:              150px;
-    height:             60px;
+    width:              120px;
+    height:             50px;
     top:                10px;
     color:              black;
     text-align:         center;
     text-decoration:    none;
-    background-image:   -webkit-linear-gradient(top, #FFB310, #FFB310);
-    background-image:   -moz-linear-gradient(top, #FFB310, #FFB310);
-    background-image:   -ms-linear-gradient(top, #FFB310, #FFB310);
-    background-image:   -o-linear-gradient(top, #FFB310, #FFB310);
-    background-image:   linear-gradient(to bottom, #FFB310, #FFB310);
-    -webkit-border-radius:  24px;
-    -moz-border-radius:     24px;
-    border-radius:          24px;
-    -webkit-box-shadow:     15px 2px 15px #666666;
-    -moz-box-shadow:        15px 2px 15px #666666;
-    box-shadow:             15px 2px 15px #666666;
+    background-image:   -webkit-linear-gradient(right, #FFB310, #990033);
+    background-image:   -moz-linear-gradient(right, #FFB310, #990033);
+    background-image:   -ms-linear-gradient(right, #FFB310, #990033);
+    background-image:   -o-linear-gradient(right, #FFB310, #990033);
+    background-image:   linear-gradient(to right, #FFB310, #990033);
+    -webkit-box-shadow:     15px 10px 20px #990033;
+    -moz-box-shadow:        15px 10px 20px #990033;
+    box-shadow:             15px 10px 20px #990033;
     font-family:            Arial;
     color:                  #000000;
     font-size:              18px;
-    padding:                14px 0px 14px 28px;
+    padding:                14px 18px 10px 28px;
     text-decoration:        none;
     border:                 none;
 }
 
 .navbarli:hover {
-    background-color:   #C0C0C0;
+        background-image:   -webkit-linear-gradient(top, #FFB310, #FFB310);
+        background-image:   -moz-linear-gradient(top, #FFB310, #FFB310);
+        background-image:   -ms-linear-gradient(top, #FFB310, #FFB310);
+        background-image:   -o-linear-gradient(top, #FFB310, #FFB310);
+        background-image:   linear-gradient(to bottom, #FFB310, #FFB310);
+        text-decoration:    none;
 }
 
 .rightalign {
@@ -152,9 +161,10 @@ h1 {
     height:             100%;
     top:                0;
     left:               -300px;
-    margin-top:         100px;
+    margin-top:         0;
     text-align:         center;
     z-index:            5;
+    padding-top:        100px;
     display:            block;
 }
 
@@ -169,8 +179,8 @@ h1 {
 #main {
     display:            inline-block;
     position:           absolute;
-    left:               0px;
-    top:                100px;
+    left:               0;
+    top:                0;
     height:             calc(100% - 70px);
     float:              left;
     z-index:            1;
@@ -195,7 +205,7 @@ h1 {
 
 #divContent {
     width:          87%;
-    max-width:      1400px;
+    max-width:      850px;
     margin-left:    310px;
     margin-right:   auto;
     margin-top:     115px;
@@ -260,7 +270,7 @@ h1 {
     /*color:black;*/ 
     background-color:   white; 
     height:             1200px; 
-    width:              910px; 
+    width:              900px; 
     display:            none;
     padding:            5px;
 }
