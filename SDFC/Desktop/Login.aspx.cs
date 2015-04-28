@@ -92,7 +92,7 @@ namespace SDFC.Desktop
                 else 
                 {
                     lblLoginError.Visible = true;
-                    main.Style.Add("top", "600px");
+                    //main.Style.Add("top", "600px");
                 }
             }
             catch (Exception)
