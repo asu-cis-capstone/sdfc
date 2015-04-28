@@ -194,8 +194,8 @@ public partial class _Default : System.Web.UI.Page
         Random rnd = new Random();
         string fileName = "report#" + reportID + "_" + rnd.Next(1, 999);
         //string newFile = @"c:\Temp\result2.pdf";
-        string path = @"c:\Temp\";
-        string newFile = @"c:\Temp\" + fileName + ".pdf";
+        string path = HttpRuntime.AppDomainAppPath + "\\downloads\\";
+        string newFile = path + fileName + ".pdf";
 
         PdfReader pdfReader = new PdfReader(pdfTemplate);
 
@@ -254,7 +254,20 @@ public partial class _Default : System.Web.UI.Page
 
         pdfStamper.Close();
 
-        Response.Redirect("Home.aspx?file=" + fileName);
+        StreamReader streamReader = new StreamReader(newFile);
+
+        Stream stream = streamReader.BaseStream;
+
+        BinaryReader binaryReader = new BinaryReader(stream);
+
+        byte[] sendbyteArray = binaryReader.ReadBytes(Convert.ToInt32(binaryReader.BaseStream.Length));
+
+        Response.Redirect("/downloads/" + fileName + ".pdf");
+        //Response.ContentType = "application/pdf";
+        //Response.AddHeader("Content-Type", "application/pdf");
+        //Response.AddHeader("Content-Disposition", "inline");
+        //Response.BinaryWrite(sendbyteArray);
+        //Response.End(); 
 
     }
 
