@@ -188,6 +188,14 @@ public partial class _Default : System.Web.UI.Page
         string mgrReferred = ((TextBox)item.FindControl("txtMgrReferred")).Text;
         string mgrFollowup = ((TextBox)item.FindControl("txtMgrFollowup")).Text;
 
+        //iTextSharp.text.Image i = (System.Web.UI.WebControls.Image)item.FindControl("sig");
+        //string imgUrl = item.GetRouteUrl("sig");
+        string imgUrl = ((System.Web.UI.WebControls.Image)item.FindControl("sig")).ImageUrl;
+        System.Web.UI.WebControls.Image sig = (System.Web.UI.WebControls.Image)item.FindControl("sig");
+        iTextSharp.text.Image nsig = iTextSharp.text.Image.GetInstance(Server.MapPath(imgUrl));                                    //(iTextSharp.text.Image)item.FindControl("sig");
+
+        
+
         //string pdfTemplate = @"c:\Temp\pdfform.pdf";
         string pdfTemplate = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Desktop\reference\accidentReport.pdf");
 
@@ -248,6 +256,15 @@ public partial class _Default : System.Web.UI.Page
         pdfFormFields.SetField("managePosition", mgrPosition);
         pdfFormFields.SetField("manageReferredTo", mgrReferred);
         pdfFormFields.SetField("manageFollowup", mgrFollowup);
+
+
+        //float[] imgPos = null;
+        //imgPos = pdfFormFields.GetFieldPositions("signature");
+        //pdfFormFields.SetField("signature", sig);
+        nsig.SetAbsolutePosition(180, 70);
+        nsig.ScaleToFit(200, 300);
+        PdfContentByte cb = pdfStamper.GetOverContent(1);
+        cb.AddImage(nsig);
 
         // Closing Part
         pdfStamper.FormFlattening = false;
