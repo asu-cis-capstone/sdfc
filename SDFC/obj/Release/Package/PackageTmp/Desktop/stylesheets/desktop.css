@@ -1,8 +1,12 @@
-﻿body {
-    color: black;
-    overflow-x: hidden;
-    font-family: Calibri;
-    background-color: #990033;
+body {
+    color:              black;
+    font-weight:        bold;
+    overflow-x:         hidden;
+    font-family:        Calibri;
+    background-color:   #FFB310;
+    width:              1200px;
+    z-index:            0;
+    
 }
 
 h1 {
@@ -11,126 +15,153 @@ h1 {
 }
 
 #header {
-    color: black;
-    background-color: green;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100px;
-    width: 100%;
-    z-index: 2;
+    color:              black;
+    background-color:   #990033;
+    position:           relative;
+    top:                0;
+    left:               0;
+    height:             100px;
+    width:              100%;
+    z-index:            2;
 }
 
 #navbar {
-    top: 0;
-    left: 0;
-    height: 70px;
-    width: 100%;
-    position: fixed;
-    color: rgb(240, 240, 240);
-    background-color: #FFB310;
-    z-index:3;
-    padding: 0;
+    top:                0;
+    left:               0;
+    height:             90px;
+    width:              100%;
+    position:           fixed;
+    display:            block;
+    color:              rgb(240, 240, 240);
+    background-image:   -webkit-linear-gradient(right, #990033, #990033);
+    background-image:   -moz-linear-gradient(right, #990033, #990033);
+    background-image:   -ms-linear-gradient(right, #990033, #990033);
+    background-image:   -o-linear-gradient(right, #990033, #990033);
+    background-image:   linear-gradient(to right, #990033, #990033);
+    z-index:            6;
+    padding:            0;
+    border:             none; 
 }
 
 #navbarContents {
 }
 
 #navbarContents ul {
-    font-size: 0px;
-    list-style-type: none;
-    padding: 0;
-    margin-top: 10px;
+    font-size:          0px;
+    list-style-type:    none;
+    padding:            0;
+    margin-top:         10px;
 }
 
 #navbarContents li {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    bottom:0;
+    display:        inline-block;
+    padding:        0;
+    padding-right:  0;
+    margin:         0;
+    bottom:         0;
 }
 
 
 .navbarli {
-    display: table-cell;
-    vertical-align: middle;
-    width: 170px;
-    height: 60px;
-    top: 10px;
-    color: black;
-    font-size: 16px;
-    text-align:center;
-    text-decoration: none;
-    background-color: #FFB310;
-    border:none;
+    display:            table-cell;
+    vertical-align:     middle;
+    width:              120px;
+    height:             50px;
+    top:                10px;
+    color:              black;
+    text-align:         center;
+    text-decoration:    none;
+    background-image:   -webkit-linear-gradient(top, #FFB310, #990033);
+    background-image:   -moz-linear-gradient(top, #FFB310, #990033);
+    background-image:   -ms-linear-gradient(top, #FFB310, #990033);
+    background-image:   -o-linear-gradient(top, #FFB310, #990033);
+    background-image:   linear-gradient(to top, #FFB310, #990033);
+    font-family:            Arial;
+    font-size:              18px;
+    padding:                14px 18px 10px 28px;
+    text-decoration:        none;
+    border:                 none;
 }
 
 .navbarli:hover {
-    background-color: #FFCB66;
+        background-image:   -webkit-linear-gradient(top, #FFB310, #FFB310);
+        background-image:   -moz-linear-gradient(top, #FFB310, #FFB310);
+        background-image:   -ms-linear-gradient(top, #FFB310, #FFB310);
+        background-image:   -o-linear-gradient(top, #FFB310, #FFB310);
+        background-image:   linear-gradient(to bottom, #FFB310, #FFB310);
+        text-decoration:    none;
 }
 
 .rightalign {
-    float:right;
+    float:          right;
 }
 
 #tblSearch {
-    margin-left:auto;
-    margin-right:auto;
-    text-align: left;
-    border: black 1px solid;
+    padding-top:    1em;
+    margin-top:     10px;
+    margin-left:    auto;
+    margin-right:   auto;
+    text-align:     left;
+    border:         black 1px solid;
 }
 
 .date {
-    display: block;
-    width: 96%;
-    height: 24px;
-    padding: 0;
-    overflow: hidden;
-    cursor: pointer;
-    border: 1px solid #aaa;
-    text-align: left;
-    padding-left: 4px;
-    white-space: nowrap;
-    line-height: 26px;
-    color: #444;
-    text-decoration: none;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    background-color: #fff;
+    display:                block;
+    width:                  96%;
+    height:                 24px;
+    padding:                0;
+    overflow:               hidden;
+    cursor:                 pointer;
+    border:                 1px solid #aaa;
+    text-align:             left;
+    padding-left:           4px;
+    white-space:            nowrap;
+    line-height:            26px;
+    color:                  #444;
+    text-decoration:        none;
+    -webkit-border-radius:  4px;
+    -moz-border-radius:     4px;
+    border-radius:          4px;
+    background-color:       #fff;
 }
 
 .searchli {
-    width: 300px;
-    height: 80px;
-    top: 20px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right:auto;
-    margin-left: auto;
-    text-align:center;
-    text-decoration: none;
-    border:none;
+    width:              300px;
+    height:             80px;
+    top:                30px;
+    display:            inline-block;
+    vertical-align:     middle;
+    margin-right:       auto;
+    margin-left:        auto;
+    text-align:         center;
+    text-decoration:    none;
+    border:             none;
 }
 
 #searchlink {
-    width: 300px;
+    width:              300px;
 }
 
 #searchlink:hover {
-    background-color:#FFCB66;
+    background-color:   #C0C0C0;
 }
 
 #sidebar {
-    background-color: #FFB310;
-    position: fixed;
-    width: 300px;
-    height: 100%;
-    top: 70px;
-    left: -300px;
-    text-align: center;
-    z-index: 5;
-    display: block;
+    background-image:   -webkit-linear-gradient(top, #FFB310, #990033);
+    background-image:   -moz-linear-gradient(top, #FFB310, #990033);
+    background-image:   -ms-linear-gradient(top, #FFB310, #990033);
+    background-image:   -o-linear-gradient(top, #FFB310, #990033);
+    background-image:   linear-gradient(to bottom, #FFB310, #990033);
+    position:           fixed;
+    width:              300px;
+    height:             100%;
+    top:                0;
+    left:               -300px;
+    margin-top:         0;
+    text-align:         center;
+    z-index:            5;
+    padding-top:        100px;
+    display:            block;
 }
 
 #ulCheckboxes{
@@ -142,22 +173,26 @@ h1 {
 }
 
 #main {
-    display: inline-block;
-    position:absolute;
-    left: 0px;
-    top:70px;
-    height: calc(100% - 70px);
-    float: left;
-    z-index:1;
-    background-color: #990033;
-    width:100%;
+    display:            inline-block;
+    position:           absolute;
+    left:               0;
+    top:                0;
+    height:             calc(100% - 70px);
+    float:              left;
+    z-index:            1;
+    background-image:   -webkit-linear-gradient(top, #990033, #FFB310);
+    background-image:   -moz-linear-gradient(top, #990033, #FFB310);
+    background-image:   -ms-linear-gradient(top, #990033, #FFB310);
+    background-image:   -o-linear-gradient(top, #990033, #FFB310);
+    background-image:   linear-gradient(to bottom, #990033, #FFB310);
+    width:              100%;
 }
 
 .titleCss {
-    color: white;
-    font-size: 16px;
-    padding-top: 150px;
-    margin-bottom: 15px;
+    color:          white;
+    font-size:      16px;
+    padding-top:    150px;
+    margin-bottom:  15px;
 }
 
 #recentRecords {
@@ -165,74 +200,81 @@ h1 {
 }
 
 #divContent {
-    width: 87%;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
+    width:          87%;
+    max-width:      850px;
+    margin-left:    310px;
+    margin-right:   auto;
+    margin-top:     115px;
+    padding-top:    1em;
+    
+    
 }
 
 .btnClass {
-    width: 100px;
-    background-color: #FFB310;
-    color: black;
+    width:              100px;
+    background-color:   #FFB310;
+    color:              black;
 }
 
 .btnClass:hover {
-    background-color: #FFCB66;
-    cursor: pointer;
+    background-color:   #FFCB66;
+    cursor:             pointer;
 }
 
-
-
 .divRepeater {
-    margin-bottom: 20px;
+    margin-bottom:      20px;
 }
 
 .tblRepeater {
-    border-collapse: collapse;
+    border-collapse:    collapse;
+    width: 910px;
+    padding: 5px;
     /*color: white;*/
 }
 
 .tblRepeater:not(first) {
-    margin-top: 20px;
+    margin-top:         20px;
 }
 
 .trRepeater {
-    background: -webkit-linear-gradient(right, #990033 40%, #FFB310 80%);
-    background-attachment: fixed;
+    background:             -webkit-linear-gradient(right, #990033 40%, #FFB310 80%);
+    background-attachment:  fixed;
 }
 
 .trHdr {
-    width: 150px;
-    text-align: left;
-    font-weight: bold;
+    width:          150px;
+    text-align:     left;
+    font-weight:    bold;
 }
 
 .trVal {
-    width: 300px;
-    text-align: left;
+    width:          300px;
+    text-align:     left;
 }
 
 .tblRepeater:hover {
-    cursor: pointer;
+    cursor:         pointer;
 }
 
 /* Start CSS for pdf of report */
 
+.full-width {
+    width:          100%;
+}
+
 .recordDetails {
     /*color:black;*/ 
-    background-color:white; 
-    height: 900px; 
-    width: 910px; 
-    display: none;
-    padding: 5px;
+    background-color:   white; 
+    height:             1200px; 
+    width:              900px; 
+    display:            none;
+    padding:            5px;
 }
 
 .recordDetails h1 {
-    font-size: 18px;
-    color: black;
-    text-align: center;
+    font-size:          18px;
+    color:              black;
+    text-align:         center;
 }
 
 .victimInfo {
@@ -242,26 +284,26 @@ h1 {
 }
 
 .hdr {
-    font-weight: bold;
-    margin-bottom: 0;
+    font-weight:    bold;
+    margin-bottom:  0;
 }
 
 .val {
-    padding-left: 15px;
-    margin-top: 0;
+    padding-left:   15px;
+    margin-top:     0;
 }
 
 .reportInfo trVal {
-    width: 400px;
+    width:          400px;
 }
 
 .treatmentInfo {
 }
 
 .treatmentContent {
-    width: 450px;
-    display: inline-block;
-    float: left;
+    width:          450px;
+    display:        inline-block;
+    float:          left;
 }
 
 .description {
@@ -270,6 +312,40 @@ h1 {
 /* End CSS for pdf of report */
 
 .btnPdf {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left:    auto;
+    margin-right:   auto;
+}
+
+.text-center {
+    text-align:     center;
+}
+
+.text-left {
+    text-align:     left;
+}
+
+.full-height {
+    height:         80%;
+}
+
+.bold {
+    font-weight:    bold;
+}
+
+.riskMgmt {
+    display:            none;
+    position:           fixed;
+    background-color:   black;
+    opacity:            .8;
+}
+
+riskMgmtContent {
+    position:           fixed;
+    margin-left:        auto;
+    margin-right:       auto;
+    top:                200px;
+    width:              300px;
+    border:             black thin solid;
+    background-color:   white;
+    color:              black;
 }

@@ -63,8 +63,9 @@ namespace SDFC.Models
         public string Comments
         {
             get
-            {
+            {                
                 return comments;
+
             }
             set
             {
@@ -88,7 +89,10 @@ namespace SDFC.Models
         {
             get
             {
-                return victimName;
+                if (victimName == null)
+                    return victimName;
+                else
+                    return "";
             }
             set
             {
@@ -112,7 +116,7 @@ namespace SDFC.Models
         {
             get
             {
-                return address;
+                 return address;
             }
             set
             {
@@ -136,7 +140,8 @@ namespace SDFC.Models
         {
             get
             {
-                return phone;
+               return phone;
+
             }
             set
             {
@@ -144,7 +149,7 @@ namespace SDFC.Models
                 string tempNumber = value;
 
                 //check length
-                if (tempNumber.Length > 9 && tempNumber.Length < 12)
+                if (tempNumber.Length >= 9 && tempNumber.Length < 12)
                 {
                     int digitCount = 0;
                     for (int i = 0; i < tempNumber.Length; i++)
@@ -153,10 +158,10 @@ namespace SDFC.Models
                         if (Int32.TryParse(tempNumber[i].ToString(), out number))
                             digitCount++;
                     }
-                    if (digitCount == 9)
+                    if (digitCount >= 9)
                         phone = tempNumber;
                     else
-                        throw new ArgumentException("Value must contain 9 digits");
+                        throw new ArgumentException("Value must contain 9+ digits");
                 }
                 else
                     throw new ArgumentException("Must be between 10 and 12 characters");
@@ -165,8 +170,9 @@ namespace SDFC.Models
         public int Age
         {
             get
-            {
+            {                
                 return age;
+                
             }
             set
             {
@@ -182,7 +188,7 @@ namespace SDFC.Models
         {
             get
             {
-                return male;
+               return male;
             }
             set
             {
@@ -269,14 +275,11 @@ namespace SDFC.Models
                     //check for max length
                     if (value.Length > 55)
                         throw new ArgumentException("Value must be under 55 characters");
-                    //check for min length
-                    else if (value == "")
-                        throw new ArgumentException("Value cannot be empty");
                     else
                         treator = value;
                 }
                 else
-                    throw new ArgumentException("Value must not be null");
+                    treator = "";
             }
         }
         public bool FacilitiesManagemet
@@ -287,7 +290,7 @@ namespace SDFC.Models
             }
             set
             {
-                facilitiesManagemet = false;
+                facilitiesManagemet = value;
             }
         }
         public bool PoliceContacted
@@ -315,14 +318,11 @@ namespace SDFC.Models
                     //check for max length
                     if (value.Length > 255)
                         throw new ArgumentException("Value must be under 255 characters");
-                    //check for min length
-                    else if (value == "")
-                        throw new ArgumentException("Value cannot be empty");
                     else
                         reportNumber = value;
                 }
                 else
-                    throw new ArgumentException("Value must not be null");
+                    reportNumber = "";
             }
         }
         public DateTime TimeCalled
@@ -361,14 +361,11 @@ namespace SDFC.Models
                     //check for max length
                     if (value.Length > 255)
                         throw new ArgumentException("Value must be under 255 characters");
-                    //check for min length
-                    else if (value == "")
-                        throw new ArgumentException("Value cannot be empty");
                     else
                         transportedTo = value;
                 }
                 else
-                    throw new ArgumentException("Value must not be null");
+                    transportedTo = "";
             }
         }
         public string MedicalReport
@@ -385,14 +382,11 @@ namespace SDFC.Models
                     //check for max length
                     if (value.Length > 255)
                         throw new ArgumentException("Value must be under 255 characters");
-                    //check for min length
-                    else if (value == "")
-                        throw new ArgumentException("Value cannot be empty");
                     else
                         medicalReport = value;
                 }
                 else
-                    throw new ArgumentException("Value must not be null");
+                    medicalReport = "";
             }
         }
         public string PositionTitles
@@ -409,14 +403,10 @@ namespace SDFC.Models
                     //check for max length
                     if (value.Length > 255)
                         throw new ArgumentException("Value must be under 255 characters");
-                    //check for min length
-                    else if (value == "")
-                        throw new ArgumentException("Value cannot be empty");
                     else
                         positionTitles = value;
                 }
-                else
-                    throw new ArgumentException("Value must not be null");
+                positionTitles = "";
             }
         }
         public bool ManagerCalled
@@ -448,13 +438,15 @@ namespace SDFC.Models
                         if (value.Length > 255)
                             throw new ArgumentException("Value must be under 255 characters");
                         //check for min length
-                        else if (value == "")
+                        else if (value == "" && !ManagerCalled)
                             throw new ArgumentException("Value cannot be empty");
                         else
                             whyNot = value;
                     }
-                    else
+                    else if (!ManagerCalled)
                         throw new ArgumentException("Value must not be null");
+                    else
+                        whyNot = "";
                 }
             }
         }
@@ -518,7 +510,7 @@ namespace SDFC.Models
                 string tempNumber = value;
 
                 //check length
-                if (tempNumber.Length > 9 && tempNumber.Length < 12)
+                if (tempNumber.Length>= 9 && tempNumber.Length < 12)
                 {
                     int digitCount = 0;
                     for (int i = 0; i < tempNumber.Length; i++)
@@ -527,10 +519,10 @@ namespace SDFC.Models
                         if (Int32.TryParse(tempNumber[i].ToString(), out number))
                             digitCount++;
                     }
-                    if (digitCount == 9)
+                    if (digitCount >= 9)
                         witnessPhone = tempNumber;
                     else
-                        throw new ArgumentException("Value must contain 9 digits");
+                        throw new ArgumentException("Value must contain 9+ digits");
                 }
                 else
                     throw new ArgumentException("Must be between 10 and 12 characters");

@@ -6,6 +6,8 @@ using System.Web.Configuration;
 using System.Net;
 using MySql.Data.MySqlClient;
 using System.Data;
+using SDFC.Utilities;
+using System.Drawing;
 
 namespace SDFC.Models
 {
@@ -76,8 +78,12 @@ namespace SDFC.Models
             return result;
         }
 
-        public bool AddReport(AccidentReport report, string asuID)
+        public bool AddReport(AccidentReport report, string asuID, string signaturePath)
         {
+            //create image and get url
+            string relativePath = "";
+            string imageURL = CreateImage(report.SignatureJSON, signaturePath);
+
             //temporary
             //create command
             MySqlCommand cmd = new MySqlCommand("fileReport");
@@ -102,7 +108,7 @@ namespace SDFC.Models
                 new MySqlParameter("@PoliceContacted", report.PoliceContacted),
                 new MySqlParameter("@PositionTitles", report.PositionTitles),
                 new MySqlParameter("@ReportNo", report.ReportNumber),
-                new MySqlParameter("@VictimSignature", report.SignatureJSON),
+                new MySqlParameter("@VictimSignature", imageURL),
                 new MySqlParameter("@TimeCalled", report.TimeCalled),
                 new MySqlParameter("@TransportedTo", report.TransportedTo),
                 new MySqlParameter("@Treatment", report.Treatment),
@@ -149,6 +155,32 @@ namespace SDFC.Models
             
             //return query result            
             return result;
+        }
+
+        public string CreateImage(string json, string absolutepath)
+        {
+            //declare random object to create last 2 characters of filename
+            Random r = new Random();
+
+            //use combination of date and random 2 digit number to create a unique photo id
+            string fileName = DateTime.Now.ToBinary().ToString() + r.Next(10,100).ToString()+".png";
+            //remove any - signs
+            fileName = fileName.Replace("-", "");
+
+            //create converer
+            SignatureToImage converter = new SignatureToImage();
+            converter.CanvasHeight = 200;
+            converter.CanvasWidth = 600;
+
+            //convert image
+            Bitmap image = converter.SigJsonToImage(json);
+            //save image
+            image.Save(absolutepath+fileName);
+
+            //split string at application root
+            string[] components = absolutepath.Split(new string[] { "\\SDFC", "\\wwwroot" }, StringSplitOptions.None);
+            //return relative path
+            return components[components.Length - 1]+fileName;
         }
         public bool AddEmployee(Employee employee, string asuID)
         {

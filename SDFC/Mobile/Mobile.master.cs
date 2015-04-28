@@ -74,11 +74,15 @@ public partial class Mobile_Mobile : System.Web.UI.MasterPage
     }
     protected void Page_PreInit(object sender, EventArgs e)
     {
+
+    }
+    protected void Page_Load(object sender, EventArgs e)
+    {
         //retrieve the user agent string
         string userAgent = Request.UserAgent.ToString().ToLower();
 
         //perform a variety of tests to ensure user is mobile
-        if (!Request.Browser.IsMobileDevice ||
+        if (!(Request.Browser.IsMobileDevice ||
             userAgent.Contains("iphone") ||
             userAgent.Contains("blackberry") ||
             userAgent.Contains("mobile") ||
@@ -86,16 +90,11 @@ public partial class Mobile_Mobile : System.Web.UI.MasterPage
             userAgent.Contains("opera mini") ||
             userAgent.Contains("palm") ||
             userAgent.Contains("htc") ||
-            userAgent.Contains("android"))
+            userAgent.Contains("android")))
         {
             //if user is mobile, redirect to mobile site
-            //commented out for testing
-            //Response.Redirect("../Desktop/Login.aspx");
+            Response.Redirect("../Desktop/Login.aspx");
         }
-    }
-    protected void Page_Load(object sender, EventArgs e)
-    {
-
     }
 
     protected void Logout_Click(object sender, ImageClickEventArgs e)
