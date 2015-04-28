@@ -38,11 +38,15 @@
 .gvReportResults {
     background-color: white;
     width: 100%;
+    overflow-x: auto;
 }
 
 .searchPanelDiv {
-    width: 33%;
+    width: 20%;
     height: 100%;
     float:left;
 }
 
+ul {
+    list-style-type: none;
+}

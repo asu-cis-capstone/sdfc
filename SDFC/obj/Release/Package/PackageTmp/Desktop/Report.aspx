@@ -7,60 +7,76 @@
 <asp:Content ID="ReportContent" ContentPlaceHolderID="DesktopContentPlaceholder" runat="server">
     
     <div id="divContent">
+        <form runat="server">
         <asp:Label id="lblReportTitle" CssClass="titleCss" runat="server">Reports</asp:Label>
         <div id="reportSearchPanel">
+            
             <div id="reportSearchPanelContents">
-                <div class="searchPanelDiv">
-                    <label>Start Date:</label>
-                    <input runat="server" id="txtStartDate" type="date"/>
+                <div class="searchPanelDiv text-center">
+                    <label class="bold">Start Date:</label>
+                    <input runat="server" id="txtStartDate" type="date" required="required"/>
                     <br />
-                    <label>End Date:</label>
-                    <input runat="server" id="txtEndDate" type="date"/>
+                    <label class="bold">End Date:</label>
+                    <input runat="server" id="txtEndDate" type="date" required="required"/>
                 </div>
-                <div class="searchPanelDiv">
-                    <label>Activity:</label>
-                    <select multiple="multiple" id="multActivity">
-                        <option id="Option1" runat="server" value="option1">Intramurals</option>
-                        <option id="Option2" runat="server" value="option1">Sport Clubs</option>
-                        <option id="Option3" runat="server" value="option1">Informal Recreation</option>
-                        <option id="Option4" runat="server" value="option1">Group Fitness</option>
-                        <option id="Option5" runat="server" value="option1">Kid's Camp</option>
-                        <option id="Option6" runat="server" value="option1">Swim Rental</option>
-                        <option id="Option7" runat="server" value="option1">Special Event</option>
-                        <option id="Option8" runat="server" value="option1">Other</option>
+                <div class="searchPanelDiv text-center">
+                    <label class="bold">Activity:</label>
+                    <br />
+                    <select multiple="true" id="multActivity" class="text-left full-height" runat="server">
+                        <option value="1" runat="server">Intramurals</option>
+                        <option runat="server" value="5">Sport Clubs</option>
+                        <option runat="server" value="2">Informal Recreation</option>
+                        <option runat="server" value="6">Group Fitness</option>
+                        <option runat="server" value="3">Kid's Camp</option>
+                        <option runat="server" value="7">Swim Rental</option>
+                        <option runat="server" value="4">Special Event</option>
+                        <option runat="server" value="8">Other</option>
                     </select>
+                    <br />
+                </div>
 
+                <div class="searchPanelDiv text-center">
+                    <label class="bold">Location:</label>
                     <br />
-                    
-                    <label>Location:</label>
-                    <select multiple="multiple" id="multLocation">
-                        <option id="Option9" runat="server" value="option1">Maroon Gym</option>
-                        <option id="Option10" runat="server" value="option1">Gold Gym</option>
-                        <option id="Option11" runat="server" value="option1">Green Gym</option>
-                        <option id="Option12" runat="server" value="option1">Two-Bay Gym</option>
-                        <option id="Option13" runat="server" value="option1">Mac Gym</option>
-                        <option id="Option14" runat="server" value="option1">Three-Bay Gym</option>
-                        <option id="Option15" runat="server" value="option1">Indoor Track</option>
-                        <option id="Option16" runat="server" value="option1">Outdoor Track</option>
-                        <option id="Option17" runat="server" value="option1">Pool</option>
-                        <option id="Option18" runat="server" value="option1">Locker Room</option>
-                        <option id="Option19" runat="server" value="option1">West Weight Room</option>
-                        <option id="Option20" runat="server" value="option1">East Weight Room</option>
-                        <option id="Option21" runat="server" value="option1">Wellness Suite</option>
-                        <option id="Option22" runat="server" value="option1">Assessment Lab</option>
-                        <option id="Option23" runat="server" value="option1">Upstairs Loft West</option>
-                        <option id="Option24" runat="server" value="option1">Upstairs Loft East</option>
-                        <option id="Option25" runat="server" value="option1">Raquetball Court</option>
-                        <option id="Option26" runat="server" value="option1">Small Gym</option>
-                        <option id="Option27" runat="server" value="option1">Field</option>
-                        <option id="Option28" runat="server" value="option1">Other</option>
+                    <select multiple="true" id="multLocation" class="text-left full-height" runat="server">
+                        <option runat="server" value="1">Maroon Gym</option>
+                        <option runat="server" value="2">Gold Gym</option>
+                        <option runat="server" value="3">Green Gym</option>
+                        <option runat="server" value="4">Two-Bay Gym</option>
+                        <option runat="server" value="5">Mac Gym</option>
+                        <option runat="server" value="6">Three-Bay Gym</option>
+                        <option runat="server" value="7">Indoor Track</option>
+                        <option runat="server" value="8">Outdoor Track</option>
+                        <option runat="server" value="9">Pool</option>
+                        <option runat="server" value="10">Locker Room</option>
+                        <option runat="server" value="11">West Weight Room</option>
+                        <option runat="server" value="11">East Weight Room</option>
+                        <option runat="server" value="12">Wellness Suite</option>
+                        <option runat="server" value="16">Assessment Lab</option>
+                        <option runat="server" value="13">Upstairs Loft West</option>
+                        <option runat="server" value="13">Upstairs Loft East</option>
+                        <option runat="server" value="14">Raquetball Court</option>
+                        <option runat="server" value="15">Small Gym</option>
+                        <option runat="server" value="17">Field</option>
+                        <option runat="server" value="18">Other</option>
                     </select>
                 </div>
-                <div class="searchPanelDiv">
-                    <label>Sort</label>
-                    <ul>
-                        <li><input type="radio" value="dateasc" /></li>
+                
+                <div class="searchPanelDiv text-center">
+                    <label class="bold">Sort</label>
+                    <br />
+                    <ul id="sortparm" class="text-left">
+                        <asp:RadioButtonList runat="server" ID="rdoSort">
+                            <asp:ListItem Text="Date DESC" Value="datedesc"/>
+                            <asp:ListItem Text="Date ASC" Value="dateasc"/>
+                            <asp:ListItem Text="Name DESC" Value="namedesc" />
+                            <asp:ListItem Text="Name ASC" Value="nameasc" />
+                        </asp:RadioButtonList>
                     </ul>
+                </div>
+
+                <div class="searchPanelDiv">
+                    <asp:Button runat="server" Text="Search" OnClick="report_Click"/>
                 </div>
             </div>
         </div>
@@ -69,25 +85,42 @@
             <button runat="server" id="btnExportCsv" value="exportcsv" class="btnClass rightalign">Export .CSV</button>
             <button runat="server" id="btnExportXls" value="exportxls" class="btnClass rightalign">Export .XLS</button>
         </div>
-
+        
         <div id="reportResults">
             <div id="gvDiv">
-                <form runat="server" id="gvForm">
-                    <asp:GridView runat="server" ID="gvReportResults" AllowPaging="false" AllowSorting="false" AutoGenerateColumns="false" CssClass="gvReportResults">
+                    <asp:GridView runat="server" ID="gvReportResults" AllowPaging="false" AllowSorting="false" AutoGenerateColumns="false" CssClass="gvReportResults" >
                         <Columns>
                             <asp:BoundField HeaderText="ASU ID" DataField="asuID" />
-                            <asp:BoundField HeaderText="Victim" DataField="treatmentProvider" />
+                            <asp:BoundField HeaderText="Victim" DataField="victimName" />
                             <asp:BoundField HeaderText="Address" DataField="address" />
                             <asp:BoundField HeaderText="Phone" DataField="phone" />
                             <asp:BoundField HeaderText="Age" DataField="age" />
+                            <asp:BoundField HeaderText="Gender" DataField="genderMale" />
+                            <asp:BoundField HeaderText="Activity" DataField="activityName" />
                             <asp:BoundField HeaderText="Location" DataField="locationName" />
-                            <asp:BoundField HeaderText="Summary" DataField="description" />
+                            <asp:BoundField HeaderText="Action" DataField="actionName" />
+                            <asp:BoundField HeaderText="Injury Type" DataField="injuryTypeName" />
+                            <asp:BoundField HeaderText="Injury Location" DataField="injuryLocationName" />
+                            <asp:BoundField HeaderText="Treatment" DataField="treatmentName" />
+                            <asp:BoundField HeaderText="Treatment Provider" DataField="treatmentProvider" />
+                            <asp:BoundField HeaderText="Manager Called" DataField="managerCalled" />
+                            <asp:BoundField HeaderText="Why Not" DataField="notWhy" />
+                            <asp:BoundField HeaderText="Emergency Called" DataField="emergencyCalled" />
+                            <asp:BoundField HeaderText="Emergency Report#" DataField="emergencyReportNum" />
+                            <asp:BoundField HeaderText="Medical Report#" DataField="medicalReportNum" />
+                            <asp:BoundField HeaderText="Position" DataField="positionTitle" />
+                            <asp:BoundField HeaderText="Time Called" DataField="timeCalled" />
+                            <asp:BoundField HeaderText="Arrival" DataField="arrival" />
+                            <asp:BoundField HeaderText="Transported" DataField="transported" />
+                            <asp:BoundField HeaderText="Description" DataField="description" />
+                            <asp:BoundField HeaderText="Witness" DataField="witnessName" />
+                            <asp:BoundField HeaderText="Witness Phone" DataField="witnessPhone" />
                         </Columns>
                     </asp:GridView>
-                </form>
             </div>
         </div>
 
+        </form>
     </div>
 
 </asp:Content>

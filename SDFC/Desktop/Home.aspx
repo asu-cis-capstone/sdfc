@@ -13,7 +13,7 @@
 <asp:Content ID="HomeContent" runat="server" ContentPlaceHolderID="DesktopContentPlaceholder">
 
     <div id="divContent">
-        <asp:Label id="lblTitle" CssClass="titleCss" runat="server">Welcome, [insert name]</asp:Label>
+        <asp:Label id="lblTitle" CssClass="titleCss" runat="server">Welcome</asp:Label>
 
         <div id="recentRecords">
             <div id="divRecent" class="recentRecord" runat="server">

@@ -30,59 +30,37 @@
 </head>
 
 <body>
-  <div id="container">
-      <div id="header">
-          <div id="head">
-          <br />
-            <span class="headText">
-                <span class="headText1">Data Reporting and Management Application</span>
-                <span class="headText2">Managing and Submitting Documents Has Never Been Easier!</span>
-            </span>
-            <span class="loginButton">Login</span>
-          </div>
-      
-      </div>
-      <div id="main" runat="server">
-            <div id="mainTitleDiv">
-                <h1>Welcome! </h1>
-                <p class="mainText">Please hit the 'LOGIN' button and follow the instructions...</p>
-            
-            </div>
-        
-            <div id="mainContent">
-            
-            </div>
-
-            <div id="footer">
-                <h1>
-                    &copy;2015, SDFC
-                </h1>
-            </div>	
-        
-      </div>
-
-      <div id="loginDiv"> <%--z index--%>
-            <form id="login" runat="server">
-                <!-- username -->
-                <br />
-                <asp:Label ID="Label1" runat="server" Text="Username:"></asp:Label>
+<section class="container">
+    <div class="login">
+      <h1>Login to SDFC Forms</h1>
+      <form runat="server" >
+                <asp:Label ID="lblUser" runat="server" Text="Username"></asp:Label>
                 <asp:TextBox runat="server" ID="tbxUsername" required="required"></asp:TextBox>
-			    <br /><br />
 			
 			    <!-- password -->
-                <asp:Label ID="Label2" runat="server" Text="Password:"></asp:Label>
+                <asp:Label ID="lblPass" runat="server" Text="Password"></asp:Label>
                 <asp:TextBox runat="server" ID="tbxPassword" TextMode="Password" required="required"></asp:TextBox>
-                <br /><br />
-
-                <asp:Button runat="server" ID="btnLogin" OnClick="btnLogin_Click" Text="Login"/>
-                <br /><br />
 
                 <asp:Label ID="lblLoginError" runat="server" Visible="false">Invalid Username or Password</asp:Label>
-            </form>
-      </div>
-  </div>
+        <p class="remember_me">
+          <label>
+            <input type="checkbox" name="remember_me" id="remember_me"/>
+            Remember me on this computer
+          </label>
+        </p>
+        <p class="submit"><asp:Button runat="server" ID="Button2" OnClick="btnLogin_Click" Text="Login"/></p>
+      </form>
+    </div>
+  </section>
+    <section>
+    <p class="footer">
+      &copy; 2015, Sun Devil Fitness Complex
+        </p>
+  </section>
   
 
 </body>
 
 </html>
+
+

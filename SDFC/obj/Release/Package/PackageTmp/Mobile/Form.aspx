@@ -9,10 +9,11 @@
     <asp:SqlDataSource ID="InjuryTypeList" runat="server" SelectCommand="SELECT injuryTypeID, injuryTypeName FROM injuryType" ProviderName="Mysql.Data.MySqlClient"></asp:SqlDataSource>
     <asp:SqlDataSource ID="TreatmentList" runat="server" SelectCommand="SELECT treatmentID, treatmentName FROM treatment" ProviderName="Mysql.Data.MySqlClient"></asp:SqlDataSource>
     <div class="horizontalCenter">
-        <div id="formInputs" class="horizontalCenter">
+        <div id="formInputs" class="horizontalCenter">            
+                        
             <asp:Label ID="name" runat="server" ClientIDMode="Static">ASU ID</asp:Label>
             <br />
-            <asp:TextBox ID="txtName" runat="server" ClientIDMode="Static"></asp:TextBox>
+            <asp:TextBox ID="txtName" runat="server" ClientIDMode="Static" ></asp:TextBox>
             <br />                                                
             
             <asp:Label ID="comments" runat="server" ClientIDMode="Static">Description</asp:Label>
