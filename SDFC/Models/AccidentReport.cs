@@ -63,8 +63,9 @@ namespace SDFC.Models
         public string Comments
         {
             get
-            {
+            {                
                 return comments;
+
             }
             set
             {
@@ -88,7 +89,10 @@ namespace SDFC.Models
         {
             get
             {
-                return victimName;
+                if (victimName == null)
+                    return victimName;
+                else
+                    return "";
             }
             set
             {
@@ -112,7 +116,7 @@ namespace SDFC.Models
         {
             get
             {
-                return address;
+                 return address;
             }
             set
             {
@@ -136,7 +140,8 @@ namespace SDFC.Models
         {
             get
             {
-                return phone;
+               return phone;
+
             }
             set
             {
@@ -165,8 +170,9 @@ namespace SDFC.Models
         public int Age
         {
             get
-            {
+            {                
                 return age;
+                
             }
             set
             {
@@ -182,7 +188,7 @@ namespace SDFC.Models
         {
             get
             {
-                return male;
+               return male;
             }
             set
             {
@@ -269,14 +275,11 @@ namespace SDFC.Models
                     //check for max length
                     if (value.Length > 55)
                         throw new ArgumentException("Value must be under 55 characters");
-                    //check for min length
-                    else if (value == "")
-                        throw new ArgumentException("Value cannot be empty");
                     else
                         treator = value;
                 }
                 else
-                    throw new ArgumentException("Value must not be null");
+                    treator = "";
             }
         }
         public bool FacilitiesManagemet
@@ -287,7 +290,7 @@ namespace SDFC.Models
             }
             set
             {
-                facilitiesManagemet = false;
+                facilitiesManagemet = value;
             }
         }
         public bool PoliceContacted
@@ -315,14 +318,11 @@ namespace SDFC.Models
                     //check for max length
                     if (value.Length > 255)
                         throw new ArgumentException("Value must be under 255 characters");
-                    //check for min length
-                    else if (value == "")
-                        throw new ArgumentException("Value cannot be empty");
                     else
                         reportNumber = value;
                 }
                 else
-                    throw new ArgumentException("Value must not be null");
+                    reportNumber = "";
             }
         }
         public DateTime TimeCalled
@@ -361,14 +361,11 @@ namespace SDFC.Models
                     //check for max length
                     if (value.Length > 255)
                         throw new ArgumentException("Value must be under 255 characters");
-                    //check for min length
-                    else if (value == "")
-                        throw new ArgumentException("Value cannot be empty");
                     else
                         transportedTo = value;
                 }
                 else
-                    throw new ArgumentException("Value must not be null");
+                    transportedTo = "";
             }
         }
         public string MedicalReport
@@ -385,14 +382,11 @@ namespace SDFC.Models
                     //check for max length
                     if (value.Length > 255)
                         throw new ArgumentException("Value must be under 255 characters");
-                    //check for min length
-                    else if (value == "")
-                        throw new ArgumentException("Value cannot be empty");
                     else
                         medicalReport = value;
                 }
                 else
-                    throw new ArgumentException("Value must not be null");
+                    medicalReport = "";
             }
         }
         public string PositionTitles
@@ -409,14 +403,10 @@ namespace SDFC.Models
                     //check for max length
                     if (value.Length > 255)
                         throw new ArgumentException("Value must be under 255 characters");
-                    //check for min length
-                    else if (value == "")
-                        throw new ArgumentException("Value cannot be empty");
                     else
                         positionTitles = value;
                 }
-                else
-                    throw new ArgumentException("Value must not be null");
+                positionTitles = "";
             }
         }
         public bool ManagerCalled
@@ -448,13 +438,15 @@ namespace SDFC.Models
                         if (value.Length > 255)
                             throw new ArgumentException("Value must be under 255 characters");
                         //check for min length
-                        else if (value == "")
+                        else if (value == "" && !ManagerCalled)
                             throw new ArgumentException("Value cannot be empty");
                         else
                             whyNot = value;
                     }
-                    else
+                    else if (!ManagerCalled)
                         throw new ArgumentException("Value must not be null");
+                    else
+                        whyNot = "";
                 }
             }
         }

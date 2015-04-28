@@ -100,7 +100,8 @@ namespace SDFC.Mobile
                 //myReport.SignatureJSON = output.Value;
 
                 //add the report to the database
-                if (myConnector.AddReport(myReport, Session["AsuID"].ToString(), HttpRuntime.AppDomainAppPath + "signatures\\"))
+                string relativePath = WebConfigurationManager.AppSettings["relPathToSigs"];
+                if (myConnector.AddReport(myReport, Session["AsuID"].ToString(), HttpRuntime.AppDomainAppPath + relativePath))
                     Response.Redirect("Confirmation.aspx");
                 else
                     Response.Write("<script>confirm('Error creating form');</script>"); //if error occured, display message
