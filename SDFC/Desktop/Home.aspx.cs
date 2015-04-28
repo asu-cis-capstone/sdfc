@@ -14,6 +14,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using iTextSharp.text.xml;
 using System.IO;
+using System.Drawing;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -187,6 +188,7 @@ public partial class _Default : System.Web.UI.Page
         string mgrPosition = ((TextBox)item.FindControl("txtMgrPosition")).Text;
         string mgrReferred = ((TextBox)item.FindControl("txtMgrReferred")).Text;
         string mgrFollowup = ((TextBox)item.FindControl("txtMgrFollowup")).Text;
+        string pathToImage = ((System.Web.UI.WebControls.Image)item.FindControl("sig")).ImageUrl;
 
         //string pdfTemplate = @"c:\Temp\pdfform.pdf";
         string pdfTemplate = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Desktop\reference\accidentReport.pdf");
@@ -203,10 +205,12 @@ public partial class _Default : System.Web.UI.Page
         {
             Directory.CreateDirectory(path);
         }
-
+        
         PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
 
         AcroFields pdfFormFields = pdfStamper.AcroFields;
+        PdfContentByte pdfByte = pdfStamper.GetOverContent(1);
+
 
         //Textfields
         pdfFormFields.SetField("name", name);
@@ -249,6 +253,15 @@ public partial class _Default : System.Web.UI.Page
         pdfFormFields.SetField("manageReferredTo", mgrReferred);
         pdfFormFields.SetField("manageFollowup", mgrFollowup);
 
+        using (Stream inputImageStream = new FileStream(pathToImage, FileMode.Open, FileAccess.Read, FileShare.Read))
+        {
+            var pdfContentByte = pdfStamper.GetOverContent(1);
+
+            iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(inputImageStream);
+            image.SetAbsolutePosition(100, 100);
+            pdfContentByte.AddImage(image);
+            pdfStamper.Close();
+        }
         // Closing Part
         pdfStamper.FormFlattening = false;
 
