@@ -23,4 +23,11 @@
         }
     })
 
+    //$('.sigWrapper').each(function () {
+    //    var sigJSON = $(this).find('.sigJSON').text();
+
+    //    var sigpad = $(this).find('.sigPad');
+    //    $(this).find('.sigPad').signaturePad().regenerate(sigJSON);
+    //});
+
 });

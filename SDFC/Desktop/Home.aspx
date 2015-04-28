@@ -5,6 +5,7 @@
     <link type="text/css" rel="stylesheet" href="stylesheets/desktop.css" />
     <link type="text/css" rel="stylesheet" href="stylesheets/home.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
     <script type="text/javascript" src="scripts/HomeScripts.js"></script>
 
 </asp:Content>
@@ -309,8 +310,9 @@
                                             Victim's Signature: 
                                         </td>
                                         <td class="trVal">
-                                            <%--<%# DataBinder.Eval(Container.DataItem, "victimSig")%>--%>
-                                            <asp:Label ID="lblVictimSig" Text='<%# DataBinder.Eval(Container.DataItem, "victimSig")%>'  runat="server" />
+                                            <%--<%# DataBinder.Eval(Container.DataItem, "victimSig")%>--%>                                            
+                                            <asp:Image ID="sig" ImageUrl='<%# DataBinder.Eval(Container.DataItem, "victimSig") %>' runat="server" Width="200" Height="66"/>
+                                            </div>
                                         </td>
                                     </tr>
                                 </table>

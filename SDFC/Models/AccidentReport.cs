@@ -144,7 +144,7 @@ namespace SDFC.Models
                 string tempNumber = value;
 
                 //check length
-                if (tempNumber.Length > 9 && tempNumber.Length < 12)
+                if (tempNumber.Length >= 9 && tempNumber.Length < 12)
                 {
                     int digitCount = 0;
                     for (int i = 0; i < tempNumber.Length; i++)
@@ -153,10 +153,10 @@ namespace SDFC.Models
                         if (Int32.TryParse(tempNumber[i].ToString(), out number))
                             digitCount++;
                     }
-                    if (digitCount == 9)
+                    if (digitCount >= 9)
                         phone = tempNumber;
                     else
-                        throw new ArgumentException("Value must contain 9 digits");
+                        throw new ArgumentException("Value must contain 9+ digits");
                 }
                 else
                     throw new ArgumentException("Must be between 10 and 12 characters");
@@ -518,7 +518,7 @@ namespace SDFC.Models
                 string tempNumber = value;
 
                 //check length
-                if (tempNumber.Length > 9 && tempNumber.Length < 12)
+                if (tempNumber.Length>= 9 && tempNumber.Length < 12)
                 {
                     int digitCount = 0;
                     for (int i = 0; i < tempNumber.Length; i++)
@@ -527,10 +527,10 @@ namespace SDFC.Models
                         if (Int32.TryParse(tempNumber[i].ToString(), out number))
                             digitCount++;
                     }
-                    if (digitCount == 9)
+                    if (digitCount >= 9)
                         witnessPhone = tempNumber;
                     else
-                        throw new ArgumentException("Value must contain 9 digits");
+                        throw new ArgumentException("Value must contain 9+ digits");
                 }
                 else
                     throw new ArgumentException("Must be between 10 and 12 characters");
