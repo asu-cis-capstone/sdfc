@@ -178,7 +178,7 @@ namespace SDFC.Models
             image.Save(absolutepath+fileName);
 
             //split string at application root
-            string[] components = absolutepath.Split(new string[] { "\\SDFC" }, StringSplitOptions.None);
+            string[] components = absolutepath.Split(new string[] { "\\SDFC", "\\wwwroot" }, StringSplitOptions.None);
             //return relative path
             return components[components.Length - 1]+fileName;
         }
