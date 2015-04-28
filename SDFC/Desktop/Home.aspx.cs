@@ -157,6 +157,7 @@ public partial class _Default : System.Web.UI.Page
         string gender = ((Label)item.FindControl("lblGender")).Text;
         string age = ((Label)item.FindControl("lblAge")).Text;
         string asuID = ((Label)item.FindControl("lblAsuID")).Text;
+        string dateFiled = ((Label)item.FindControl("lblDateFiled")).Text;
         string status = ((Label)item.FindControl("lblVictimName")).Text;
         string reportID = ((Label)item.FindControl("lblReportID")).Text;
 
@@ -223,7 +224,7 @@ public partial class _Default : System.Web.UI.Page
         //Textfields
         pdfFormFields.SetField("name", name);
         pdfFormFields.SetField("address", address);
-        //pdfFormFields.SetField("time", time);
+        pdfFormFields.SetField("date", dateFiled);
         pdfFormFields.SetField("phoneNumber", phoneNumber);
         pdfFormFields.SetField("gender", gender);
         pdfFormFields.SetField("age", age);
@@ -261,17 +262,17 @@ public partial class _Default : System.Web.UI.Page
         pdfFormFields.SetField("manageReferredTo", mgrReferred);
         pdfFormFields.SetField("manageFollowup", mgrFollowup);
 
-<<<<<<< HEAD
-        using (Stream inputImageStream = new FileStream(pathToImage, FileMode.Open, FileAccess.Read, FileShare.Read))
-        {
-            var pdfContentByte = pdfStamper.GetOverContent(1);
+//<<<<<<< HEAD
+        //using (Stream inputImageStream = new FileStream(pathToImage, FileMode.Open, FileAccess.Read, FileShare.Read))
+        //{
+            //var pdfContentByte = pdfStamper.GetOverContent(1);
 
-            iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(inputImageStream);
-            image.SetAbsolutePosition(100, 100);
-            pdfContentByte.AddImage(image);
-            pdfStamper.Close();
-        }
-=======
+            //iTextSharp.text.Image image = iTextSharp.text.Image.GetInstance(inputImageStream);
+            //image.SetAbsolutePosition(100, 100);
+            //pdfContentByte.AddImage(image);
+            //pdfStamper.Close();
+        //}/
+//=======
 
         //float[] imgPos = null;
         //imgPos = pdfFormFields.GetFieldPositions("signature");
@@ -281,7 +282,7 @@ public partial class _Default : System.Web.UI.Page
         PdfContentByte cb = pdfStamper.GetOverContent(1);
         cb.AddImage(nsig);
 
->>>>>>> c843afddb17f0c6136851b7fb9271dacfa787d19
+//>>>>>>> c843afddb17f0c6136851b7fb9271dacfa787d19
         // Closing Part
         pdfStamper.FormFlattening = false;
 

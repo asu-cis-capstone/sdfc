@@ -329,7 +329,7 @@
                                             Date:
                                         </td>
                                         <td>
-                                            datetime.now
+                                            <asp:Literal runat="server" Text='<%# DateTime.Now %>'></asp:Literal>
                                         </td>
                                     </tr>
                                     <tr>

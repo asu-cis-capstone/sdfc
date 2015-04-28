@@ -3,7 +3,7 @@ body {
     font-weight:        bold;
     overflow-x:         hidden;
     font-family:        Calibri;
-    background-color:   #FFB310;
+    background-color:   #ff6666;
     width:              1200px;
     z-index:            0;
     
@@ -32,12 +32,8 @@ h1 {
     width:              100%;
     position:           fixed;
     display:            block;
-    color:              rgb(240, 240, 240);
-    background-image:   -webkit-linear-gradient(right, #990033, #990033);
-    background-image:   -moz-linear-gradient(right, #990033, #990033);
-    background-image:   -ms-linear-gradient(right, #990033, #990033);
-    background-image:   -o-linear-gradient(right, #990033, #990033);
-    background-image:   linear-gradient(to right, #990033, #990033);
+    color:              #404040;
+    background:         #ff6666;
     z-index:            6;
     padding:            0;
     border:             none; 
@@ -71,25 +67,20 @@ h1 {
     color:              black;
     text-align:         center;
     text-decoration:    none;
-    background-image:   -webkit-linear-gradient(top, #FFB310, #990033);
-    background-image:   -moz-linear-gradient(top, #FFB310, #990033);
-    background-image:   -ms-linear-gradient(top, #FFB310, #990033);
-    background-image:   -o-linear-gradient(top, #FFB310, #990033);
-    background-image:   linear-gradient(to top, #FFB310, #990033);
+    background:             white;
+    background-attachment:  fixed;
+    border-radius: 3px;
     font-family:            Arial;
     font-size:              18px;
-    padding:                14px 18px 10px 28px;
+    padding:                10px 10px 10px 10px;
     text-decoration:        none;
-    border:                 none;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .navbarli:hover {
-        background-image:   -webkit-linear-gradient(top, #FFB310, #FFB310);
-        background-image:   -moz-linear-gradient(top, #FFB310, #FFB310);
-        background-image:   -ms-linear-gradient(top, #FFB310, #FFB310);
-        background-image:   -o-linear-gradient(top, #FFB310, #FFB310);
-        background-image:   linear-gradient(to bottom, #FFB310, #FFB310);
-        text-decoration:    none;
+    background-color: #f2f2f2;
 }
 
 .rightalign {
@@ -143,15 +134,12 @@ h1 {
 }
 
 #searchlink:hover {
-    background-color:   #C0C0C0;
+    background-color:   #f2f2f2;
 }
 
 #sidebar {
-    background-image:   -webkit-linear-gradient(top, #FFB310, #990033);
-    background-image:   -moz-linear-gradient(top, #FFB310, #990033);
-    background-image:   -ms-linear-gradient(top, #FFB310, #990033);
-    background-image:   -o-linear-gradient(top, #FFB310, #990033);
-    background-image:   linear-gradient(to bottom, #FFB310, #990033);
+    color: #404040;
+    background: #E65C5C;
     position:           fixed;
     width:              300px;
     height:             100%;
@@ -180,11 +168,8 @@ h1 {
     height:             calc(100% - 70px);
     float:              left;
     z-index:            1;
-    background-image:   -webkit-linear-gradient(top, #990033, #FFB310);
-    background-image:   -moz-linear-gradient(top, #990033, #FFB310);
-    background-image:   -ms-linear-gradient(top, #990033, #FFB310);
-    background-image:   -o-linear-gradient(top, #990033, #FFB310);
-    background-image:   linear-gradient(to bottom, #990033, #FFB310);
+    color: #404040;
+    background: #ff6666;
     width:              100%;
 }
 
@@ -196,7 +181,14 @@ h1 {
 }
 
 #recentRecords {
-    /*color:white;*/
+    clear:both;
+  margin: 0 auto;
+  padding: 20px 20px 20px;
+  width: 915px;
+  background: white;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 #divContent {
@@ -217,7 +209,7 @@ h1 {
 }
 
 .btnClass:hover {
-    background-color:   #FFCB66;
+    background-color:   #f2f2f2;
     cursor:             pointer;
 }
 
@@ -237,8 +229,10 @@ h1 {
 }
 
 .trRepeater {
-    background:             -webkit-linear-gradient(right, #990033 40%, #FFB310 80%);
+    
+    background:             #d8f6d5;
     background-attachment:  fixed;
+    border-radius: 3px;
 }
 
 .trHdr {
