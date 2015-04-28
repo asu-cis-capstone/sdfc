@@ -263,11 +263,11 @@ public partial class _Default : System.Web.UI.Page
         byte[] sendbyteArray = binaryReader.ReadBytes(Convert.ToInt32(binaryReader.BaseStream.Length));
 
         Response.Redirect("/downloads/" + fileName + ".pdf");
-        //Response.ContentType = "application/pdf";
-        //Response.AddHeader("Content-Type", "application/pdf");
-        //Response.AddHeader("Content-Disposition", "inline");
-        //Response.BinaryWrite(sendbyteArray);
-        //Response.End(); 
+        Response.ContentType = "application/pdf";
+        Response.AddHeader("Content-Type", "application/pdf");
+        Response.AddHeader("Content-Disposition", "inline");
+        Response.BinaryWrite(sendbyteArray);
+        Response.End(); 
 
     }
 
