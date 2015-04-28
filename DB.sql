@@ -123,6 +123,404 @@ Password, LastName, FirstName, Position, Active, Manager);
 END$$
 DELIMITER ;
 
+DELIMITER $$
+CREATE DEFINER=`capstone`@`%` PROCEDURE `spGetRecentAccidentReport`()
+BEGIN
+
+SELECT
+	firstName,
+    lastName,
+    dateFiled,
+	victimName,
+    address,
+    phone,
+    age,
+    genderMale,
+    inj.asuID,
+    inj.reportID,
+    #victimStatus
+    
+    activityName,
+    locationName,
+    actionName,
+    injuryTypeName,
+    injuryLocationName,
+    treatmentName,
+    
+    treatmentProvider,
+    managerCalled,
+    emergencyCalled,
+    emergencyReportNum,
+    medicalReportNum,
+    
+    positionTitle,
+    notWhy,
+    timeCalled, 
+    arrival, 
+    transported,
+    
+    description,
+    witnessName, 
+    witnessPhone, 
+    victimSig,
+    
+    mgrReviewedBy,
+    mgrDate,
+    mgrPosition,
+    mgrReferred,
+    mgrFollowup
+    
+    
+FROM
+	injury inj
+    INNER JOIN
+    actions on inj.actionsID = actions.actionsID
+    INNER JOIN 
+    activity on inj.activityID = activity.activityID
+    INNER JOIN 
+    injuryLocation on inj.injuryLocationID = injuryLocation.injuryLocationID
+    INNER JOIN 
+    injuryType on inj.injuryTypeID = injuryType.injuryTypeID
+    INNER JOIN 
+    location on inj.locationID = location.locationID
+    INNER JOIN 
+    treatment on inj.treatmentID = treatment.treatmentID
+    INNER JOIN 
+    report on inj.reportID = report.reportID
+    INNER JOIN 
+    employee on report.asuID = employee.asuID
+
+ORDER BY 
+	dateFiled desc
+    
+LIMIT 5;
+
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`capstone`@`%` PROCEDURE `spGetUserLogin`(asuriteLog varchar(30))
+BEGIN
+	
+SELECT emp.password,
+		emp.asuID
+
+FROM employee emp
+
+WHERE asuriteLog = asurite;
+    
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`capstone`@`%` PROCEDURE `spReportAllParms`(
+	startdate datetime,
+    enddate datetime,
+    
+    activity1 int,
+    activity2 int,
+    activity3 int,
+    activity4 int,
+    activity5 int,
+    activity6 int,
+    activity7 int,
+    activity8 int,
+    
+    location1 int,
+    location2 int,
+    location3 int,
+    location4 int,
+    location5 int,
+    location6 int,
+    location7 int,
+    location8 int,
+    location9 int,
+    location10 int,
+    location11 int,
+    location12 int,
+    location13 int,
+    location14 int,
+    location15 int,
+    location16 int,
+    location17 int,
+    location18 int,
+    location19 int,
+    location20 int,
+    
+    sort varchar(10)
+    
+)
+BEGIN
+	SELECT
+	firstName,
+    lastName,
+    dateFiled,
+	victimName,
+    address,
+    phone,
+    age,
+    genderMale,
+    inj.asuID,
+    #victimStatus
+    
+    activityName,
+    locationName,
+    actionName,
+    injuryTypeName,
+    injuryLocationName,
+    treatmentName,
+    
+    treatmentProvider,
+    managerCalled,
+    emergencyCalled,
+    emergencyReportNum,
+    medicalReportNum,
+    
+    positionTitle,
+    notWhy,
+    timeCalled, 
+    arrival, 
+    transported,
+    
+    description,
+    witnessName, 
+    witnessPhone, 
+    victimSig,
+    
+    mgrReviewedBy,
+    mgrDate,
+    mgrPosition,
+    mgrReferred,
+    mgrFollowup
+    
+    
+FROM
+	injury inj
+    INNER JOIN
+    actions on inj.actionsID = actions.actionsID
+    INNER JOIN 
+    activity on inj.activityID = activity.activityID
+    INNER JOIN 
+    injuryLocation on inj.injuryLocationID = injuryLocation.injuryLocationID
+    INNER JOIN 
+    injuryType on inj.injuryTypeID = injuryType.injuryTypeID
+    INNER JOIN 
+    location on inj.locationID = location.locationID
+    INNER JOIN 
+    treatment on inj.treatmentID = treatment.treatmentID
+    INNER JOIN 
+    report on inj.reportID = report.reportID
+    INNER JOIN 
+    employee on report.asuID = employee.asuID
+
+WHERE 
+	dateFiled BETWEEN startdate AND enddate
+    
+    and
+
+	inj.activityID IN (activity1,
+						activity2,
+						activity3,
+						activity4,
+						activity5,
+						activity6,
+						activity7,
+						activity8)
+	 and
+	inj.injuryLocationID IN (location1,
+								location2,
+								location3,
+								location4,
+								location5,
+								location6,
+								location7,
+								location8,
+								location9,
+								location10,
+								location11,
+								location12,
+								location13,
+								location14,
+								location15,
+								location16,
+								location17,
+								location18,
+								location19,
+								location20)
+                                
+	
+
+ORDER BY 
+	CASE sort
+		WHEN "datedesc" then dateFiled
+		WHEN "namedesc" then victimName
+        else 1 END
+	DESC,
+        
+	CASE sort
+		WHEN "dateasc" then dateFiled
+		WHEN "nameasc" then victimName
+        else 1 END
+	ASC;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`capstone`@`%` PROCEDURE `spSearchByLastName`(lastName varchar(30))
+BEGIN
+	
+    declare search varchar(30);
+    set search = concat('%', lastName, '%');
+    
+    SELECT
+	firstName,
+    employee.lastName,
+    dateFiled,
+    
+	victimName,
+    address,
+    phone,
+    age,
+    genderMale,
+    inj.asuID,
+    inj.reportID,
+    #victimStatus
+    
+    activityName,
+    locationName,
+    actionName,
+    injuryTypeName,
+    injuryLocationName,
+    treatmentName,
+    
+    treatmentProvider,
+    managerCalled,
+    emergencyCalled,
+    emergencyReportNum,
+    medicalReportNum,
+    
+    positionTitle,
+    notWhy,
+    timeCalled, 
+    arrival, 
+    transported,
+    
+    description,
+    witnessName, 
+    witnessPhone, 
+    victimSig,
+    
+    mgrReviewedBy,
+    mgrDate,
+    mgrPosition,
+    mgrReferred,
+    mgrFollowup
+    
+    
+FROM
+	injury inj
+    INNER JOIN
+    actions on inj.actionsID = actions.actionsID
+    INNER JOIN 
+    activity on inj.activityID = activity.activityID
+    INNER JOIN 
+    injuryLocation on inj.injuryLocationID = injuryLocation.injuryLocationID
+    INNER JOIN 
+    injuryType on inj.injuryTypeID = injuryType.injuryTypeID
+    INNER JOIN 
+    location on inj.locationID = location.locationID
+    INNER JOIN 
+    treatment on inj.treatmentID = treatment.treatmentID
+    INNER JOIN 
+    report on inj.reportID = report.reportID
+    INNER JOIN 
+    employee on report.asuID = employee.asuID
+
+WHERE
+	victimName like search
+    or
+    firstName like search
+    or 
+    lastName like search
+    or 
+    inj.asuID like search
+    or 
+    witnessName like search
+
+ORDER BY 
+	dateFiled desc;
+    
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`capstone`@`%` PROCEDURE `spSelectAllEmployee`(asuid int(11))
+BEGIN
+	SELECT 
+		* 
+        
+	FROM 
+		cis440db.employee
+    
+    WHERE 
+		manager = asuid;
+        
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`capstone`@`%` PROCEDURE `spUpdateEmployee`(nasuID int, nasurite varchar(10), npassword varchar(15), nfirstName varchar(15), nlastName varchar(15), nposition varchar(15), nactive bit, nmanager int)
+BEGIN
+	UPDATE employee
+    SET asurite = nasurite,
+		employee.password = npassword,
+        lastName = nlastName,
+        firstName = nfirstName,
+        position = nposition,
+        active = nactive,
+        manager = nmanager
+        
+	WHERE 
+		asuID = nasuID;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`capstone`@`%` PROCEDURE `spUpdateRiskMgr`(treportID int, tmgrReview varchar(45), tmgrDate DateTime, tmgrPosition varchar(45), tmgrReferred varchar(45), tmgrFollowup varchar(5000))
+BEGIN
+
+	UPDATE injury
+    SET mgrReviewedBy = tmgrReview,
+		mgrDate = tmgrDate,
+        mgrPosition = tmgrPosition,
+        mgrReferred = tmgrReferred,
+        mgrFollowup = tmgrFollowup
+        
+	WHERE 
+		reportID = treportID;
+
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`capstone`@`%` PROCEDURE `viewReports`()
+BEGIN
+	SELECT victimName,
+			asuID,
+            locationName,
+            treatmentProvider,
+            address,
+            phone,
+            age,
+            description
+    
+    FROM injury
+			inner join 
+            location on injury.locationID = location.locationID;
+END$$
+DELIMITER ;
+
+
 
 
 
