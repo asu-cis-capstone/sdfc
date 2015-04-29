@@ -17,8 +17,11 @@ Arizona State University’s Sun Devil Fitness Complex (SDFC) enhances the ASU e
 - Add interactivity using Javascript and JQuery for interface
 
 ##Release Notes
-- Version 0.1: Initial repository, waffle.io integration, visual mock-up
-- Version 0.2: In Development
+- Version 0.1
+  - Initial repository, waffle.io integration, visual mock-up
+
+- Version 0.2
+  - 
 
 ##List of Contributions
 * Cody Pugliese
