@@ -8,20 +8,36 @@ Arizona State University’s Sun Devil Fitness Complex (SDFC) enhances the ASU e
 [![Stories in Done](https://badge.waffle.io/asu-cis-capstone/sdfc.png?label=Done&title=Done)](https://waffle.io/asu-cis-capstone/sdfc)
 
 ##Getting Started / How to Install
-- (Coming up soon)
-
-##To-Do List
-- Create front end for Mobile/Desktop
-- Create database backend
-- Implement SSL
-- Add interactivity using Javascript and JQuery for interface
+- 
 
 ##Release Notes
 - Version 0.1
   - Initial repository, waffle.io integration, visual mock-up
 
 - Version 0.2
+  - Done with basic CSS and HTML for desktop and mobile
+ 
+- Version 0.3
+  - Got connection working to AWS
+  - Done with login functionality
+  - Done with html canvas for writing signature on mobile
+
+- Version 0.4
   - 
+
+- Version 0.5
+  - Done with CSS and HTML for the most part on desktop
+  - Added some test data in MySQL; few employees and managers information added
+
+- Version 0.6
+  - Done with pulling all necessary information for the standard injury report on desktop
+  - Implement export PDF function
+  - Done with security on navigating pages without having a session works
+
+- Version 1.0
+  - Implement export gridview to Excel and CSV file function
+  - Done with new styling on desktop
+
 
 ##List of Contributions
 * Cody Pugliese
