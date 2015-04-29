@@ -3,7 +3,7 @@ body {
     font-weight:        bold;
     overflow-x:         hidden;
     font-family:        Calibri;
-    background-color:   #ff6666;
+    background-color:   #A31919;
     width:              1200px;
     z-index:            0;
     
@@ -33,10 +33,13 @@ h1 {
     position:           fixed;
     display:            block;
     color:              #404040;
-    background:         #ff6666;
+    background:         #FF9900;
     z-index:            6;
     padding:            0;
     border:             none; 
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 #navbarContents {
@@ -138,8 +141,8 @@ h1 {
 }
 
 #sidebar {
-    color: #404040;
-    background: #E65C5C;
+    color: white;
+    background: #232322;
     position:           fixed;
     width:              300px;
     height:             100%;
@@ -169,7 +172,7 @@ h1 {
     float:              left;
     z-index:            1;
     color: #404040;
-    background: #ff6666;
+    background: #A31919;
     width:              100%;
 }
 
