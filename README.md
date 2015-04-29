@@ -9,9 +9,19 @@ Arizona State University’s Sun Devil Fitness Complex (SDFC) enhances the ASU e
 
 
 ##Getting Started / How to Install
-- 
+###How to Install and test SDFC webpage
+1. The provided files on our repository will contain everything you need to download and use.
+2. The required software will be Microsoft Visual Studio and MySQL Workbench.
+3. In order to test our webpage, simply open SDFC.suo file and run with web browser(Google Chrome is recommended)
+4. Login with our guest account in order to test everything with all the permissions // ID - guest, Password - password
 
+###How to connect the Amazon Web Services 
+1. In order to test our AWS locally, you need to install MySQL from Orcale: http://dev.mysql.com/downloads/installer/
+2. After installing it, open the MySQL Workbench and set up a new MySQL connection
+3. Simply put all the information given below
+  - Hostname: cis440.cj1rt5lolr7p.us-west-2.rds.amazonaws.com // Port: 3306 // Username and Password: will be provided soon.
 
+<br/>
 ##Release Notes
 - Version 0.1
   - Initial repository, waffle.io integration, visual mock-up
