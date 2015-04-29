@@ -7,8 +7,10 @@ Arizona State University’s Sun Devil Fitness Complex (SDFC) enhances the ASU e
 ##Product Backlog
 [![Stories in Ready](https://badge.waffle.io/asu-cis-capstone/sdfc.svg?label=ready&title=Ready)](http://waffle.io/asu-cis-capstone/sdfc)
 
+
 ##Getting Started / How to Install
 - 
+
 
 ##Release Notes
 - Version 0.1
@@ -23,7 +25,8 @@ Arizona State University’s Sun Devil Fitness Complex (SDFC) enhances the ASU e
   - Done with html canvas for writing signature on mobile
 
 - Version 0.4
-  - 
+  - Added search functionality
+  - Improvement for styling on homepage with different color and font
 
 - Version 0.5
   - Done with CSS and HTML for the most part on desktop
