@@ -5,7 +5,7 @@ Sun Devil Fitness Complex Form is a web-based and mobile application thata allow
 Arizona State University’s Sun Devil Fitness Complex (SDFC) enhances the ASU experience by providing programs, services and facilities that promote healthy lifestyles, build community and enable student success. Sun Devil Fitness offers a variety of recreation, fitness and sport opportunities that include intramurals, group exercise, personal training, sport clubs and instructional classes.
 
 ##Product Backlog
-[![Stories in Ready](https://badge.waffle.io/asu-cis-capstone/sdfc.png?label=Done&title=done)](https://waffle.io/asu-cis-capstone/sdfc)
+[![Stories in Done](https://badge.waffle.io/asu-cis-capstone/sdfc.png?label=Done&title=Done)](https://waffle.io/asu-cis-capstone/sdfc)
 
 ##Getting Started / How to Install
 - (Coming up soon)
